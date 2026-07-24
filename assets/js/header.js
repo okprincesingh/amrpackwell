@@ -59,7 +59,7 @@ onHeaderReady(function () {
     plus.textContent = drop.classList.contains("show") ? "-" : "+";
   };
 // ── reCAPTCHA v2 (Get a Quote forms) — same site key as the admin login ──
-  const RECAPTCHA_SITE_KEY = "6LeHo-csAAAAAA-RUUtC-xmee5YqI4LMF75xMXuV";
+  const RECAPTCHA_SITE_KEY = "6LfB12ItAAAAAKvrgkjQfE-kPjb3WORmiqu5owDE";
   let recaptchaApiPromise = null;
   let quoteRecaptchaWidgetId = null;
 
@@ -147,8 +147,10 @@ onHeaderReady(function () {
 
       if (honeypot && honeypot.value !== "") return; // silently drop bots
 
-      const captchaOk = window.grecaptcha && quoteRecaptchaWidgetId !== null && grecaptcha.getResponse(quoteRecaptchaWidgetId);
-      if (!captchaOk) {
+      const captchaToken = window.grecaptcha && quoteRecaptchaWidgetId !== null
+        ? grecaptcha.getResponse(quoteRecaptchaWidgetId)
+        : "";
+      if (!captchaToken) {
         if (msgBox) {
           msgBox.style.display = "block";
           msgBox.style.color = "#c0392b";
@@ -160,7 +162,10 @@ onHeaderReady(function () {
       submitBtn.disabled = true;
       submitBtn.textContent = "Sending...";
 
-      fetch("quote-submit.php", { method: "POST", body: new FormData(form) })
+      const formData = new FormData(form);
+      formData.set("g-recaptcha-response", captchaToken);
+
+      fetch("quote-submit.php", { method: "POST", body: formData })
         .then((r) => r.json())
         .then((data) => {
           if (msgBox) {
