@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <meta charset="UTF-8">
 <title>Admin Login — AMR Packwell</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../assets/css/admin.css">
+<link rel="stylesheet" href="<?= e(SITE_URL) ?>/php-admin/assets/css/admin.css">
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body class="login-page">

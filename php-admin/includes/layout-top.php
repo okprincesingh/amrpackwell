@@ -21,7 +21,7 @@ $adminInitials = mb_substr($adminInitials, 0, 2) ?: 'A';
 <meta charset="UTF-8">
 <title><?= e($pageTitle ?? 'Admin') ?> — AMR Packwell Admin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="../assets/css/admin.css">
+<link rel="stylesheet" href="<?= e(SITE_URL) ?>/php-admin/assets/css/admin.css">
 </head>
 <body>
 <div class="admin-shell">
