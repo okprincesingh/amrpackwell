@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMR Packwell – About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['DM Sans', 'sans-serif'],
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.65s ease both',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%':   { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .delay-100 { animation-delay: 0.10s; }
+    .delay-200 { animation-delay: 0.20s; }
+    .delay-300 { animation-delay: 0.30s; }
+    .delay-400 { animation-delay: 0.40s; }
+    .delay-500 { animation-delay: 0.50s; }
+    .delay-600 { animation-delay: 0.60s; }
+    .dot-bg {
+      background-image: radial-gradient(circle, #171F6018 1.2px, transparent 1.2px);
+      background-size: 22px 22px;
+    }
+  </style>
+</head>
+<body class="bg-white font-sans antialiased">
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="relative overflow-hidden bg-white">
+
+    <!-- Navy top banner -->
+    <div style="background:#171F60;" class="py-3 px-6 text-center">
+      <p class="text-xs tracking-widest uppercase text-white/60 font-medium">Established 2017 · Greater Noida, India</p>
+    </div>
+
+    <!-- Main content -->
+    <div class="relative dot-bg">
+
+      <!-- Orange left accent bar -->
+      <div style="background:#F68440;" class="absolute top-0 left-0 w-1.5 h-full"></div>
+
+      <div class="relative max-w-6xl mx-auto px-8 md:px-14 lg:px-20 py-20">
+
+        <!-- Header -->
+        <div class="animate-fade-up">
+          <span style="background:#F6844018; color:#F68440; border-color:#F6844050;"
+                class="inline-block text-[11px] font-medium tracking-[0.18em] uppercase border px-4 py-1.5 rounded-full mb-6">
+            About Us
+          </span>
+          <h2 style="color:#171F60;" class="font-serif text-4xl md:text-5xl lg:text-[3.4rem] font-semibold leading-tight">
+            AMR Packwell<br/>
+            <span style="color:#F68440;">Private Limited</span>
+          </h2>
+          <div class="flex gap-1 mt-5">
+            <div style="background:#171F60;" class="w-10 h-1 rounded-full"></div>
+            <div style="background:#F68440;" class="w-5 h-1 rounded-full"></div>
+          </div>
+        </div>
+
+        <!-- Two-column body -->
+        <div class="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+          <!-- LEFT: Text + Stats -->
+          <div class="space-y-8 animate-fade-up delay-200">
+            <p class="text-[17px] font-light text-gray-600 leading-[1.9]">
+              Established in <span style="color:#171F60;" class="font-medium">2017</span>, AMR Packwell Private Limited is a leading manufacturer, supplier, and service provider of premium packaging solutions, headquartered in
+              <span style="color:#171F60;" class="font-medium">Greater Noida, Uttar Pradesh, India</span>.
+            </p>
+            <p class="text-base font-light text-gray-500 leading-relaxed">
+              We deal exclusively in superior-quality Plywood Boxes, Automatic Strapping Machines, Packing Straps, Corrugated Boxes, and more — all crafted from the finest materials. Every product is rigorously tested across multiple quality parameters before reaching the market, ensuring longevity, ease of use, and unmatched reliability at the best possible prices.
+            </p>
+            <p class="text-base font-light text-gray-500 leading-relaxed">
+              As a trusted service partner, we also fulfill timely requirements for Car Lashing, Wire Rope Tractor Lashing, Box Packaging Services, and more.
+            </p>
+
+            <!-- Stats -->
+            <div class="flex flex-wrap gap-10 pt-6 border-t border-gray-100">
+              <div>
+                <p style="color:#F68440;" class="font-serif text-5xl font-semibold">8+</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-400 mt-1.5">Years in Business</p>
+              </div>
+              <div>
+                <p style="color:#F68440;" class="font-serif text-5xl font-semibold">20</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-400 mt-1.5">Employees</p>
+              </div>
+              <div>
+                <p style="color:#F68440;" class="font-serif text-5xl font-semibold">100%</p>
+                <p class="text-[10px] uppercase tracking-widest text-gray-400 mt-1.5">Quality Tested</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: Key Facts + Tags -->
+          <div class="space-y-7 animate-fade-up delay-400">
+
+            <!-- Key Facts Card (navy bg) -->
+            <div style="background:#171F60;" class="rounded-2xl p-7 text-white">
+              <h3 class="font-serif text-xl font-semibold mb-6 text-white">Key Facts</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                <div style="background:rgba(255,255,255,0.08); border-left:4px solid #F68440;"
+                     class="rounded-r-xl px-4 py-3">
+                  <p class="text-[10px] uppercase tracking-widest text-white/50 mb-1">Nature of Business</p>
+                  <p class="text-sm font-medium text-white leading-snug">Manufacturer · Supplier · Service Provider</p>
+                </div>
+
+                <div style="background:rgba(255,255,255,0.08); border-left:4px solid #F68440;"
+                     class="rounded-r-xl px-4 py-3">
+                  <p class="text-[10px] uppercase tracking-widest text-white/50 mb-1">Year of Establishment</p>
+                  <p class="text-sm font-medium text-white">2017</p>
+                </div>
+
+                <div style="background:rgba(255,255,255,0.08); border-left:4px solid #F68440;"
+                     class="rounded-r-xl px-4 py-3">
+                  <p class="text-[10px] uppercase tracking-widest text-white/50 mb-1">GST No.</p>
+                  <p class="text-sm font-medium text-white tracking-wide">09AARCA6409K1Z5</p>
+                </div>
+
+                <div style="background:rgba(255,255,255,0.08); border-left:4px solid #F68440;"
+                     class="rounded-r-xl px-4 py-3">
+                  <p class="text-[10px] uppercase tracking-widest text-white/50 mb-1">No. of Employees</p>
+                  <p class="text-sm font-medium text-white">20</p>
+                </div>
+
+                <div style="background:rgba(255,255,255,0.08); border-left:4px solid #F68440;"
+                     class="sm:col-span-2 rounded-r-xl px-4 py-3">
+                  <p class="text-[10px] uppercase tracking-widest text-white/50 mb-1">Location</p>
+                  <p class="text-sm font-medium text-white">Greater Noida, Uttar Pradesh, India</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Products -->
+            <div class="animate-fade-up delay-500">
+              <p style="color:#171F60;" class="text-[10px] font-medium uppercase tracking-widest opacity-50 mb-3">Our Products</p>
+              <div class="flex flex-wrap gap-2">
+                <span style="color:#171F60; border-color:#171F6040;"
+                      class="text-sm border px-3 py-1.5 rounded-lg cursor-default transition-all duration-200 hover:bg-[#171F60] hover:text-white hover:border-[#171F60]">Plywood Boxes</span>
+                <span style="color:#171F60; border-color:#171F6040;"
+                      class="text-sm border px-3 py-1.5 rounded-lg cursor-default transition-all duration-200 hover:bg-[#171F60] hover:text-white hover:border-[#171F60]">Automatic Strapping Machines</span>
+                <span style="color:#171F60; border-color:#171F6040;"
+                      class="text-sm border px-3 py-1.5 rounded-lg cursor-default transition-all duration-200 hover:bg-[#171F60] hover:text-white hover:border-[#171F60]">Packing Straps</span>
+                <span style="color:#171F60; border-color:#171F6040;"
+                      class="text-sm border px-3 py-1.5 rounded-lg cursor-default transition-all duration-200 hover:bg-[#171F60] hover:text-white hover:border-[#171F60]">Corrugated Boxes</span>
+              </div>
+            </div>
+
+            <!-- Services -->
+            <div class="animate-fade-up delay-600">
+              <p style="color:#171F60;" class="text-[10px] font-medium uppercase tracking-widest opacity-50 mb-3">Our Services</p>
+              <div class="flex flex-wrap gap-2">
+                <span style="background:#F6844015; color:#F68440; border-color:#F6844050;"
+                      class="text-sm border px-3 py-1.5 rounded-lg cursor-default transition-all duration-200 hover:bg-[#F68440] hover:text-white hover:border-[#F68440]">Car Lashing Services</span>
+                <span style="background:#F6844015; color:#F68440; border-color:#F6844050;"
+                      class="text-sm border px-3 py-1.5 rounded-lg cursor-default transition-all duration-200 hover:bg-[#F68440] hover:text-white hover:border-[#F68440]">Wire Rope Tractor Lashing</span>
+                <span style="background:#F6844015; color:#F68440; border-color:#F6844050;"
+                      class="text-sm border px-3 py-1.5 rounded-lg cursor-default transition-all duration-200 hover:bg-[#F68440] hover:text-white hover:border-[#F68440]">Box Packaging Services</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Footer strip -->
+        <div class="mt-16 pt-6 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4 animate-fade-up delay-600">
+          <div class="flex items-center gap-2 text-sm text-gray-400">
+            <span style="background:#F68440;" class="w-2 h-2 rounded-full inline-block"></span>
+            Greater Noida, Uttar Pradesh, India
+          </div>
+          <p class="text-xs text-gray-300 tracking-widest uppercase">© 2025 AMR Packwell Private Limited</p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+    <script src="assets/js/formsubmit.js"></script>
+</body>
+</html>

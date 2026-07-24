@@ -1,0 +1,22 @@
+RewriteEngine On
+# 1. Redirect HTTP (non-HTTPS) to HTTPS www
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://www.amrpackwell.com/$1 [R=301,L]
+# 2. Redirect non-www HTTPS to www HTTPS
+RewriteCond %{HTTP_HOST} !^www\.amrpackwell.com$ [NC]
+RewriteRule ^(.*)$ https://www.amrpackwell.com/$1 [R=301,L]
+# 3. Remove .html extension — header.html footer.php skip
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+RewriteCond %{REQUEST_URI} !^/(header|footer)\.html$ [NC]
+RewriteRule ^(.+)\.html$ https://www.amrpackwell.com/$1 [R=301,L]
+# 4. Internally rewrite extensionless URLs to .html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/.]+)/?$ $1.html [L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php82” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php82 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

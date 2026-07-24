@@ -1,0 +1,29 @@
+<?php
+// config/config.php
+
+
+// ---- Database ----
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'amr_packwell');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_CHARSET', 'utf8mb4');
+
+// ---- Site ----
+define('SITE_URL', 'http://localhost/amrpackwell'); // no trailing slash
+define('ADMIN_URL', SITE_URL . '/admin');
+define('UPLOAD_DIR', __DIR__ . '/../uploads');      // absolute filesystem path
+define('UPLOAD_URL', SITE_URL . '/php-admin/uploads');       // public URL to uploads folder
+
+// ---- Session ----
+define('ADMIN_SESSION_LIFETIME', 60 * 60 * 4); // 4 hours
+
+// ---- Google reCAPTCHA (v2 checkbox) ----
+define('RECAPTCHA_SITE_KEY', '6LeHo-csAAAAAA-RUUtC-xmee5YqI4LMF75xMXuV');
+define('RECAPTCHA_SECRET_KEY', '6LeHo-csAAAAAG_k_wiYsZtptzG9BLmDTd_6cK5h');
+
+// ---- Error reporting (turn OFF display_errors on production) ----
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+date_default_timezone_set('Asia/Kolkata');

@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+     <link rel="icon" type="image/png" href="assets/images/logo/logo_140881.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/styless.css">
+    <title>Wooden Caging / Crate &ndash; AMR Packwell</title>
+      <link rel="canonical" href="https://www.amrpackwell.com/detail-wooden-caging"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/header.js"></script>
+  <script src="assets/js/footer.js"></script>
+  
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&family=Bebas+Neue&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        bebas: ['Bebas Neue', 'cursive'],
+                    },
+                    colors: {
+                        orange: { DEFAULT: '#F15A24', light: '#FF7A45', pale: '#FFF3EE', dark: '#c94412' },
+                        navy: { DEFAULT: '#1A2B4A', dark: '#0f1c30', light: '#243660', muted: '#2d3f5f' },
+                    },
+                    boxShadow: {
+                        card: '0 8px 40px rgba(26,43,74,0.10)',
+                        'card-lg': '0 20px 60px rgba(26,43,74,0.16)',
+                        orange: '0 8px 28px rgba(241,90,36,0.40)',
+                    },
+                    keyframes: {
+                        fadeUp: { from: { opacity: '0', transform: 'translateY(40px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+                        floatY: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-14px)' } },
+                        rotateSlow: { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(360deg)' } },
+                        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+                        scaleIn: { from: { opacity: '0', transform: 'scale(0.85)' }, to: { opacity: '1', transform: 'scale(1)' } },
+                        pulseRing: { '0%': { transform: 'scale(1)', opacity: '0.8' }, '100%': { transform: 'scale(1.6)', opacity: '0' } },
+                    },
+                    animation: {
+                        fadeUp: 'fadeUp 0.7s cubic-bezier(.4,0,.2,1) both',
+                        floatY: 'floatY 4s ease-in-out infinite',
+                        rotateSlow: 'rotateSlow 20s linear infinite',
+                        shimmer: 'shimmer 2.5s linear infinite',
+                        scaleIn: 'scaleIn 0.6s cubic-bezier(.34,1.56,.64,1) both',
+                        pulseRing: 'pulseRing 2s cubic-bezier(.4,0,.2,1) infinite',
+                    },
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            --orange: #F15A24;
+            --navy: #1A2B4A;
+        }
+
+        .reveal {
+            opacity: 0;
+            transition: opacity .75s cubic-bezier(.4, 0, .2, 1), transform .75s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .reveal.from-left {
+            transform: translateX(-70px);
+        }
+
+        .reveal.from-right {
+            transform: translateX(70px);
+        }
+
+        .reveal.from-bottom {
+            transform: translateY(55px);
+        }
+
+        .reveal.revealed {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        .delay-1 {
+            transition-delay: .10s;
+        }
+
+        .delay-2 {
+            transition-delay: .22s;
+        }
+
+        .delay-3 {
+            transition-delay: .34s;
+        }
+
+        .delay-4 {
+            transition-delay: .46s;
+        }
+
+        .shine-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shine-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s linear infinite;
+        }
+
+        .grad-text {
+            background: linear-gradient(135deg, #F15A24, #FF7A45, #f9a96e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-line::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+
+        .accent-line-center::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            border-radius: 3px;
+            margin: 10px auto 0;
+        }
+
+        .grid-overlay {
+            background-image:
+                repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 64px),
+                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 64px);
+        }
+
+        .float-badge {
+            animation: floatY 4s ease-in-out infinite;
+        }
+
+        .float-badge-delay {
+            animation: floatY 4s 1s ease-in-out infinite;
+        }
+
+        .pulse-dot {
+            position: relative;
+        }
+
+        .pulse-dot::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border: 2px solid #F15A24;
+            border-radius: 50%;
+            animation: pulseRing 2s cubic-bezier(.4, 0, .2, 1) infinite;
+        }
+
+        .gst-badge {
+            background: linear-gradient(135deg, #1A2B4A, #243660);
+            border: 1px solid rgba(241, 90, 36, 0.4);
+        }
+
+        .img-zoom {
+            overflow: hidden;
+        }
+
+        .img-zoom img {
+            transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .img-zoom:hover img {
+            transform: scale(1.06);
+        }
+
+        .thumb {
+            border: 2px solid transparent;
+            transition: border-color .2s;
+            cursor: pointer;
+        }
+
+        .thumb.active,
+        .thumb:hover {
+            border-color: #F15A24;
+        }
+
+        .qty-btn {
+            transition: all .2s;
+        }
+
+        .qty-btn:hover {
+            background: #F15A24;
+            color: #fff;
+        }
+
+        .prod-card {
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .prod-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(26, 43, 74, 0.14);
+        }
+
+        .card-bar-top::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s ease;
+        }
+
+        .prod-card:hover .card-bar-top::before {
+            transform: scaleX(1);
+        }
+
+        .tab-btn {
+            transition: all .2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-btn.active {
+            border-color: #F15A24;
+            color: #F15A24;
+        }
+
+        .why-card {
+            transition: box-shadow .3s, transform .3s;
+        }
+
+        .why-card:hover {
+            box-shadow: 0 0 0 2px #F15A24, 0 20px 50px rgba(241, 90, 36, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .faq-question {
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            display: none;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .size-table th {
+            background: #1A2B4A;
+            color: white;
+        }
+
+        .size-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .size-table tr:hover {
+            background: #FFF3EE;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #F15A24;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F5F4F0] text-gray-900 font-poppins scroll-smooth">
+
+    <div id="navbar-header"></div>
+    <script>
+        fetch('header.html').then(r => r.text()).then(data => {
+            const c = document.getElementById('navbar-header');
+            c.innerHTML = data;
+            window.addEventListener('scroll', () => {
+                const h = c.querySelector('.navbar-header');
+                if (h) h.classList.toggle('is-sticky-active', window.scrollY > 50);
+            });
+        }).catch(() => { });
+    </script>
+
+    <!-- BREADCRUMB -->
+    <div class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-3">
+            <p class="font-poppins text-[11px] tracking-[2px] uppercase text-gray-400">
+                <a href="#" class="hover:text-orange transition-colors">Home</a>
+                &nbsp;/&nbsp;
+                <a href="#" class="hover:text-orange transition-colors">Products</a>
+                &nbsp;/&nbsp;
+                <a href="wooden-box-crate.html" class="hover:text-orange transition-colors">Wooden Box / Crate</a>
+                &nbsp;/&nbsp;
+                <span class="text-orange font-semibold">Wooden Caging / Crate</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- PRODUCT DETAIL SECTION -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <!-- LEFT: Image Gallery -->
+            <div class="reveal from-left lg:sticky lg:top-24 lg:self-start">
+                <div class="img-zoom rounded-2xl overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-sky-100 relative shadow-card mb-4"
+                    style="height:420px;">
+                    <img id="main-img" src="assets/images/product-img/wooden.png" alt="Wooden Caging / Crate"
+                        class="w-full h-full object-cover"
+                        onerror="this.style.display='none'; document.getElementById('img-placeholder').style.display='flex';" />
+                    <div id="img-placeholder" class="absolute inset-0 items-center justify-center"
+                        style="display:none;">
+                        <svg class="w-48 h-48 opacity-20 text-sky-700" viewBox="0 0 80 80" fill="currentColor">
+                            <rect x="10" y="10" width="14" height="60" rx="2" />
+                            <rect x="10" y="10" width="60" height="14" rx="2" />
+                        </svg>
+                    </div>
+                    <div
+                        class="absolute top-4 left-4 w-10 h-10 border-2 border-orange/20 rounded-full float-badge pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute bottom-6 right-8 w-6 h-6 border-2 border-orange/15 rounded float-badge-delay pointer-events-none">
+                    </div>
+                    <div class="absolute top-4 right-4">
+                        <span
+                            class="font-montserrat font-extrabold text-[9px] tracking-[2px] uppercase bg-navy text-white px-3 py-1.5 rounded-full">Crate
+                            Wood</span>
+                    </div>
+                    <div class="absolute bottom-4 left-4">
+                        <span
+                            class="font-montserrat font-extrabold text-[9px] tracking-[2px] uppercase bg-orange text-white px-3 py-1.5 rounded-full shadow-orange">Custom
+                            Build</span>
+                    </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="flex gap-3">
+                    <div class="thumb active rounded-xl overflow-hidden bg-gradient-to-br from-sky-50 to-blue-100 w-20 h-20 flex items-center justify-center"
+                        data-src="assets/images/product-img/wooden.png" onclick="switchThumb(this)">
+                        <img src="assets/images/product-img/wooden.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="thumb rounded-xl overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100 w-20 h-20 flex items-center justify-center"
+                        data-src="assets/images/product-img/wooden.png" onclick="switchThumb(this)">
+                        <img src="assets/images/product-img/wooden.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                    <div class="thumb rounded-xl overflow-hidden bg-gradient-to-br from-amber-100 to-yellow-50 w-20 h-20 flex items-center justify-center"
+                        data-src="assets/images/product-img/wooden.png" onclick="switchThumb(this)">
+                        <img src="assets/images/product-img/wooden.png" alt="" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="mt-5 flex flex-wrap gap-2">
+                    <div
+                        class="flex items-center gap-2 bg-white border border-gray-100 px-3 py-2 rounded-xl shadow-card">
+                        <span class="text-green-500 text-base">&#10004;</span>
+                        <span class="font-montserrat font-bold text-[10px] tracking-widest uppercase text-gray-600">ISO
+                            Compliant</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 bg-white border border-gray-100 px-3 py-2 rounded-xl shadow-card">
+                        <span class="text-green-500 text-base">&#10004;</span>
+                        <span class="font-montserrat font-bold text-[10px] tracking-widest uppercase text-gray-600">GST
+                            Registered</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 bg-white border border-gray-100 px-3 py-2 rounded-xl shadow-card">
+                        <span class="text-green-500 text-base">&#10004;</span>
+                        <span class="font-montserrat font-bold text-[10px] tracking-widest uppercase text-gray-600">100%
+                            Recyclable</span>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 bg-white border border-gray-100 px-3 py-2 rounded-xl shadow-card">
+                        <span class="text-green-500 text-base">&#10004;</span>
+                        <span class="font-montserrat font-bold text-[10px] tracking-widest uppercase text-gray-600">PAN
+                            India Supply</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Product Info -->
+            <div class="reveal from-right">
+                <div
+                    class="inline-flex items-center gap-2 bg-orange/10 border border-orange/20 px-4 py-1.5 rounded-full mb-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange pulse-dot"></span>
+                    <span class="font-montserrat font-bold text-[10px] tracking-[3px] uppercase text-orange">Wooden
+                        Pallets</span>
+                </div>
+
+                <h1 class="font-bebas text-5xl lg:text-6xl uppercase text-navy tracking-wide leading-tight mb-1">
+                    Wooden Caging<br /><span class="grad-text">/ Crate</span>
+                </h1>
+
+                <!-- Price -->
+                <div class="flex items-end gap-3 mt-4 mb-5">
+                    <div>
+                        <p class="font-poppins text-[11px] text-gray-400 uppercase tracking-widest mb-1">Starting Price
+                        </p>
+                        <div class="flex items-baseline gap-1.5">
+                            <span class="font-bebas text-5xl grad-text">&#8377;200</span>
+                            <span class="font-montserrat font-bold text-sm text-gray-500">INR / Piece</span>
+                        </div>
+                    </div>
+                    <div class="ml-4 pl-4 border-l border-gray-200">
+                        <p class="font-poppins text-[11px] text-gray-400 uppercase tracking-widest mb-1">MOQ</p>
+                        <span class="font-bebas text-3xl text-navy">100</span>
+                        <span class="font-montserrat font-bold text-xs text-gray-500 ml-1">Pieces</span>
+                    </div>
+                    <div class="ml-4 pl-4 border-l border-gray-200">
+                        <p class="font-poppins text-[11px] text-gray-400 uppercase tracking-widest mb-1">Delivery</p>
+                        <span class="font-bebas text-3xl text-navy">5-10</span>
+                        <span class="font-montserrat font-bold text-xs text-gray-500 ml-1">Days</span>
+                    </div>
+                </div>
+
+                <!-- Specification table -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden mb-5">
+                    <div class="bg-navy px-5 py-3 flex items-center gap-2">
+                        <span
+                            class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-white">Specifications</span>
+                    </div>
+                    <div class="divide-y divide-gray-50">
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Material</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Wood</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Product Type</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Wooden Caging / Crate</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Size</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Natural Wood</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Color</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Different Available</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Dynamic Load</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Forklift/loading friendly
+                                (Different Available)</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Load Capacity</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Forklift/loading
+                                friendly</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Entry Type</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">2 Way / 4 Way Options</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Surface Finish</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Industrial timber
+                                construction</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Usage</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Machine parts, fragile goods,
+                                and export cargo</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Customization</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Built to product
+                                dimensions</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Durability</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Warranty available</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Moisture Handling</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Transit-safe wooden
+                                protection</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Supply Ability</span>
+                            <span class="font-montserrat font-bold text-sm text-orange">100 Per Month</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">GST No.</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">09AARCA6409K1Z5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden mb-5">
+                    <div class="bg-gradient-to-r from-navy to-navy-light px-5 py-3">
+                        <span
+                            class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-white">Tell
+                            Us Your Requirement</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div>
+                            <label
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Quantity
+                                (Pieces)</label>
+                            <div class="flex gap-2 flex-wrap">
+                                <button onclick="setQty(100)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">100</button>
+                                <button onclick="setQty(250)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">250</button>
+                                <button onclick="setQty(500)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">500</button>
+                                <button onclick="setQty(750)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">750</button>
+                                <button onclick="setQty(1000)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">1,000</button>
+                                <button onclick="setQty(2000)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">2,000</button>
+                            </div>
+                            <input id="qty-input" type="number" value="100" placeholder="Or enter custom quantity"
+                                class="mt-2 w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors" />
+                        </div>
+                        <div>
+                            <label
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Mobile
+                                Number</label>
+                            <div class="flex gap-2">
+                                <span
+                                    class="flex items-center px-3 bg-gray-50 border border-gray-200 rounded-lg font-montserrat font-bold text-sm text-gray-500">+91</span>
+                                <input id="mobile-input" type="tel" placeholder="Enter mobile number"
+                                    class="flex-1 border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors" />
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Additional
+                                Details</label>
+                            <textarea id="detail-input" rows="2"
+                                placeholder="Pallet size, load requirement, wood finish, stacking or dispatch details..."
+                                class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors resize-none"></textarea>
+                        </div>
+                        <button onclick="submitQuote()"
+                            class="shine-btn w-full font-montserrat font-extrabold text-[12px] tracking-widest uppercase bg-orange text-white py-3.5 rounded-xl hover:bg-orange-light transition-all duration-200 shadow-orange">
+                            Get a Price / Quote &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-1.5">
+                    <span
+                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-orange/10 text-orange px-2.5 py-1 rounded-full">Crate</span>
+                    <span
+                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-navy/10 text-navy px-2.5 py-1 rounded-full">Custom
+                        Sizes</span>
+                    <span
+                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-green-100 text-green-800 px-2.5 py-1 rounded-full">Warranty</span>
+                    <span
+                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-sky-100 text-sky-800 px-2.5 py-1 rounded-full">Custom
+                        Build</span>
+                    <span
+                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full">Heavy
+                        Duty</span>
+                    <span
+                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-violet-100 text-violet-800 px-2.5 py-1 rounded-full">Load
+                        Support</span>
+                    <span
+                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-rose-100 text-rose-800 px-2.5 py-1 rounded-full">Bestseller</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABS -->
+    <section class="max-w-7xl mx-auto px-6 pb-16">
+        <div class="flex gap-0 border-b border-gray-200 mb-8 overflow-x-auto">
+            <button
+                class="tab-btn active font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-600 whitespace-nowrap"
+                data-tab="about">About Product</button>
+            <button
+                class="tab-btn font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-500 whitespace-nowrap hover:text-orange transition-colors"
+                data-tab="sizes">Size Chart</button>
+            <button
+                class="tab-btn font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-500 whitespace-nowrap hover:text-orange transition-colors"
+                data-tab="trade">Trade Information</button>
+            <button
+                class="tab-btn font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-500 whitespace-nowrap hover:text-orange transition-colors"
+                data-tab="applications">Applications</button>
+            <button
+                class="tab-btn font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-500 whitespace-nowrap hover:text-orange transition-colors"
+                data-tab="faq">FAQ</button>
+        </div>
+
+        <!-- About Tab -->
+        <div id="tab-about" class="tab-content reveal from-bottom">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-6">About Wooden
+                        Caging / Crate</h2>
+                    <div class="space-y-4 font-poppins text-sm text-gray-600 leading-relaxed">
+                        <p>We <strong class="text-navy font-semibold">AMR PACKWELL</strong> supply sturdy
+                            <strong class="text-navy font-semibold">Wooden Caging / Crate</strong> for regular warehouse
+                            use, internal movement, dispatch preparation, and organized stacking of finished goods.
+                        </p>
+                        <p>Crate wood pallets are valued for their practical strength, workable structure, and ability
+                            to
+                            be fabricated in customized sizes. They are suitable for cartons, sacks, components, and
+                            general material handling where customers need reliable support and economical pallet
+                            supply.</p>
+                        <p>We manufacture <strong class="text-navy font-semibold">custom pine pallets, industrial
+                                wooden pallets, storage pallets, and dispatch pallets</strong> designed around customer
+                            load needs, product footprint, and handling preferences.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                            <div class="bg-sky-50 border border-sky-100 rounded-2xl p-5">
+                                <div
+                                    class="font-montserrat font-extrabold text-[11px] tracking-widest uppercase text-sky-800 mb-2">
+                                    Strong Transit Protection</div>
+                                <p class="font-poppins text-xs text-gray-500 leading-relaxed">Designed for routine
+                                    forklift and pallet-truck movement in storage and dispatch environments.</p>
+                            </div>
+                            <div class="bg-green-50 border border-green-100 rounded-2xl p-5">
+                                <div
+                                    class="font-montserrat font-extrabold text-[11px] tracking-widest uppercase text-green-800 mb-2">
+                                    Built To Size</div>
+                                <p class="font-poppins text-xs text-gray-500 leading-relaxed">Crate wood construction
+                                    gives a balanced combination of strength, handling ease, and economical supply.</p>
+                            </div>
+                            <div class="bg-amber-50 border border-amber-100 rounded-2xl p-5">
+                                <div
+                                    class="font-montserrat font-extrabold text-[11px] tracking-widest uppercase text-amber-800 mb-2">
+                                    &#128220; Loading Friendly</div>
+                                <p class="font-poppins text-xs text-gray-500 leading-relaxed">We can tailor deck size,
+                                    spacing, and pallet format around your product and storage requirement.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">&#128293;</span>
+                            </div>
+                            <div>
+                                <div
+                                    class="font-montserrat font-extrabold text-[11px] tracking-widest uppercase text-navy mb-1">
+                                    Superior Strength</div>
+                                <div class="font-poppins text-xs text-gray-400">Built for routine material movement
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">&#9851;</span>
+                            </div>
+                            <div>
+                                <div
+                                    class="font-montserrat font-extrabold text-[11px] tracking-widest uppercase text-navy mb-1">
+                                    Wood Build</div>
+                                <div class="font-poppins text-xs text-gray-400">Natural wood pallet construction</div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">&#128220;</span>
+                            </div>
+                            <div>
+                                <div
+                                    class="font-montserrat font-extrabold text-[11px] tracking-widest uppercase text-navy mb-1">
+                                    Loading Friendly</div>
+                                <div class="font-poppins text-xs text-gray-400">Produced to match your load pattern
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">&#128176;</span>
+                            </div>
+                            <div>
+                                <div
+                                    class="font-montserrat font-extrabold text-[11px] tracking-widest uppercase text-navy mb-1">
+                                    Bulk Pricing</div>
+                                <div class="font-poppins text-xs text-gray-400">Practical pricing for regular orders
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side card -->
+                <div class="space-y-4">
+                    <div class="bg-navy rounded-2xl p-6 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-orange opacity-10"></div>
+                        <div class="relative z-10">
+                            <p
+                                class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-orange mb-4">
+                                Company Info</p>
+                            <div class="space-y-3">
+                                <div>
+                                    <p
+                                        class="font-montserrat font-bold text-[10px] tracking-widest uppercase text-white/40 mb-1">
+                                        Company</p>
+                                    <p class="font-montserrat font-bold text-sm text-white">AMR Packwell</p>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-montserrat font-bold text-[10px] tracking-widest uppercase text-white/40 mb-1">
+                                        GST No.</p>
+                                    <p class="font-montserrat font-bold text-sm text-white">09AARCA6409K1Z5</p>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-montserrat font-bold text-[10px] tracking-widest uppercase text-white/40 mb-1">
+                                        Experience</p>
+                                    <p class="font-montserrat font-bold text-sm text-white">8+ Years</p>
+                                </div>
+                                <div>
+                                    <p
+                                        class="font-montserrat font-bold text-[10px] tracking-widest uppercase text-white/40 mb-1">
+                                        Supply</p>
+                                    <p class="font-montserrat font-bold text-sm text-white">PAN India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-orange/10 border border-orange/20 rounded-2xl p-5">
+                        <p class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-orange mb-3">
+                            Quick Contact</p>
+                        <p class="font-poppins text-xs text-gray-600 mb-3 leading-relaxed">Need a custom quote or have
+                            questions? Our team responds within 24 hours.</p>
+                        <button
+                            onclick="document.getElementById('inquiry-modal').style.display='flex'; document.body.style.overflow='hidden';"
+                            class="shine-btn w-full font-montserrat font-extrabold text-[11px] tracking-widest uppercase bg-orange text-white py-3 rounded-xl shadow-orange transition-all">
+                            Contact Now &rarr;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Size Chart Tab -->
+        <div id="tab-sizes" class="tab-content hidden reveal from-bottom">
+            <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-8">Size Chart &amp;
+                Dimensions</h2>
+            <p class="font-poppins text-sm text-gray-500 mb-6">Below are common pallet footprints used in warehousing
+                and dispatch. Custom sizes can be manufactured on request.</p>
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                <div class="bg-navy px-5 py-3">
+                    <span
+                        class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-white">Standard
+                        Crate Pallet Sizes and Typical Usage</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="size-table w-full text-sm">
+                        <thead>
+                            <tr>
+                                <th
+                                    class="px-6 py-3 text-left font-montserrat font-bold text-[11px] tracking-widest uppercase">
+                                    Pallet Size (mm)</th>
+                                <th
+                                    class="px-6 py-3 text-left font-montserrat font-bold text-[11px] tracking-widest uppercase">
+                                    Typical Use</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr>
+                                <td class="px-6 py-3 font-montserrat font-semibold text-navy">800 &times; 600</td>
+                                <td class="px-6 py-3 font-poppins text-gray-600">Small boxed goods and compact loads
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 font-montserrat font-semibold text-navy">900 &times; 900</td>
+                                <td class="px-6 py-3 font-poppins text-gray-600">Balanced stack loads and bagged
+                                    material</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 font-montserrat font-semibold text-navy">1000 &times; 1000</td>
+                                <td class="px-6 py-3 font-poppins text-gray-600">General warehouse and storage handling
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 font-montserrat font-semibold text-navy">1100 &times; 1100</td>
+                                <td class="px-6 py-3 font-poppins text-gray-600">Components and medium industrial packs
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 font-montserrat font-semibold text-navy">1200 &times; 800</td>
+                                <td class="px-6 py-3 font-poppins text-gray-600">Dispatch-ready palletized cartons</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 font-montserrat font-semibold text-navy">1200 &times; 1000</td>
+                                <td class="px-6 py-3 font-poppins text-gray-600">Regular warehouse and transport use
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 font-montserrat font-semibold text-navy">1200 &times; 1200</td>
+                                <td class="px-6 py-3 font-poppins text-gray-600">Bulk storage and stable square loads
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 font-montserrat font-semibold text-navy">1300 &times; 1100</td>
+                                <td class="px-6 py-3 font-poppins text-gray-600">Custom industrial support pallets</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-3 font-montserrat font-semibold text-navy">Custom Sizes</td>
+                                <td class="px-6 py-3 font-poppins text-gray-600">Produced as per load and product
+                                    dimensions</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="px-5 py-4 bg-orange/5 border-t border-orange/10">
+                    <p class="font-poppins text-xs text-gray-500">* Pallet format, wood section, and top deck
+                        arrangement can be developed according to your handling requirement.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trade Info Tab -->
+        <div id="tab-trade" class="tab-content hidden reveal from-bottom">
+            <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-8">Trade Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <div class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mb-4"><span
+                            class="text-2xl">&#128246;</span></div>
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widest uppercase text-gray-400 mb-1">
+                        Minimum Order Quantity</p>
+                    <p class="font-bebas text-4xl text-navy">100</p>
+                    <p class="font-poppins text-sm text-gray-400">Pieces</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <div class="w-12 h-12 rounded-xl bg-sky-100 flex items-center justify-center mb-4"><span
+                            class="text-2xl">&#9889;</span></div>
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widest uppercase text-gray-400 mb-1">
+                        Supply Ability</p>
+                    <p class="font-bebas text-4xl text-navy">100</p>
+                    <p class="font-poppins text-sm text-gray-400">Per Month</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center mb-4"><span
+                            class="text-2xl">&#128657;</span></div>
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widest uppercase text-gray-400 mb-1">
+                        Delivery Time</p>
+                    <p class="font-bebas text-4xl text-navy">5-10</p>
+                    <p class="font-poppins text-sm text-gray-400">Business Days</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <div class="w-12 h-12 rounded-xl bg-amber-100 flex items-center justify-center mb-4"><span
+                            class="text-2xl">&#128181;</span></div>
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widest uppercase text-gray-400 mb-1">
+                        Price Range</p>
+                    <p class="font-bebas text-4xl grad-text">&#8377;200+</p>
+                    <p class="font-poppins text-sm text-gray-400">INR per piece depending on size and build</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <div class="w-12 h-12 rounded-xl bg-violet-100 flex items-center justify-center mb-4"><span
+                            class="text-2xl">&#127758;</span></div>
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widest uppercase text-gray-400 mb-1">
+                        Coverage</p>
+                    <p class="font-bebas text-4xl text-navy">PAN</p>
+                    <p class="font-poppins text-sm text-gray-400">India &mdash; All States</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <div class="w-12 h-12 rounded-xl bg-rose-100 flex items-center justify-center mb-4"><span
+                            class="text-2xl">&#127981;</span></div>
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widest uppercase text-gray-400 mb-1">
+                        Production</p>
+                    <p class="font-bebas text-4xl text-navy">8+</p>
+                    <p class="font-poppins text-sm text-gray-400">Years serving industrial packaging clients</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Applications Tab -->
+        <div id="tab-applications" class="tab-content hidden reveal from-bottom">
+            <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-8">Applications &amp; Use
+                Cases</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card text-center hover:border-orange transition-colors">
+                    <div class="text-3xl mb-3">&#128246;</div>
+                    <p class="font-montserrat font-bold text-[11px] tracking-widest uppercase text-navy">Custom Build
+                        Dispatch</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card text-center hover:border-orange transition-colors">
+                    <div class="text-3xl mb-3">&#128674;</div>
+                    <p class="font-montserrat font-bold text-[11px] tracking-widest uppercase text-navy">Shipping &amp;
+                        Export</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card text-center hover:border-orange transition-colors">
+                    <div class="text-3xl mb-3">&#128230;</div>
+                    <p class="font-montserrat font-bold text-[11px] tracking-widest uppercase text-navy">Cartonized
+                        Loads</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card text-center hover:border-orange transition-colors">
+                    <div class="text-3xl mb-3">&#129704;</div>
+                    <p class="font-montserrat font-bold text-[11px] tracking-widest uppercase text-navy">Furniture Units
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card text-center hover:border-orange transition-colors">
+                    <div class="text-3xl mb-3">&#128268;</div>
+                    <p class="font-montserrat font-bold text-[11px] tracking-widest uppercase text-navy">Hardware Goods
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card text-center hover:border-orange transition-colors">
+                    <div class="text-3xl mb-3">&#128187;</div>
+                    <p class="font-montserrat font-bold text-[11px] tracking-widest uppercase text-navy">Electronics</p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card text-center hover:border-orange transition-colors">
+                    <div class="text-3xl mb-3">&#9881;</div>
+                    <p class="font-montserrat font-bold text-[11px] tracking-widest uppercase text-navy">Machinery Parts
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card text-center hover:border-orange transition-colors">
+                    <div class="text-3xl mb-3">&#127981;</div>
+                    <p class="font-montserrat font-bold text-[11px] tracking-widest uppercase text-navy">Custom Build
+                        Storage</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Tab -->
+        <div id="tab-faq" class="tab-content hidden reveal from-bottom">
+            <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-8">Frequently Asked
+                Questions</h2>
+            <div class="max-w-3xl space-y-2">
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                    <div class="faq-question flex items-center justify-between px-6 py-4" onclick="toggleFaq(this)">
+                        <span class="font-montserrat font-bold text-sm text-navy">Why are pine wooden pallets commonly
+                            used in warehouses?</span>
+                        <span class="faq-icon text-orange text-xl font-bold ml-4">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="font-poppins text-sm text-gray-500 leading-relaxed">Crate wooden pallets provide
+                            dependable support for routine storage and movement of cartons, bags, and components. They
+                            are widely used because they are practical, durable, and easy to customize.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                    <div class="faq-question flex items-center justify-between px-6 py-4" onclick="toggleFaq(this)">
+                        <span class="font-montserrat font-bold text-sm text-navy">Can pine pallets be customized in size
+                            and design?</span>
+                        <span class="faq-icon text-orange text-xl font-bold ml-4">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="font-poppins text-sm text-gray-500 leading-relaxed">Yes. We can develop pine pallets
+                            in customized dimensions, runner patterns, and deck structures to suit your product size,
+                            stacking height, and handling flow.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                    <div class="faq-question flex items-center justify-between px-6 py-4" onclick="toggleFaq(this)">
+                        <span class="font-montserrat font-bold text-sm text-navy">What load details should be shared
+                            before ordering?</span>
+                        <span class="faq-icon text-orange text-xl font-bold ml-4">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="font-poppins text-sm text-gray-500 leading-relaxed">Please share pallet size, product
+                            weight, load per pallet, stack height, and whether the pallets will be used for storage,
+                            dispatch, or transport.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                    <div class="faq-question flex items-center justify-between px-6 py-4" onclick="toggleFaq(this)">
+                        <span class="font-montserrat font-bold text-sm text-navy">What are the common applications of
+                            pine wooden pallets?</span>
+                        <span class="faq-icon text-orange text-xl font-bold ml-4">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="font-poppins text-sm text-gray-500 leading-relaxed">They are used in warehouses,
+                            manufacturing units, dispatch areas, general material movement, and organized floor storage
+                            of finished goods and components.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                    <div class="faq-question flex items-center justify-between px-6 py-4" onclick="toggleFaq(this)">
+                        <span class="font-montserrat font-bold text-sm text-navy">Are pine pallets suitable for regular
+                            movement cycles?</span>
+                        <span class="faq-icon text-orange text-xl font-bold ml-4">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="font-poppins text-sm text-gray-500 leading-relaxed">Yes. When designed according to
+                            the intended load and used under proper handling conditions, pine pallets perform well in
+                            routine movement and storage operations.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                    <div class="faq-question flex items-center justify-between px-6 py-4" onclick="toggleFaq(this)">
+                        <span class="font-montserrat font-bold text-sm text-navy">How quickly can pine wooden pallets be
+                            supplied?</span>
+                        <span class="faq-icon text-orange text-xl font-bold ml-4">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="font-poppins text-sm text-gray-500 leading-relaxed">Supply time depends on quantity,
+                            size, and customization level. Standard lead times are usually discussed based on production
+                            planning and destination.</p>
+                    </div>
+                </div>
+                <div class="faq-item bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden">
+                    <div class="faq-question flex items-center justify-between px-6 py-4" onclick="toggleFaq(this)">
+                        <span class="font-montserrat font-bold text-sm text-navy">Do you deliver pine wooden pallets
+                            across India?</span>
+                        <span class="faq-icon text-orange text-xl font-bold ml-4">+</span>
+                    </div>
+                    <div class="faq-answer px-6 pb-5">
+                        <p class="font-poppins text-sm text-gray-500 leading-relaxed">Yes. AMR Packwell supports PAN
+                            India dispatch for wooden pallet requirements based on order quantity and delivery location.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="bg-navy py-16 relative overflow-hidden">
+        <div class="absolute inset-0 grid-overlay pointer-events-none opacity-60"></div>
+        <div
+            class="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-orange opacity-[0.05] blur-3xl pointer-events-none">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-10 reveal from-bottom">
+                <h2 class="font-bebas text-4xl uppercase text-white tracking-wide accent-line-center">Why Choose AMR
+                    Packwell?</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                <div
+                    class="why-card reveal from-bottom delay-1 text-center p-6 border border-white/[0.08] rounded-2xl cursor-default group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-orange/20 transition-colors">
+                        <span class="text-2xl">&#128293;</span></div>
+                    <div class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">
+                        Superior Strength</div>
+                    <div class="font-poppins text-[11px] text-white/35">Resists heavy loads</div>
+                </div>
+                <div
+                    class="why-card reveal from-bottom delay-2 text-center p-6 border border-white/[0.08] rounded-2xl cursor-default group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-orange/20 transition-colors">
+                        <span class="text-2xl">&#9851;</span></div>
+                    <div class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">Eco
+                        Friendly</div>
+                    <div class="font-poppins text-[11px] text-white/35">100% recyclable</div>
+                </div>
+                <div
+                    class="why-card reveal from-bottom delay-3 text-center p-6 border border-white/[0.08] rounded-2xl cursor-default group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-orange/20 transition-colors">
+                        <span class="text-2xl">&#128220;</span></div>
+                    <div class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">
+                        Loading Friendly</div>
+                    <div class="font-poppins text-[11px] text-white/35">Made to measure</div>
+                </div>
+                <div
+                    class="why-card reveal from-bottom delay-4 text-center p-6 border border-white/[0.08] rounded-2xl cursor-default group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-orange/20 transition-colors">
+                        <span class="text-2xl">&#128176;</span></div>
+                    <div class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">
+                        Cost Effective</div>
+                    <div class="font-poppins text-[11px] text-white/35">Bulk discounts</div>
+                </div>
+                <div
+                    class="why-card reveal from-bottom delay-4 text-center p-6 border border-white/[0.08] rounded-2xl cursor-default group">
+                    <div
+                        class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-3 group-hover:bg-orange/20 transition-colors">
+                        <span class="text-2xl">&#128657;</span></div>
+                    <div class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">PAN
+                        India</div>
+                    <div class="font-poppins text-[11px] text-white/35">Fast delivery</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MORE PRODUCTS -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="reveal from-bottom mb-10">
+            <p class="font-montserrat font-bold text-[10px] tracking-[3px] uppercase text-orange mb-1">Related Products
+            </p>
+            <h2 class="font-bebas text-5xl uppercase text-navy tracking-wide accent-line">More in Wooden Box / Crate
+            </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+            <!-- Card 1 -->
+            <div
+                class="prod-card card-bar-top reveal from-bottom delay-1 bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden relative">
+                <div
+                    class="h-40 bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute top-2 right-2"><span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-amber-700 text-white px-2 py-1 rounded-full">Ply</span>
+                    </div>
+                    <img src="assets/images/product-img/plywood-pallets.webp" alt="Plywood Boxes"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-montserrat font-extrabold text-sm uppercase text-navy tracking-tight mb-2">Plywood
+                        Pallets</h3>
+                    <div class="flex justify-between text-xs mb-1">
+                        <span class="font-poppins text-gray-400">Price</span>
+                        <span class="font-montserrat font-bold text-orange">&#8377;2000 / Piece</span>
+                    </div>
+                    <div class="flex justify-between text-xs mb-3">
+                        <span class="font-poppins text-gray-400">MOQ</span>
+                        <span class="font-montserrat font-semibold text-navy">100 pcs</span>
+                    </div>
+                    <div class="flex gap-1 mb-3 flex-wrap">
+                        <span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-orange/10 text-orange px-2 py-0.5 rounded-full">Plywood</span>
+                        <span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-navy/10 text-navy px-2 py-0.5 rounded-full">Export</span>
+                    </div>
+                    <a href="detail-plywood-pallets.html"
+                        class="block w-full text-center font-montserrat font-bold text-[10px] tracking-widest uppercase bg-navy text-white py-2.5 rounded-lg hover:bg-orange transition-all duration-200">View
+                        Details</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="prod-card card-bar-top reveal from-bottom delay-2 bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden relative">
+                <div
+                    class="h-40 bg-gradient-to-br from-amber-50 to-yellow-100 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute top-2 right-2"><span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-amber-700 text-white px-2 py-1 rounded-full">Deck</span>
+                    </div>
+                    <img src="assets/images/product-img/wooden.png" alt="Wooden Packaging"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-montserrat font-extrabold text-sm uppercase text-navy tracking-tight mb-2">Wooden
+                        Pallets</h3>
+                    <div class="flex justify-between text-xs mb-1">
+                        <span class="font-poppins text-gray-400">Price</span>
+                        <span class="font-montserrat font-bold text-orange">Custom Quote</span>
+                    </div>
+                    <div class="flex justify-between text-xs mb-3">
+                        <span class="font-poppins text-gray-400">MOQ</span>
+                        <span class="font-montserrat font-semibold text-navy">As required</span>
+                    </div>
+                    <div class="flex gap-1 mb-3 flex-wrap">
+                        <span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-orange/10 text-orange px-2 py-0.5 rounded-full">Custom
+                            Build</span>
+                        <span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-navy/10 text-navy px-2 py-0.5 rounded-full">Industrial</span>
+                    </div>
+                    <a href="wooden-pallets.html"
+                        class="block w-full text-center font-montserrat font-bold text-[10px] tracking-widest uppercase bg-navy text-white py-2.5 rounded-lg hover:bg-orange transition-all duration-200">View
+                        Range</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="prod-card card-bar-top reveal from-bottom delay-3 bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden relative">
+                <div
+                    class="h-40 bg-gradient-to-br from-rose-50 to-red-100 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute top-2 right-2"><span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-red-600 text-white px-2 py-1 rounded-full">Export</span>
+                    </div>
+                    <img src="assets/images/product-img/plywood-pallets-2.webp" alt="Eucalyptus Wooden Box"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-montserrat font-extrabold text-sm uppercase text-navy tracking-tight mb-2">
+                        Eucalyptus Wooden Box</h3>
+                    <div class="flex justify-between text-xs mb-1">
+                        <span class="font-poppins text-gray-400">Price</span>
+                        <span class="font-montserrat font-bold text-orange">&#8377;2000+ / Piece</span>
+                    </div>
+                    <div class="flex justify-between text-xs mb-3">
+                        <span class="font-poppins text-gray-400">MOQ</span>
+                        <span class="font-montserrat font-semibold text-navy">100 pcs</span>
+                    </div>
+                    <div class="flex gap-1 mb-3 flex-wrap">
+                        <span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-red-100 text-red-800 px-2 py-0.5 rounded-full">Heavy
+                            Duty</span>
+                        <span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-navy/10 text-navy px-2 py-0.5 rounded-full">Export</span>
+                    </div>
+                    <button
+                        onclick="document.getElementById('inquiry-modal').style.display='flex'; document.getElementById('f-product-modal').value='Eucalyptus Wooden Box'; document.body.style.overflow='hidden';"
+                        class="w-full font-montserrat font-bold text-[10px] tracking-widest uppercase bg-navy text-white py-2.5 rounded-lg hover:bg-orange transition-all duration-200">
+                        Get a Price/Quote
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                class="prod-card card-bar-top reveal from-bottom delay-4 bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden relative">
+                <div
+                    class="h-40 bg-gradient-to-br from-emerald-50 to-green-100 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute top-2 right-2"><span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-emerald-700 text-white px-2 py-1 rounded-full">Crate</span>
+                    </div>
+                    <img src="assets/images/product-img/wooden.png" alt="Wooden Caging / Crate"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-montserrat font-extrabold text-sm uppercase text-navy tracking-tight mb-2">
+                        Industrial Crate Pallets</h3>
+                    <div class="flex justify-between text-xs mb-1">
+                        <span class="font-poppins text-gray-400">Price</span>
+                        <span class="font-montserrat font-bold text-orange">&#8377;200+ / Piece</span>
+                    </div>
+                    <div class="flex justify-between text-xs mb-3">
+                        <span class="font-poppins text-gray-400">MOQ</span>
+                        <span class="font-montserrat font-semibold text-navy">100 pcs</span>
+                    </div>
+                    <div class="flex gap-1 mb-3 flex-wrap">
+                        <span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">Load
+                            Support</span>
+                        <span
+                            class="font-montserrat font-bold text-[8px] tracking-widest uppercase bg-navy/10 text-navy px-2 py-0.5 rounded-full">Custom
+                            Build</span>
+                    </div>
+                    <button
+                        onclick="document.getElementById('inquiry-modal').style.display='flex'; document.getElementById('f-product-modal').value='Wooden Caging / Crate'; document.body.style.overflow='hidden';"
+                        class="w-full font-montserrat font-bold text-[10px] tracking-widest uppercase bg-navy text-white py-2.5 rounded-lg hover:bg-orange transition-all duration-200">
+                        Get a Price/Quote
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-orange py-20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 32px)">
+        </div>
+        <div
+            class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white opacity-[0.06] blur-3xl pointer-events-none">
+        </div>
+        <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+            <div class="reveal from-bottom">
+                <p class="font-montserrat font-bold text-[10px] tracking-[4px] uppercase text-white/60 mb-3">Ready to
+                    Order?</p>
+                <h2 class="font-bebas text-5xl lg:text-6xl uppercase text-white tracking-wide mb-4">Get a Custom Quote
+                    Today</h2>
+                <p class="font-poppins font-light text-white/75 text-sm mb-10 max-w-lg mx-auto leading-relaxed">Tell us
+                    your dimensions, volume, and requirements &mdash; we'll respond within 24 hours with competitive
+                    pricing.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button
+                        onclick="document.getElementById('inquiry-modal').style.display='flex'; document.body.style.overflow='hidden';"
+                        class="shine-btn font-montserrat font-extrabold text-[12px] tracking-widest uppercase bg-white text-orange px-10 py-4 rounded hover:bg-navy hover:text-white transition-all duration-300 shadow-card-lg">
+                        Send Inquiry Now
+                    </button>
+                    <button
+                        class="font-montserrat font-extrabold text-[12px] tracking-widest uppercase border-2 border-white text-white px-10 py-4 rounded hover:bg-white hover:text-orange transition-all duration-300">
+                        &#128222; Call Us Today
+                    </button>
+                </div>
+                <div class="inline-flex items-center gap-2.5 gst-badge px-5 py-2.5 rounded-full mt-8">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange inline-block pulse-dot"></span>
+                    <span class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-white/70">GST
+                        Registered &nbsp;&middot;&nbsp; ISO Compliant &nbsp;&middot;&nbsp; PAN India Delivery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INQUIRY MODAL -->
+    <div id="inquiry-modal"
+        class="fixed inset-0 bg-navy-dark/80 z-[999] items-center justify-center p-4 backdrop-blur-sm"
+        style="display:none">
+        <div class="bg-white rounded-2xl w-full max-w-md shadow-card-lg overflow-hidden animate-scaleIn">
+            <div class="bg-navy px-6 py-5 flex items-center justify-between">
+                <div>
+                    <h3 class="font-montserrat font-black text-lg uppercase text-white tracking-tight">Send Inquiry</h3>
+                    <p class="font-poppins text-[11px] text-white/40 mt-0.5">We respond within 24 hours</p>
+                </div>
+                <button
+                    onclick="document.getElementById('inquiry-modal').style.display='none'; document.body.style.overflow='';"
+                    class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/60 hover:text-white transition-all">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6 space-y-4">
+                <div>
+                    <label
+                        class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Your
+                        Name *</label>
+                    <input id="f-name-modal" type="text" placeholder="e.g. Rajesh Kumar"
+                        class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors" />
+                </div>
+                <div>
+                    <label
+                        class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Mobile
+                        / Email *</label>
+                    <input id="f-contact-modal" type="text" placeholder="+91 98765 43210"
+                        class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors" />
+                </div>
+                <div>
+                    <label
+                        class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Product</label>
+                    <input id="f-product-modal" type="text" value="Wooden Caging / Crate" readonly
+                        class="w-full border border-gray-100 bg-gray-50 rounded-lg px-4 py-2.5 text-sm text-gray-400 font-poppins outline-none" />
+                </div>
+                <div>
+                    <label
+                        class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Requirements</label>
+                    <textarea rows="3" placeholder="Quantity, dimensions, coating, special requirements..."
+                        class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors resize-none"></textarea>
+                </div>
+                <button onclick="submitModalInquiry()"
+                    class="shine-btn w-full font-montserrat font-black text-[12px] tracking-widest uppercase bg-orange text-white py-3.5 rounded-lg hover:bg-orange-light transition-all shadow-orange">
+                    Submit Inquiry &rarr;
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-bottom"></div>
+    <script>fetch('footer.php').then(r => r.text()).then(d => { document.getElementById('footer-bottom').innerHTML = d; }).catch(() => { });</script>
+
+    <script>
+        // Thumbnail image switcher
+        function switchThumb(el) {
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+            const src = el.dataset.src;
+            const mainImg = document.getElementById('main-img');
+            const placeholder = document.getElementById('img-placeholder');
+            if (src && src !== '') {
+                mainImg.style.opacity = '0';
+                mainImg.style.transition = 'opacity 0.3s ease';
+                setTimeout(() => {
+                    mainImg.src = src;
+                    mainImg.style.display = 'block';
+                    placeholder.style.display = 'none';
+                    mainImg.onload = () => { mainImg.style.opacity = '1'; };
+                    mainImg.onerror = () => { mainImg.style.display = 'none'; placeholder.style.display = 'flex'; };
+                }, 150);
+            } else {
+                mainImg.style.opacity = '0';
+                setTimeout(() => { mainImg.style.display = 'none'; placeholder.style.display = 'flex'; }, 150);
+            }
+        }
+
+        // Scroll reveal
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Tab system
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+                btn.classList.add('active');
+                const target = document.getElementById('tab-' + btn.dataset.tab);
+                target.classList.remove('hidden');
+                setTimeout(() => target.classList.add('revealed'), 10);
+            });
+        });
+
+        // Quantity buttons
+        function setQty(val) {
+            document.getElementById('qty-input').value = val;
+            document.querySelectorAll('.qty-btn').forEach(b => {
+                b.classList.toggle('bg-orange', parseInt(b.textContent.replace(',', '')) === val);
+                b.classList.toggle('text-white', parseInt(b.textContent.replace(',', '')) === val);
+                b.classList.toggle('border-orange', parseInt(b.textContent.replace(',', '')) === val);
+            });
+        }
+
+        // FAQ accordion
+        function toggleFaq(el) {
+            const item = el.closest('.faq-item');
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+
+        // Quote form submit
+        function submitQuote() {
+            const mobile = document.getElementById('mobile-input').value.trim();
+            if (!mobile) { alert('Please enter your mobile number.'); return; }
+            showToast('\u2714 Quote request sent! We\'ll contact you within 24 hours.');
+        }
+
+        // Modal submit
+        function submitModalInquiry() {
+            const name = document.getElementById('f-name-modal').value.trim();
+            const contact = document.getElementById('f-contact-modal').value.trim();
+            if (!name || !contact) { alert('Please fill in your name and contact details.'); return; }
+            document.getElementById('inquiry-modal').style.display = 'none';
+            document.body.style.overflow = '';
+            showToast('\u2714 Inquiry submitted! We\'ll contact you within 24 hours.');
+        }
+
+        // Toast
+        function showToast(msg) {
+            const t = document.createElement('div');
+            t.className = 'fixed bottom-6 right-6 bg-navy text-white px-6 py-4 rounded-xl shadow-card-lg z-[9999] font-montserrat font-bold text-sm tracking-wide border-l-4 border-orange animate-scaleIn';
+            t.textContent = msg;
+            document.body.appendChild(t);
+            setTimeout(() => { t.style.transition = 'opacity .4s'; t.style.opacity = '0'; setTimeout(() => t.remove(), 400); }, 4000);
+        }
+
+        // Close modal on backdrop
+        document.getElementById('inquiry-modal').addEventListener('click', function (e) {
+            if (e.target === this) { this.style.display = 'none'; document.body.style.overflow = ''; }
+        });
+    </script>
+    <script src="assets/js/formsubmit.js"></script>
+</body>
+
+</html>

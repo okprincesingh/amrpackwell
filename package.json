@@ -1,0 +1,19 @@
+{
+  "name": "AMR",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:css": "tailwindcss -i ./assets/css/index.css -o ./assets/css/output.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.4",
+    "vite": "^6.3.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "caniuse-lite": "^1.0.30001726",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,34 @@
+
+
+    /* Ye CSS yahan zaroori hai taaki external header load hote hi fix ho jaye */
+    #navbar-header {
+      position: relative;
+      z-index: 9999;
+      /* Isse dropdown banner ke peeche nahi chupega */
+      width: 100%;
+    }
+
+    /* Sticky class jo scroll par activate hogi */
+    .is-sticky-active {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      animation: slideDown 0.4s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-100%);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    /* Padding taaki banner header ke niche na dabe */
+    body {
+      padding-top: 0;
+    }

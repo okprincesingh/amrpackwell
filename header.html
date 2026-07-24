@@ -1,0 +1,572 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600&display=swap');
+
+    :root {
+        --orange: #F15A24;
+        --orange-light: #FF7A45;
+        --orange-pale: #FFF3EE;
+        --navy: #1A2B4A;
+        --white: #ffffff;
+        --gray-line: #e8eaf0;
+        --gray-bg: #f7f8fa;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .amr-topbar {
+        background: linear-gradient(135deg, #1A2B4A, #243660);
+        color: white;
+        font-size: 12px;
+        padding: 8px 5%;
+        position: relative;
+        z-index: 1001;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: var(--transition);
+    }
+
+    .amr-topbar-left {
+        display: flex;
+        gap: 15px;
+    }
+
+    .amr-topbar-left a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .amr-topbar-marquee {
+        flex: 1;
+        overflow: hidden;
+        margin: 0 20px;
+        white-space: nowrap;
+    }
+
+    .amr-topbar-track {
+        display: inline-flex;
+        animation: marquee 25s linear infinite;
+        gap: 30px;
+    }
+
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    .navbar-header {
+        background: var(--white);
+        padding: 12px 5%;
+        border-bottom: 3px solid var(--orange);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .navbar-header.scrolled {
+        padding: 8px 5%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo img {
+        height: 70px;
+        width: auto;
+        transition: var(--transition);
+    }
+
+    .navbar-header.scrolled .logo img {
+        height: 45px;
+    }
+
+    .search-container {
+        flex: 1;
+        max-width: 350px;
+        margin: 0 20px;
+        position: relative;
+        display: none;
+    }
+
+    @media(min-width: 768px) {
+        .search-container {
+            display: block;
+        }
+    }
+
+    .search-container input {
+        width: 100%;
+        padding: 10px 15px 10px 40px;
+        border-radius: 25px;
+        border: 1px solid var(--gray-line);
+        background: var(--gray-bg);
+        outline: none;
+        font-size: 13px;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    @media(min-width: 1100px) {
+        .desktop-nav {
+            display: block;
+        }
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .nav-link {
+        text-decoration: none;
+        color: var(--navy);
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        padding: 10px 12px;
+        border-radius: 6px;
+        transition: 0.2s;
+    }
+
+    .nav-link:hover {
+        color: var(--orange);
+        background: var(--orange-pale);
+    }
+
+    .has-dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 220px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: 0.3s;
+        border-top: 3px solid var(--orange);
+        list-style: none;
+        padding: 10px 0;
+    }
+
+    .has-dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: var(--navy);
+        text-decoration: none;
+        font-size: 13px;
+    }
+
+    .dropdown-menu a:hover {
+        background: var(--orange-pale);
+        color: var(--orange);
+    }
+
+    .nav-quote-btn {
+        background: var(--orange);
+        color: white !important;
+        padding: 10px 22px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-size: 13px;
+        text-decoration: none;
+        box-shadow: 0 4px 12px rgba(241, 90, 36, 0.2);
+        transition: 0.3s;
+        display: inline-block;
+    }
+
+    .nav-quote-btn:hover {
+        background: var(--navy);
+        transform: translateY(-2px);
+    }
+
+    .menu-btn {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        color: var(--navy);
+        background: none;
+        border: none;
+    }
+
+    @media(min-width: 1100px) {
+        .menu-btn {
+            display: none;
+        }
+    }
+
+    .mobile-drawer {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
+        background: white;
+        z-index: 2000;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
+        box-shadow: 15px 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-drawer.active {
+        left: 0;
+    }
+
+    .drawer-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1999;
+        display: none;
+    }
+
+    .drawer-overlay.active {
+        display: block;
+    }
+
+    .drawer-header {
+        padding: 20px;
+        background: var(--navy);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .drawer-content {
+        padding: 15px;
+    }
+
+    .drawer-links {
+        list-style: none;
+    }
+
+    .drawer-links li {
+        border-bottom: 1px solid var(--gray-line);
+    }
+
+    .drawer-links a,
+    .drawer-links button {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 10px;
+        color: var(--navy);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        background: none;
+        border: none;
+        font-family: 'Montserrat';
+        text-align: left;
+    }
+
+    .mob-dropdown {
+        display: none;
+        background: #f9f9f9;
+        padding-left: 15px;
+        list-style: none;
+    }
+
+    .mob-dropdown.show {
+        display: block;
+    }
+
+
+    /* form css */
+    /* Modal Styles */
+    .quote-modal {
+        display: none;
+        position: fixed;
+        z-index: 3000;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .quote-modal.active {
+        display: flex;
+    }
+
+    .modal-content {
+        background: var(--white);
+        width: 100%;
+        max-width: 500px;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        animation: modalSlide 0.4s ease;
+    }
+
+    @keyframes modalSlide {
+        from {
+            transform: translateY(-30px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .modal-header {
+        background: var(--navy);
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .modal-header h2 {
+        font-family: 'Montserrat';
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .close-modal {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    .modal-body {
+        padding: 25px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: var(--navy);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px 15px;
+        border: 1px solid var(--gray-line);
+        border-radius: 8px;
+        font-family: 'Poppins';
+        outline: none;
+        transition: 0.3s;
+    }
+
+    .form-group input:focus {
+        border-color: var(--orange);
+        box-shadow: 0 0 0 3px var(--orange-pale);
+    }
+
+    .submit-btn {
+        width: 100%;
+        background: var(--orange);
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+        background: var(--navy);
+    }
+
+    .dropdown-menu .cat-heading,
+    .dropdown-menu .dropdown-link {
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        text-transform: none;
+        letter-spacing: 0;
+        color: var(--navy);
+        padding: 10px 20px;
+    }
+
+    .dropdown-menu .cat-heading:hover,
+    .dropdown-menu .dropdown-link:hover {
+        color: var(--orange);
+        background: var(--orange-pale);
+    }
+
+    .dropdown-menu .sub-link {
+        padding-left: 32px !important;
+        font-size: 12px !important;
+        opacity: .85;
+    }
+
+    .mob-dropdown .sub-link {
+        padding-left: 30px !important;
+        font-size: 13px !important;
+        opacity: .85;
+    }
+</style>
+
+<div class="amr-topbar" id="topBar">
+    <div class="amr-topbar-left">
+        <a href="tel:+918045800934">📞 +91 8045800934</a>
+        <a href="mailto:info@amrpackaging.com" class="hidden-xs">✉️ info@amrpackaging.com</a>
+    </div>
+    <div class="amr-topbar-marquee">
+        <div class="amr-topbar-track">
+            <span>🎉 <b>Free Delivery</b> above ₹5000 |</span>
+            <span>📦 <b>Custom Packaging</b> Solutions |</span>
+            <span>🏭 <b>ISO Certified</b> Unit |</span>
+            <span>🎉 <b>Free Delivery</b> above ₹5000 |</span>
+        </div>
+    </div>
+</div>
+
+<header class="navbar-header" id="mainHeader">
+    <a href="index.html" class="logo">
+        <img src="assets/images/logo/AMR-LOGO-2.png" alt="Logo">
+    </a>
+
+    <div class="search-container">
+        <span style="position:absolute; left:15px; top:10px; color:#aaa;">🔍</span>
+        <input type="text" placeholder="Search products...">
+    </div>
+
+    <nav class="desktop-nav">
+        <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about-us.html" class="nav-link">About Us</a></li>
+            <li class="has-dropdown">
+                <a href="product.php" class="nav-link">Our Products ▾</a>
+                <ul class="dropdown-menu" id="productsDropdownMenu">
+                    <li><a href="product.php">Loading…</a></li>
+                </ul>
+            </li>
+            <li><a href="blogs.php" class="nav-link">Blogs</a></li>
+            <li><a href="contact-us.php" class="nav-link">Contact Us</a></li>
+            <li><a href="javascript:void(0)" onclick="openQuoteModal()" class="nav-quote-btn">Get a Quote</a></li>
+        </ul>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleDrawer()">☰</button>
+</header>
+
+<div class="drawer-overlay" id="overlay" onclick="toggleDrawer()"></div>
+<div class="mobile-drawer" id="drawer">
+    <div class="drawer-header">
+        <span style="font-weight:800; font-size:18px;">MENU</span>
+        <button onclick="toggleDrawer()"
+            style="background:none; border:none; color:white; font-size:35px;">&times;</button>
+    </div>
+    <div class="drawer-content">
+        <ul class="drawer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li>
+                <button onclick="toggleMobDrop()">Our Products <span id="plus">+</span></button>
+                <ul class="mob-dropdown" id="mobDrop">
+                    <li><a href="product.php">Loading…</a></li>
+                </ul>
+            </li>
+            <li><a href="blogs.php">Blogs</a></li>
+            <li><a href="contact-us.php">Contact Us</a></li>
+            <li style="border:none; margin-top:20px;">
+                <button onclick="openQuoteModal()" class="nav-quote-btn" style="text-align:center; width:100%;">Get a
+                    Quote</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Get a Quote Modal -->
+<div class="quote-modal" id="quoteModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close-modal" onclick="closeQuoteModal()">&times;</span>
+            <h2>Request a Quote</h2>
+            <p style="font-size: 12px; opacity: 0.8;">Fill the form, we'll get back to you shortly.</p>
+        </div>
+        <div class="modal-body">
+            <form id="quoteForm" data-local-submit="1" action="quote-submit.php" method="post">
+                <input type="hidden" name="csrf_token" id="quoteCsrfToken" value="">
+                <div style="display:none;" aria-hidden="true">
+    <input type="text" name="hp_field" id="quoteHoneypot" tabindex="-1" autocomplete="off">
+</div>
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="full_name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" name="phone" placeholder="Enter mobile number" required>
+                </div>
+                <div class="form-group">
+                    <label>Select Product *</label>
+                    <select name="product" required>
+                        <option value="">Select a product</option>
+                        <option>Paper Edge Protector</option>
+                        <option>Corrugated Box</option>
+                        <option>Wooden Pallets</option>
+                        <option>Cardboard Tray</option>
+                        <option>Other Services</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <div id="quoteRecaptcha"></div>
+                    <label>Message / Requirements</label>
+                    <textarea rows="3" name="message" placeholder="Tell us about your needs..."></textarea>
+                </div>
+                
+                <div class="form-group" id="quoteFormMsg" style="display:none;font-size:13px;"></div>
+                <button type="submit" class="submit-btn" id="quoteSubmitBtn">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/images/logo/logo_140881.png" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/styless.css">
+ <title>Box Packaging Services in Greater Noida | AMR Packwell</title>
+       <meta name="description" content="AMR Packwell provides box packaging services for industrial goods, machinery, electronics and export products with safe and cost-effective solutions in India."/>
+       <meta name="keywords" content="Box Packaging Services in Greater Noida, Box Packaging Services"/>
+<meta name="robots" content="index, follow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="canonical" href="https://www.amrpackwell.com/box-packaging-services">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&family=Bebas+Neue&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        bebas: ['Bebas Neue', 'cursive'],
+                    },
+                    colors: {
+                        orange: { DEFAULT: '#F15A24', light: '#FF7A45', pale: '#FFF3EE', dark: '#c94412' },
+                        navy: { DEFAULT: '#1A2B4A', dark: '#0f1c30', light: '#243660', muted: '#2d3f5f' },
+                    },
+                    boxShadow: {
+                        card: '0 8px 40px rgba(26,43,74,0.10)',
+                        'card-lg': '0 20px 60px rgba(26,43,74,0.16)',
+                        orange: '0 8px 28px rgba(241,90,36,0.40)',
+                    },
+                    keyframes: {
+                        fadeUp: { from: { opacity: '0', transform: 'translateY(40px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+                        floatY: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-14px)' } },
+                        rotateSlow: { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(360deg)' } },
+                        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+                        scaleIn: { from: { opacity: '0', transform: 'scale(0.85)' }, to: { opacity: '1', transform: 'scale(1)' } },
+                        pulseRing: { '0%': { transform: 'scale(1)', opacity: '0.8' }, '100%': { transform: 'scale(1.6)', opacity: '0' } },
+                    },
+                    animation: {
+                        fadeUp: 'fadeUp 0.7s cubic-bezier(.4,0,.2,1) both',
+                        floatY: 'floatY 4s ease-in-out infinite',
+                        rotateSlow: 'rotateSlow 20s linear infinite',
+                        shimmer: 'shimmer 2.5s linear infinite',
+                        scaleIn: 'scaleIn 0.6s cubic-bezier(.34,1.56,.64,1) both',
+                        pulseRing: 'pulseRing 2s cubic-bezier(.4,0,.2,1) infinite',
+                    },
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            --orange: #F15A24;
+            --navy: #1A2B4A;
+        }
+
+        .reveal {
+            opacity: 0;
+            transition: opacity .75s cubic-bezier(.4, 0, .2, 1), transform .75s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .reveal.from-left {
+            transform: translateX(-70px);
+        }
+
+        .reveal.from-right {
+            transform: translateX(70px);
+        }
+
+        .reveal.from-bottom {
+            transform: translateY(55px);
+        }
+
+        .reveal.revealed {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        .delay-1 {
+            transition-delay: .10s;
+        }
+
+        .delay-2 {
+            transition-delay: .22s;
+        }
+
+        .delay-3 {
+            transition-delay: .34s;
+        }
+
+        .delay-4 {
+            transition-delay: .46s;
+        }
+
+        .shine-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shine-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s linear infinite;
+        }
+
+        .grad-text {
+            background: linear-gradient(135deg, #F15A24, #FF7A45, #f9a96e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-line::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+
+        .accent-line-center::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            border-radius: 3px;
+            margin: 10px auto 0;
+        }
+
+        .grid-overlay {
+            background-image:
+                repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 64px),
+                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 64px);
+        }
+
+        .float-badge {
+            animation: floatY 4s ease-in-out infinite;
+        }
+
+        .float-badge-delay {
+            animation: floatY 4s 1s ease-in-out infinite;
+        }
+
+        .pulse-dot {
+            position: relative;
+        }
+
+        .pulse-dot::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border: 2px solid #F15A24;
+            border-radius: 50%;
+            animation: pulseRing 2s cubic-bezier(.4, 0, .2, 1) infinite;
+        }
+
+        .gst-badge {
+            background: linear-gradient(135deg, #1A2B4A, #243660);
+            border: 1px solid rgba(241, 90, 36, 0.4);
+        }
+
+        .img-zoom {
+            overflow: hidden;
+        }
+
+        .img-zoom img {
+            transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .img-zoom:hover img {
+            transform: scale(1.06);
+        }
+
+        .thumb {
+            border: 2px solid transparent;
+            transition: border-color .2s;
+            cursor: pointer;
+        }
+
+        .thumb.active,
+        .thumb:hover {
+            border-color: #F15A24;
+        }
+
+        .qty-btn {
+            transition: all .2s;
+        }
+
+        .qty-btn:hover {
+            background: #F15A24;
+            color: #fff;
+        }
+
+        .prod-card {
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .prod-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(26, 43, 74, 0.14);
+        }
+
+        .card-bar-top::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s ease;
+        }
+
+        .prod-card:hover .card-bar-top::before {
+            transform: scaleX(1);
+        }
+
+        .tab-btn {
+            transition: all .2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-btn.active {
+            border-color: #F15A24;
+            color: #F15A24;
+        }
+
+        .why-card {
+            transition: box-shadow .3s, transform .3s;
+        }
+
+        .why-card:hover {
+            box-shadow: 0 0 0 2px #F15A24, 0 20px 50px rgba(241, 90, 36, 0.15);
+            transform: translateY(-5px);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #F15A24;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F5F4F0] text-gray-900 font-poppins scroll-smooth">
+
+    <div id="navbar-header"></div>
+    <script>
+        fetch('header.html').then(r => r.text()).then(data => {
+            const c = document.getElementById('navbar-header');
+            c.innerHTML = data;
+            window.addEventListener('scroll', () => {
+                const h = c.querySelector('.navbar-header');
+                if (h) h.classList.toggle('is-sticky-active', window.scrollY > 50);
+            });
+        }).catch(() => { });
+    </script>
+
+    <!-- ══════════ BREADCRUMB ══════════ -->
+    <div class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-3">
+            <p class="font-poppins text-[11px] tracking-[2px] uppercase text-gray-400">
+                <a href="index.html" class="hover:text-orange transition-colors">Home</a>
+                &nbsp;/&nbsp;
+                <a href="product.php" class="hover:text-orange transition-colors">Products</a>
+                &nbsp;/&nbsp;
+                <span class="text-orange font-semibold">Industrial Packaging Solutions</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- ══════════ PRODUCT DETAIL SECTION ══════════ -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <!-- LEFT: Image Gallery -->
+            <div class="reveal from-left lg:sticky lg:top-28 lg:self-start">
+                <div class="img-zoom rounded-2xl overflow-hidden bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-100 relative shadow-card mb-4"
+                    style="height:420px;">
+                    <img id="main-img" src="assets/images/category-img/allpacking.png"
+                        alt="Complete Packaging Solutions by AMR Packwell" class="w-full h-full object-cover"
+                        onerror="this.style.display='none'; document.getElementById('img-placeholder').style.display='flex';" />
+                    <div id="img-placeholder" class="absolute inset-0 items-center justify-center"
+                        style="display:none;">
+                        <svg class="w-48 h-48 opacity-20 text-blue-700" viewBox="0 0 80 80" fill="currentColor">
+                            <rect x="10" y="25" width="60" height="45" rx="3" />
+                            <path d="M10 25 L40 10 L70 25" />
+                            <line x1="40" y1="10" x2="40" y2="70" stroke="white" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <div class="absolute top-4 left-4">
+                        <span
+                            class="font-montserrat font-extrabold text-[9px] tracking-[2px] uppercase bg-navy text-white px-3 py-1.5 rounded-full">Industrial</span>
+                    </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="flex gap-3">
+                    <div class="thumb active rounded-xl overflow-hidden bg-gradient-to-br from-sky-50 to-blue-100 w-20 h-20 flex items-center justify-center"
+                        data-src="assets/images/category-img/allpacking.png" onclick="switchThumb(this)">
+                        <img src="assets/images/category-img/allpacking.png" alt="Stretch Film">
+                    </div>
+                    <div class="thumb rounded-xl overflow-hidden bg-gradient-to-br from-orange-50 to-amber-50 w-20 h-20 flex items-center justify-center"
+                        data-src="assets/images/category-img/allpacking1.png" onclick="switchThumb(this)">
+                        <img src="assets/images/category-img/allpacking1.png" alt="BOPP Tapes">
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Product Info -->
+            <div class="reveal from-right">
+                <div
+                    class="inline-flex items-center gap-2 bg-orange/10 border border-orange/20 px-4 py-1.5 rounded-full mb-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange pulse-dot"></span>
+                    <span class="font-montserrat font-bold text-[10px] tracking-[3px] uppercase text-orange">Full
+                        Inventory Available</span>
+                </div>
+
+                <h1 class="font-bebas text-5xl lg:text-6xl uppercase text-navy tracking-wide leading-tight mb-1">
+                    All Types Of<br /><span class="grad-text">Packaging Materials</span>
+                </h1>
+
+                <!-- Specification table - Updated with your product details -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden my-6">
+                    <div class="bg-navy px-5 py-3">
+                        <span
+                            class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-white">Dealing
+                            Products & Specs</span>
+                    </div>
+                    <div class="divide-y divide-gray-50">
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">STRETCH FILM</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Size: 6" to 24" (23–51
+                                Micron)</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">BOPP TAPE</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">1"/2"/3" (34–42 Micron)</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">PET STRAP</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">12 MM / 15 MM</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">PP STRAP ROLL</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">9 MM / 11 MM</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Others</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Shrink Film, EPE Foam, Bubble
+                                Roll</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden mb-5">
+                    <div class="bg-gradient-to-r from-navy to-navy-light px-5 py-3">
+                        <span class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-white">Get
+                            Custom Pricing</span>
+                    </div>
+                    <form id="box-packaging-quote-form" class="p-5 space-y-3" action="quote-submit.php" method="post" data-local-submit="1">
+                        <input type="hidden" name="csrf_token" id="box-packaging-csrf" value="">
+                        <input type="hidden" name="full_name" value="Website Quote Request">
+                        <input type="hidden" name="product" value="Box Packaging Services">
+                        <input type="hidden" name="message" id="box-packaging-message" value="">
+
+                        <div>
+                            <label
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Quantity
+                                Required</label>
+                            <input id="qty-input" name="quantity" type="number" placeholder="Enter quantity"
+                                class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors" />
+                        </div>
+                        <div>
+                            <label
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Mobile
+                                Number</label>
+                            <div class="flex gap-2">
+                                <span
+                                    class="flex items-center px-3 bg-gray-50 border border-gray-200 rounded-lg font-montserrat font-bold text-sm text-gray-500">+91</span>
+                                <input id="mobile-input" name="phone" type="tel" placeholder="Mobile number"
+                                    class="flex-1 border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors" />
+                            </div>
+                        </div>
+                        <div>
+                            <div id="boxPackagingRecaptcha"></div>
+                        </div>
+                        <button type="submit" id="box-packaging-submit-btn"
+                            class="shine-btn w-full font-montserrat font-extrabold text-[12px] tracking-widest uppercase bg-orange text-white py-3.5 rounded-xl hover:bg-orange-light transition-all shadow-orange">
+                            Get Quote Now →
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ TABS ══════════ -->
+    <section class="max-w-7xl mx-auto px-6 pb-16">
+        <div class="flex gap-0 border-b border-gray-200 mb-8 overflow-x-auto">
+            <button
+                class="tab-btn active font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-600 whitespace-nowrap"
+                data-tab="about">Detailed Description</button>
+            <button
+                class="tab-btn font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-500 whitespace-nowrap hover:text-orange transition-colors"
+                data-tab="applications">Full Product List</button>
+        </div>
+
+        <!-- About Tab -->
+        <div id="tab-about" class="tab-content reveal from-bottom">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-6">Complete Range of
+                        Packaging Solutions</h2>
+                    <div class="space-y-4 font-poppins text-sm text-gray-600 leading-relaxed">
+                        <p><strong class="text-navy font-semibold">AMR Packwell</strong> deals in all types of
+                            industrial packaging materials. Our premium <strong class="text-navy font-semibold">STRETCH
+                                FILMS</strong> come in sizes from 6 inches to 24 inches with specialized thickness
+                            ranging from 23 micron to 51 micron for maximum safety.</p>
+
+                        <p>We supply <strong class="text-navy font-semibold">BOPP TAPES</strong> in all standard widths
+                            (1”, 2”, 3”) with micron options of 34 to 42. For heavy-duty strapping, we provide both
+                            <strong class="text-navy font-semibold">PET STRAPS</strong> (12MM/15MM) and <strong
+                                class="text-navy font-semibold">PP STRAP ROLLS</strong> (9MM/11MM) along with
+                            high-quality Packing Clips.
+                        </p>
+
+                        <p>Our protective packaging range includes <strong class="text-navy font-semibold">Air Bubble
+                                Rolls, Thermocol Sheets, and EPE Foam Rolls</strong>, ensuring your products remain
+                            damage-free during transit. We also provide Shrink Films for modern packaging needs.</p>
+                    </div>
+
+                    <!-- Dealing Products Grid -->
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card flex items-start gap-3">
+                            <div
+                                class="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">📦</span>
+                            </div>
+                            <div>
+                                <div
+                                    class="font-montserrat font-extrabold text-[11px] tracking-widest uppercase text-navy mb-1">
+                                    Protective Rolls</div>
+                                <div class="font-poppins text-xs text-gray-400">Bubble, EPE Foam & Thermocol</div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-5 border border-gray-100 shadow-card flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-xl">🎞️</span>
+                            </div>
+                            <div>
+                                <div
+                                    class="font-montserrat font-extrabold text-[11px] tracking-widest uppercase text-navy mb-1">
+                                    Industrial Films</div>
+                                <div class="font-poppins text-xs text-gray-400">Stretch & Shrink Solutions</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-navy rounded-2xl p-6 relative overflow-hidden">
+                        <div class="relative z-10">
+                            <p
+                                class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-orange mb-4">
+                                Quick Specs Summary</p>
+                            <ul class="text-white/80 text-xs space-y-2 font-poppins">
+                                <li>• Stretch Film (6"-24")</li>
+                                <li>• BOPP Tape (34-42 Micron)</li>
+                                <li>• PET/PP Strap (9mm-15mm)</li>
+                                <li>• EPE Foam & Air Bubble</li>
+                                <li>• Shrink Films & Clips</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Full Product List Tab -->
+        <div id="tab-applications" class="tab-content hidden reveal from-bottom">
+            <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-8">Our Complete Inventory
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <p class="font-bold text-navy">STRETCH FILM</p>
+                    <p class="text-xs text-gray-500">6” to 24” | 23 to 51 Micron</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <p class="font-bold text-navy">BOPP TAPE</p>
+                    <p class="text-xs text-gray-500">1”/2”/3” | 34 to 42 Micron</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <p class="font-bold text-navy">SHRINK FILM</p>
+                    <p class="text-xs text-gray-500">Industrial Grade</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <p class="font-bold text-navy">PET STRAP</p>
+                    <p class="text-xs text-gray-500">12 MM / 15 MM</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <p class="font-bold text-navy">PP STRAP ROLL</p>
+                    <p class="text-xs text-gray-500">9 MM / 11 MM</p>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                    <p class="font-bold text-navy">PROTECTIVE RANGE</p>
+                    <p class="text-xs text-gray-500">Air Bubble, EPE Foam, Thermocol</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-bottom"></div>
+    <script>fetch('footer.php').then(r => r.text()).then(d => { document.getElementById('footer-bottom').innerHTML = d; }).catch(() => { });</script>
+
+    <script>
+        function switchThumb(el) {
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+            const src = el.dataset.src;
+            const mainImg = document.getElementById('main-img');
+            const placeholder = document.getElementById('img-placeholder');
+            if (src && src !== '') {
+                mainImg.style.opacity = '0';
+                setTimeout(() => {
+                    mainImg.src = src;
+                    mainImg.style.display = 'block';
+                    placeholder.style.display = 'none';
+                    mainImg.onload = () => { mainImg.style.opacity = '1'; };
+                }, 150);
+            }
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+                btn.classList.add('active');
+                const target = document.getElementById('tab-' + btn.dataset.tab);
+                target.classList.remove('hidden');
+                setTimeout(() => target.classList.add('revealed'), 10);
+            });
+        });
+
+        function submitQuote() {
+            const qty = document.getElementById('qty-input').value.trim();
+            const mobile = document.getElementById('mobile-input').value.trim();
+            const submitBtn = document.querySelector('button[onclick="submitQuote()"]');
+
+            if (!qty) {
+                alert('Please enter quantity required.');
+                return;
+            }
+            if (!mobile) {
+                alert('Please enter your mobile number.');
+                return;
+            }
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+            }
+
+            fetch('csrf-token.php', { credentials: 'same-origin' })
+                .then((response) => response.json())
+                .then((tokenData) => {
+                    const formData = new FormData();
+                    formData.append('csrf_token', tokenData.csrf_token || '');
+                    formData.append('full_name', 'Website Quote Request');
+                    formData.append('phone', mobile);
+                    formData.append('product', 'Box Packaging Services');
+                    formData.append('message', `Quantity required: ${qty}`);
+
+                    return fetch('quote-submit.php', {
+                        method: 'POST',
+                        credentials: 'same-origin',
+                        body: formData,
+                    });
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success) {
+                        document.getElementById('qty-input').value = '';
+                        document.getElementById('mobile-input').value = '';
+                        showToast('✓ Quote request sent! We will contact you soon.');
+                    } else {
+                        alert(data.message || 'Something went wrong. Please try again.');
+                    }
+                })
+                .catch(() => {
+                    alert('Network error. Please try again.');
+                })
+                .finally(() => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Get Quote Now →';
+                    }
+                });
+        }
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.grecaptcha) return; // header.js's loader already in flight elsewhere on this page
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js?onload=__onBoxPackagingRecaptchaLoad&render=explicit';
+    script.async = true;
+    script.defer = true;
+    window.__onBoxPackagingRecaptchaLoad = function () {
+        window.__boxPackagingRecaptchaId = grecaptcha.render('boxPackagingRecaptcha', { sitekey: 'PASTE_YOUR_SITE_KEY_HERE' });
+    };
+    document.head.appendChild(script);
+});
+
+        document.getElementById('box-packaging-quote-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const qty = document.getElementById('qty-input').value.trim();
+            const mobile = document.getElementById('mobile-input').value.trim();
+            const csrfEl = document.getElementById('box-packaging-csrf');
+            const msgEl = document.getElementById('box-packaging-message');
+            const submitBtn = document.getElementById('box-packaging-submit-btn');
+
+            if (!qty) {
+                alert('Please enter quantity required.');
+                return;
+            }
+            if (!mobile) {
+                alert('Please enter your mobile number.');
+                return;
+            }
+            const captchaId = window.__boxPackagingRecaptchaId;
+    if (captchaId === undefined || !window.grecaptcha || !grecaptcha.getResponse(captchaId)) {
+        alert('Please complete the "I\'m not a robot" check.');
+        return;
+    }
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+            }
+
+            fetch('csrf-token.php', { credentials: 'same-origin' })
+                .then((response) => response.json())
+                .then((tokenData) => {
+                    csrfEl.value = tokenData.csrf_token || '';
+                    msgEl.value = `Quantity required: ${qty}`;
+                    const formData = new FormData(event.target);
+                    return fetch('quote-submit.php', {
+                        method: 'POST',
+                        credentials: 'same-origin',
+                        body: formData,
+                    });
+                })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success) {
+                        document.getElementById('qty-input').value = '';
+                        document.getElementById('mobile-input').value = '';
+                        showToast('✓ Quote request sent! We will contact you soon.');
+                    } else {
+                        alert(data.message || 'Something went wrong. Please try again.');
+                    }
+                })
+                .catch(() => {
+                    alert('Network error. Please try again.');
+                })
+                .finally(() => {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Get Quote Now →';
+                    }
+                    if (window.__boxPackagingRecaptchaId !== undefined && window.grecaptcha) {
+                        grecaptcha.reset(window.__boxPackagingRecaptchaId);
+                    }
+                });
+        });
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 right-6 bg-navy text-white px-6 py-4 rounded-3xl shadow-card-lg z-[9999] font-montserrat font-bold text-sm tracking-wide border-l-4 border-orange';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => {
+                toast.style.transition = 'opacity .4s';
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 400);
+            }, 3800);
+        }
+    </script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/formsubmit.js"></script>
+</body>
+
+</html>

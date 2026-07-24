@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/images/logo/logo_140881.png" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/styless.css">
+    <title>Kraft Paper Edge Protector – AMR Packwell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <link rel="canonical" href="https://www.amrpackwell.com/detail-kraft-paper-edge-protector">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&family=Bebas+Neue&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        bebas: ['Bebas Neue', 'cursive'],
+                    },
+                    colors: {
+                        orange: { DEFAULT: '#F15A24', light: '#FF7A45', pale: '#FFF3EE', dark: '#c94412' },
+                        navy: { DEFAULT: '#1A2B4A', dark: '#0f1c30', light: '#243660', muted: '#2d3f5f' },
+                    },
+                    boxShadow: {
+                        card: '0 8px 40px rgba(26,43,74,0.10)',
+                        'card-lg': '0 20px 60px rgba(26,43,74,0.16)',
+                        orange: '0 8px 28px rgba(241,90,36,0.40)',
+                    },
+                    keyframes: {
+                        fadeUp: { from: { opacity: '0', transform: 'translateY(40px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+                        floatY: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-14px)' } },
+                        rotateSlow: { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(360deg)' } },
+                        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+                        scaleIn: { from: { opacity: '0', transform: 'scale(0.85)' }, to: { opacity: '1', transform: 'scale(1)' } },
+                        pulseRing: { '0%': { transform: 'scale(1)', opacity: '0.8' }, '100%': { transform: 'scale(1.6)', opacity: '0' } },
+                    },
+                    animation: {
+                        fadeUp: 'fadeUp 0.7s cubic-bezier(.4,0,.2,1) both',
+                        floatY: 'floatY 4s ease-in-out infinite',
+                        rotateSlow: 'rotateSlow 20s linear infinite',
+                        shimmer: 'shimmer 2.5s linear infinite',
+                        scaleIn: 'scaleIn 0.6s cubic-bezier(.34,1.56,.64,1) both',
+                        pulseRing: 'pulseRing 2s cubic-bezier(.4,0,.2,1) infinite',
+                    },
+                }
+            }
+        };
+    </script>
+    <style>
+        :root {
+            --orange: #F15A24;
+            --navy: #1A2B4A;
+        }
+
+        .reveal {
+            opacity: 0;
+            transition: opacity .75s cubic-bezier(.4, 0, .2, 1), transform .75s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .reveal.from-left {
+            transform: translateX(-70px);
+        }
+
+        .reveal.from-right {
+            transform: translateX(70px);
+        }
+
+        .reveal.from-bottom {
+            transform: translateY(55px);
+        }
+
+        .reveal.revealed {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        .delay-1 {
+            transition-delay: .10s;
+        }
+
+        .delay-2 {
+            transition-delay: .22s;
+        }
+
+        .delay-3 {
+            transition-delay: .34s;
+        }
+
+        .delay-4 {
+            transition-delay: .46s;
+        }
+
+        .shine-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shine-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s linear infinite;
+        }
+
+        .grad-text {
+            background: linear-gradient(135deg, #F15A24, #FF7A45, #f9a96e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-line::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+
+        .accent-line-center::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            border-radius: 3px;
+            margin: 10px auto 0;
+        }
+
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+        }
+
+        .grid-overlay {
+            background-image:
+                repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 64px),
+                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 64px);
+        }
+
+        .float-badge {
+            animation: floatY 4s ease-in-out infinite;
+        }
+
+        .float-badge-delay {
+            animation: floatY 4s 1s ease-in-out infinite;
+        }
+
+        .pulse-dot {
+            position: relative;
+        }
+
+        .pulse-dot::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border: 2px solid #F15A24;
+            border-radius: 50%;
+            animation: pulseRing 2s cubic-bezier(.4, 0, .2, 1) infinite;
+        }
+
+        .gst-badge {
+            background: linear-gradient(135deg, #1A2B4A, #243660);
+            border: 1px solid rgba(241, 90, 36, 0.4);
+        }
+
+        /* Product image zoom */
+        .img-zoom {
+            overflow: hidden;
+        }
+
+        .img-zoom img {
+            transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .img-zoom:hover img {
+            transform: scale(1.06);
+        }
+
+        /* Thumbnail */
+        .thumb {
+            border: 2px solid transparent;
+            transition: border-color .2s;
+            cursor: pointer;
+        }
+
+        .thumb.active,
+        .thumb:hover {
+            border-color: #F15A24;
+        }
+
+        /* Qty selector */
+        .qty-btn {
+            transition: all .2s;
+        }
+
+        .qty-btn:hover {
+            background: #F15A24;
+            color: #fff;
+        }
+
+        /* Prod card hover */
+        .prod-card {
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .prod-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(26, 43, 74, 0.14);
+        }
+
+        .card-bar-top::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s ease;
+        }
+
+        .prod-card:hover .card-bar-top::before {
+            transform: scaleX(1);
+        }
+
+        /* Tab */
+        .tab-btn {
+            transition: all .2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-btn.active {
+            border-color: #F15A24;
+            color: #F15A24;
+        }
+
+        /* Why card */
+        .why-card {
+            transition: box-shadow .3s, transform .3s;
+        }
+
+        .why-card:hover {
+            box-shadow: 0 0 0 2px #F15A24, 0 20px 50px rgba(241, 90, 36, 0.15);
+            transform: translateY(-5px);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #F15A24;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F5F4F0] text-gray-900 font-poppins scroll-smooth">
+
+    <div id="navbar-header"></div>
+    <script>
+        fetch('header.html').then(r => r.text()).then(data => {
+            const c = document.getElementById('navbar-header');
+            c.innerHTML = data;
+            window.addEventListener('scroll', () => {
+                const h = c.querySelector('.navbar-header');
+                if (h) h.classList.toggle('is-sticky-active', window.scrollY > 50);
+            });
+        }).catch(() => { });
+    </script>
+
+    <div class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-3">
+            <p class="font-poppins text-[11px] tracking-[2px] uppercase text-gray-400">
+                <a href="index.html" class="hover:text-orange transition-colors">Home</a>
+                &nbsp;/&nbsp;
+                <a href="#" class="hover:text-orange transition-colors">Products</a>
+                &nbsp;/&nbsp;
+                <a href="paper-edge-protector.html" class="hover:text-orange transition-colors">Paper Edge Protector</a>
+                &nbsp;/&nbsp;
+                <span class="text-orange font-semibold">Kraft Paper Edge Protector</span>
+            </p>
+        </div>
+    </div>
+
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+            <div class="reveal from-left lg:sticky lg:top-24 lg:self-start">
+                <div class="img-zoom rounded-2xl overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 relative shadow-card mb-4"
+                    style="height:420px;">
+                    <img id="main-img" src="assets/images/product-img/kraft-paper-edge-protector.jpg"
+                        alt="Kraft Paper Edge Protector" class="w-full h-full object-cover"
+                        onerror="this.style.display='none'; document.getElementById('img-placeholder').style.display='flex';" />
+                    <div id="img-placeholder" class="absolute inset-0 items-center justify-center"
+                        style="display:none;">
+                        <svg class="w-48 h-48 opacity-20 text-amber-700" viewBox="0 0 80 80" fill="currentColor">
+                            <rect x="10" y="10" width="14" height="60" rx="2" />
+                            <rect x="10" y="10" width="60" height="14" rx="2" />
+                        </svg>
+                    </div>
+                    <div class="absolute top-4 right-4">
+                        <span
+                            class="font-montserrat font-extrabold text-[9px] tracking-[2px] uppercase bg-navy text-white px-3 py-1.5 rounded-full">Eco
+                            Friendly</span>
+                    </div>
+                    <div class="absolute bottom-4 left-4">
+                        <span
+                            class="font-montserrat font-extrabold text-[9px] tracking-[2px] uppercase bg-orange text-white px-3 py-1.5 rounded-full shadow-orange">Anti-Curl</span>
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <div class="thumb active rounded-xl overflow-hidden bg-gradient-to-br from-amber-50 to-amber-100 w-20 h-20 flex items-center justify-center"
+                        data-src="assets/images/product-img/kraft-paper-edge-protector.jpg" onclick="switchThumb(this)">
+                        <img src="assets/images/product-img/kraft-paper-edge-protector.jpg"
+                            alt="Kraft Paper Edge Protector">
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal from-right">
+                <div
+                    class="inline-flex items-center gap-2 bg-orange/10 border border-orange/20 px-4 py-1.5 rounded-full mb-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange pulse-dot"></span>
+                    <span class="font-montserrat font-bold text-[10px] tracking-[3px] uppercase text-orange">Paper Edge
+                        Protector</span>
+                </div>
+
+                <h1 class="font-bebas text-5xl lg:text-6xl uppercase text-navy tracking-wide leading-tight mb-1">
+                    Kraft Paper<br /><span class="grad-text">Edge Protector</span>
+                </h1>
+
+                <div class="flex items-end gap-3 mt-4 mb-5">
+                    <div>
+                        <p class="font-poppins text-[11px] text-gray-400 uppercase tracking-widest mb-1">Price</p>
+                        <div class="flex items-baseline gap-1.5">
+                            <span class="font-bebas text-5xl grad-text">₹20</span>
+                            <span class="font-montserrat font-bold text-sm text-gray-500">INR / Piece</span>
+                        </div>
+                    </div>
+                    <div class="ml-4 pl-4 border-l border-gray-200">
+                        <p class="font-poppins text-[11px] text-gray-400 uppercase tracking-widest mb-1">MOQ</p>
+                        <span class="font-bebas text-3xl text-navy">1,000</span>
+                        <span class="font-montserrat font-bold text-xs text-gray-500 ml-1">Pieces</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden mb-5">
+                    <div class="bg-navy px-5 py-3 flex items-center gap-2">
+                        <span
+                            class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-white">Specifications</span>
+                    </div>
+                    <div class="divide-y divide-gray-50">
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Material</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Paper</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Paper Type</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Craft Paper</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Coating</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Coated (Single side)</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Feature</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Anti Curl</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Color</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">Brown</span>
+                        </div>
+                        <div class="flex justify-between items-center px-5 py-3">
+                            <span class="font-poppins text-sm text-gray-400">Use</span>
+                            <span class="font-montserrat font-semibold text-sm text-navy">For protecting edges</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden mb-5">
+                    <div class="bg-gradient-to-r from-navy to-navy-light px-5 py-3">
+                        <span
+                            class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-white">Tell
+                            Us Your Requirement</span>
+                    </div>
+                    <div class="p-5 space-y-3">
+                        <div>
+                            <label
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Quantity
+                                (Pieces)</label>
+                            <div class="flex gap-2 flex-wrap">
+                                <button onclick="setQty(1050)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">1,050</button>
+                                <button onclick="setQty(1150)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">1,150</button>
+                                <button onclick="setQty(1300)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">1,300</button>
+                                <button onclick="setQty(1500)"
+                                    class="qty-btn font-montserrat font-bold text-[11px] border border-gray-200 px-4 py-2 rounded-lg hover:border-orange text-gray-600 transition-all">1,500</button>
+                            </div>
+                            <input id="qty-input" type="number" value="1000"
+                                class="mt-2 w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors" />
+                        </div>
+                        <div>
+                            <label
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Mobile
+                                Number</label>
+                            <div class="flex gap-2">
+                                <span
+                                    class="flex items-center px-3 bg-gray-50 border border-gray-200 rounded-lg font-montserrat font-bold text-sm text-gray-500">+91</span>
+                                <input id="mobile-input" type="tel" placeholder="Enter mobile number"
+                                    class="flex-1 border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors" />
+                            </div>
+                        </div>
+                        <button onclick="submitQuote()"
+                            class="shine-btn w-full font-montserrat font-extrabold text-[12px] tracking-widest uppercase bg-orange text-white py-3.5 rounded-xl hover:bg-orange-light transition-all duration-200 shadow-orange">
+                            Get a Price / Quote →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 pb-16">
+        <div class="flex gap-0 border-b border-gray-200 mb-8 overflow-x-auto">
+            <button
+                class="tab-btn active font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-600 whitespace-nowrap"
+                data-tab="about">About Product</button>
+            <button
+                class="tab-btn font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-500 whitespace-nowrap hover:text-orange transition-colors"
+                data-tab="trade">Trade Information</button>
+            <button
+                class="tab-btn font-montserrat font-bold text-[11px] tracking-widest uppercase px-6 py-4 text-gray-500 whitespace-nowrap hover:text-orange transition-colors"
+                data-tab="faq">FAQs</button>
+        </div>
+
+        <div id="tab-about" class="tab-content reveal from-bottom">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2">
+                    <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-6">About Kraft Paper
+                        Edge Protector</h2>
+                    <div class="space-y-4 font-poppins text-sm text-gray-600 leading-relaxed">
+                        <p>The <strong class="text-navy font-semibold">Kraft paper edge protector</strong> is a
+                            single-sided coated paper that is brown in color and made from high-quality craft paper. It
+                            is designed to protect the edges of your products during shipping or handling.</p>
+                        <p>The anti-curl feature ensures that the paper stays in place and doesn't curl up, providing
+                            even better protection. The coating on this paper helps to add strength to it, making it a
+                            reliable option for all shipping and packaging needs.</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-navy rounded-2xl p-6">
+                        <p class="font-montserrat font-extrabold text-[10px] tracking-[3px] uppercase text-orange mb-4">
+                            Key Benefits</p>
+                        <ul class="text-white text-xs space-y-3 font-poppins">
+                            <li>• High-quality Craft Paper</li>
+                            <li>• Anti-Curl Performance</li>
+                            <li>• Enhanced Strength via Coating</li>
+                            <li>• Perfect for Edge Safeguarding</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-trade" class="tab-content hidden reveal from-bottom">
+            <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-8">Trade Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widests uppercase text-gray-400 mb-1">
+                        MOQ</p>
+                    <p class="font-bebas text-4xl text-navy">1,000 Pieces</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widests uppercase text-gray-400 mb-1">
+                        Payment Terms</p>
+                    <p class="font-bebas text-4xl text-navy">Cash in Advance</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widests uppercase text-gray-400 mb-1">
+                        Supply Ability</p>
+                    <p class="font-bebas text-4xl text-navy">5,000 Pieces</p>
+                    <p class="text-[10px] text-gray-400 font-poppins">Per Month</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widests uppercase text-gray-400 mb-1">
+                        Delivery Time</p>
+                    <p class="font-bebas text-4xl text-navy">2–10 Days</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                    <p class="font-montserrat font-extrabold text-[10px] tracking-widests uppercase text-gray-400 mb-1">
+                        Market</p>
+                    <p class="font-bebas text-4xl text-navy">All India</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-faq" class="tab-content hidden reveal from-bottom">
+            <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line mb-8">Frequently Asked
+                Questions</h2>
+            <div class="space-y-4 max-w-4xl">
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card">
+                    <p class="font-montserrat font-bold text-navy text-sm mb-2">Q: Is this edge protector made from
+                        paper?</p>
+                    <p class="font-poppins text-gray-600 text-sm">A: Yes, the Kraft paper edge protector is made from
+                        high-quality craft paper.</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card">
+                    <p class="font-montserrat font-bold text-navy text-sm mb-2">Q: Does this paper have any special
+                        features?</p>
+                    <p class="font-poppins text-gray-600 text-sm">A: Yes, it has an anti-curl feature that ensures it
+                        stays in place and doesn't curl up.</p>
+                </div>
+                <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-card">
+                    <p class="font-montserrat font-bold text-navy text-sm mb-2">Q: Can you provide customization
+                        options?</p>
+                    <p class="font-poppins text-gray-600 text-sm">A: Yes, as a manufacturer and supplier, we provide
+                        customization. Please contact us with your requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="reveal from-bottom mb-10">
+            <p class="font-montserrat font-bold text-[10px] tracking-[3px] uppercase text-orange mb-1">Related Products
+            </p>
+            <h2 class="font-bebas text-5xl uppercase text-navy tracking-wide accent-line">More Products</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div
+                class="prod-card card-bar-top reveal from-bottom delay-1 bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden relative">
+                <div class="p-4">
+                    <h3 class="font-montserrat font-extrabold text-sm uppercase text-navy tracking-tight mb-2">
+                        Protection Edge Boards</h3>
+                    <div class="flex justify-between text-xs mb-1"><span
+                            class="font-poppins text-gray-400">Price</span><span
+                            class="font-montserrat font-bold text-orange">₹30 / Piece</span></div>
+                    <div class="flex justify-between text-xs mb-3"><span
+                            class="font-poppins text-gray-400">MOQ</span><span
+                            class="font-montserrat font-semibold text-navy">1,000 pcs</span></div>
+                    <button onclick="openModal('Protection Edge Boards')"
+                        class="w-full font-montserrat font-bold text-[10px] tracking-widests uppercase bg-navy text-white py-2.5 rounded-lg hover:bg-orange transition-all duration-200">Get
+                        Quote</button>
+                </div>
+            </div>
+            <div
+                class="prod-card card-bar-top reveal from-bottom delay-2 bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden relative">
+                <div class="p-4">
+                    <h3 class="font-montserrat font-extrabold text-sm uppercase text-navy tracking-tight mb-2">Heavy
+                        Duty Paper Angle Board</h3>
+                    <div class="flex justify-between text-xs mb-1"><span
+                            class="font-poppins text-gray-400">Price</span><span
+                            class="font-montserrat font-bold text-orange">₹20 / Piece</span></div>
+                    <div class="flex justify-between text-xs mb-3"><span
+                            class="font-poppins text-gray-400">MOQ</span><span
+                            class="font-montserrat font-semibold text-navy">1,000 pcs</span></div>
+                    <button onclick="openModal('Heavy Duty Paper Angle Board')"
+                        class="w-full font-montserrat font-bold text-[10px] tracking-widests uppercase bg-navy text-white py-2.5 rounded-lg hover:bg-orange transition-all duration-200">Get
+                        Quote</button>
+                </div>
+            </div>
+            <div
+                class="prod-card card-bar-top reveal from-bottom delay-3 bg-white rounded-2xl border border-gray-100 shadow-card overflow-hidden relative">
+                <div class="p-4">
+                    <h3 class="font-montserrat font-extrabold text-sm uppercase text-navy tracking-tight mb-2">Paper
+                        Angle Board Pallets</h3>
+                    <div class="flex justify-between text-xs mb-1"><span
+                            class="font-poppins text-gray-400">Price</span><span
+                            class="font-montserrat font-bold text-orange">₹100 / Piece</span></div>
+                    <div class="flex justify-between text-xs mb-3"><span
+                            class="font-poppins text-gray-400">MOQ</span><span
+                            class="font-montserrat font-semibold text-navy">1,000 pcs</span></div>
+                    <button onclick="openModal('Paper Angle Board Pallets')"
+                        class="w-full font-montserrat font-bold text-[10px] tracking-widests uppercase bg-navy text-white py-2.5 rounded-lg hover:bg-orange transition-all duration-200">Get
+                        Quote</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="inquiry-modal"
+        class="fixed inset-0 bg-navy-dark/80 z-[999] items-center justify-center p-4 backdrop-blur-sm"
+        style="display:none">
+        <div class="bg-white rounded-2xl w-full max-w-md shadow-card-lg overflow-hidden animate-scaleIn">
+            <div class="bg-navy px-6 py-5 flex items-center justify-between">
+                <h3 class="font-montserrat font-black text-lg uppercase text-white tracking-tight">Send Inquiry</h3>
+                <button
+                    onclick="document.getElementById('inquiry-modal').style.display='none'; document.body.style.overflow='';"
+                    class="text-white/60 hover:text-white">✕</button>
+            </div>
+            <div class="p-6 space-y-4">
+                <input id="f-product-modal" type="text" value="Kraft Paper Edge Protector" readonly
+                    class="w-full border border-gray-100 bg-gray-50 rounded-lg px-4 py-2.5 text-sm text-gray-400 font-poppins" />
+                <input id="f-name-modal" type="text" placeholder="Your Name"
+                    class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange" />
+                <input id="f-contact-modal" type="text" placeholder="Mobile / Email"
+                    class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange" />
+                <textarea rows="3" placeholder="Additional details..."
+                    class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange resize-none"></textarea>
+                <button onclick="submitModalInquiry()"
+                    class="shine-btn w-full font-montserrat font-black text-[12px] tracking-widests uppercase bg-orange text-white py-3.5 rounded-lg">Submit
+                    Inquiry →</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-bottom"></div>
+    <script>fetch('footer.php').then(r => r.text()).then(d => { document.getElementById('footer-bottom').innerHTML = d; }).catch(() => { });</script>
+
+    <script>
+        function openModal(prod) {
+            document.getElementById('inquiry-modal').style.display = 'flex';
+            document.getElementById('f-product-modal').value = prod;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function switchThumb(el) {
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            el.classList.add('active');
+            document.getElementById('main-img').src = el.dataset.src;
+        }
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
+                btn.classList.add('active');
+                document.getElementById('tab-' + btn.dataset.tab).classList.remove('hidden');
+            });
+        });
+
+        function setQty(val) { document.getElementById('qty-input').value = val; }
+
+        function submitQuote() { alert('Quote request sent!'); }
+
+        function submitModalInquiry() {
+            document.getElementById('inquiry-modal').style.display = 'none';
+            document.body.style.overflow = '';
+            alert('Inquiry submitted!');
+        }
+    </script>
+    <script src="assets/js/formsubmit.js"></script>
+</body>
+
+</html>

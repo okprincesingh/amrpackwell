@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Main Sitemap
+Sitemap: https://www.amrpackwell.com/sitemap.xml
+
+# RSS Feed
+Sitemap: https://www.amrpackwell.com/feed.rss
+
+# Block system/internal folders
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /backup/
+
+# Block unnecessary files
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.bak$
+
+# Allow important assets
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+# Crawl delay
+Crawl-delay: 5

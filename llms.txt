@@ -1,0 +1,123 @@
+# llms.txt for AMR Packwell Private Limited
+# Website: https://www.amrpackwell.com/
+# Generated: 2026-05-15
+
+[company]
+name = "AMR Packwell Private Limited"
+website = "https://www.amrpackwell.com/"
+industry = "Industrial Packaging Solutions"
+location = "Greater Noida, Uttar Pradesh, India"
+gst = "09AARCA6409K1Z5"
+
+[description]
+AMR Packwell Private Limited is a manufacturer, supplier, and service provider of industrial packaging products and protective packaging materials. The company specializes in corrugated boxes, paper angle boards, wooden pallets, plywood boxes, packaging consumables, and packaging support services for industrial logistics and shipping applications.
+
+[keywords]
+industrial packaging
+paper angle board
+edge protector
+kraft corner board
+wooden pallets
+plywood boxes
+corrugated boxes
+protective packaging
+paper edge protector
+industrial packing materials
+packaging manufacturer india
+greater noida packaging supplier
+
+[products]
+
+[[products.item]]
+name = "Paper Angle Board"
+url = "https://www.amrpackwell.com/paper-angle-board.html"
+category = "Protective Packaging"
+description = "Eco-friendly multilayer kraft paper angle boards used for edge and corner protection during shipping and palletization."
+
+[[products.item]]
+name = "Paper Edge Protector"
+url = "https://www.amrpackwell.com/wooden-packaging-box.html"
+category = "Protective Packaging"
+description = "Protective paper edge solutions designed to minimize transit damage and improve load stability."
+
+[[products.item]]
+name = "Kraft Corner Board"
+url = "https://www.amrpackwell.com/kraft-corner-board-9321374.html"
+category = "Packaging Consumables"
+description = "Recyclable kraft paper corner protection boards available in multiple thicknesses and dimensions."
+
+[[products.item]]
+name = "Heavy Duty Paper Angle Board"
+url = "https://www.amrpackwell.com/heavy-duty-paper-angle-board-9321397.html"
+category = "Protective Packaging"
+description = "Heavy-duty coated kraft paper angle boards for industrial packaging applications."
+
+[[products.item]]
+name = "Pine Wooden Pallets"
+url = "https://www.amrpackwell.com/pine-wooden-pallets-8504082.html"
+category = "Wooden Packaging"
+description = "Customizable pine wood pallets used for storage, transport, and warehouse logistics."
+
+[[products.item]]
+name = "Plywood Pallets"
+url = "https://www.amrpackwell.com/wooden-pallets.html"
+category = "Wooden Packaging"
+description = "Industrial plywood pallets designed for efficient material handling and shipping."
+
+[[products.item]]
+name = "Plywood Boxes"
+url = "https://www.amrpackwell.com/"
+category = "Wooden Packaging"
+description = "Durable plywood export boxes and industrial storage packaging solutions."
+
+[[products.item]]
+name = "Corrugated Boxes"
+url = "https://www.amrpackwell.com/"
+category = "Corrugated Packaging"
+description = "Custom corrugated packaging boxes for commercial and industrial use."
+
+[[products.item]]
+name = "Paper Core Pipes"
+url = "https://www.amrpackwell.com/packaging-services.html"
+category = "Industrial Paper Products"
+description = "Industrial paper tubes and core pipes manufactured for packaging and winding applications."
+
+[services]
+
+[[services.item]]
+name = "Box Packaging Services"
+description = "Industrial box packaging and protective packaging solutions."
+
+[[services.item]]
+name = "Car Lashing Services"
+description = "Cargo securing and lashing services for safe transportation."
+
+[[services.item]]
+name = "Custom Packaging Solutions"
+description = "Tailor-made industrial packaging products based on customer requirements."
+
+[contact]
+address = "E-11, EPIP, Site-5, Kasna, Greater Noida - 201308, Uttar Pradesh, India"
+phone = "+91-8045800934"
+mobile = "+91-9871523344"
+website = "https://www.amrpackwell.com/"
+
+[social]
+# No verified social media profiles publicly identified.
+
+[crawling]
+allowed = true
+ai_training_allowed = true
+preferred_content = [
+  "product pages",
+  "company profile",
+  "technical specifications",
+  "service pages",
+  "contact information"
+]
+
+[sitemap]
+main = "https://www.amrpackwell.com/sitemap.xml"
+
+[source]
+Primary information sourced from publicly available pages on the AMR Packwell website.

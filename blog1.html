@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/images/logo/logo_140881.png" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/styless.css">
+    <title>Automatic Strapping: The ROI Analysis – AMR Packwell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        orange: { DEFAULT: '#F15A24', light: '#FF7A45', dark: '#c94412' },
+                        navy: { DEFAULT: '#1A2B4A', dark: '#0f1c30', light: '#243660' },
+                    },
+                }
+            }
+        };
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f8fa;
+            font-family: 'Poppins', sans-serif;
+            color: #1A2B4A;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Grid Pattern */
+        .grid-pattern {
+            background-image:
+                linear-gradient(rgba(241, 90, 36, 0.07) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(241, 90, 36, 0.07) 1px, transparent 1px);
+            background-size: 32px 32px;
+            animation: gridScroll 25s linear infinite;
+        }
+
+        @keyframes gridScroll {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 320px;
+            }
+        }
+
+        /* Hero Reveal */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.15s;
+            opacity: 0;
+        }
+
+        .delay-2 {
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+
+        .delay-3 {
+            animation-delay: 0.45s;
+            opacity: 0;
+        }
+
+        .delay-4 {
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.7s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stat cards */
+        .stat-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 60%, rgba(241, 90, 36, 0.08));
+            pointer-events: none;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px -10px rgba(26, 43, 74, 0.18);
+        }
+
+        /* TOC */
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #4a5568;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover,
+        .toc-link.active {
+            background: #F15A24;
+            color: white;
+        }
+
+        .toc-link span.num {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 11px;
+            background: rgba(241, 90, 36, 0.12);
+            color: #F15A24;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover span.num,
+        .toc-link.active span.num {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        /* Progress bar */
+        #reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Pull quote */
+        .pull-quote {
+            position: relative;
+            border-left: 4px solid #F15A24;
+            background: linear-gradient(135deg, #fff8f5, #fff);
+            border-radius: 0 16px 16px 0;
+            padding: 24px 28px;
+        }
+
+        .pull-quote::before {
+            content: '"';
+            font-family: 'Montserrat', sans-serif;
+            font-size: 80px;
+            color: #F15A24;
+            opacity: 0.15;
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            line-height: 1;
+        }
+
+        /* Comparison table */
+        .comp-row:nth-child(even) {
+            background: rgba(241, 90, 36, 0.03);
+        }
+
+        .comp-row:hover {
+            background: rgba(241, 90, 36, 0.07);
+        }
+
+        /* Back button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #F15A24;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #F15A24;
+            border-radius: 12px;
+            transition: all 0.25s;
+        }
+
+        .back-btn:hover {
+            background: #F15A24;
+            color: white;
+        }
+
+        /* Share btn */
+        .share-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1.5px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+            color: #1A2B4A;
+        }
+
+        .share-pill:hover {
+            border-color: #F15A24;
+            color: #F15A24;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Reading Progress -->
+    <div id="reading-progress"></div>
+
+    <!-- Navbar Placeholder -->
+    <div id="navbar-header"></div>
+    <script>
+        fetch('header.html')
+            .then(r => r.text())
+            .then(d => { document.getElementById('navbar-header').innerHTML = d; })
+            .catch(() => { });
+    </script>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <header class="relative bg-navy-dark pt-28 pb-44 overflow-hidden" style="background:#0f1c30;">
+        <div class="absolute inset-0 grid-pattern opacity-30 z-0"></div>
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1601598851547-4302969d0614?w=1400&q=80"
+                class="w-full h-full object-cover opacity-20" alt="Strapping Machinery">
+            <div class="absolute inset-0"
+                style="background:linear-gradient(to top, #0f1c30 30%, rgba(15,28,48,0.6) 100%)"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <!-- Breadcrumb -->
+            <div class="fade-up delay-1 flex items-center gap-2 text-xs text-gray-400 mb-8">
+                <a href="blog.php" class="hover:text-orange-DEFAULT transition-colors">Insights</a>
+                <span>›</span>
+                <span class="text-orange" style="color:#F15A24;">Machinery</span>
+            </div>
+
+            <div class="fade-up delay-1">
+                <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
+                    style="background:rgba(241,90,36,0.15);color:#F15A24;border:1px solid rgba(241,90,36,0.3)">
+                    Machinery Analysis
+                </span>
+            </div>
+
+            <h1 class="fade-up delay-2 font-montserrat font-black text-white leading-tight mb-6"
+                style="font-size:clamp(2.2rem,5vw,3.8rem);">
+                Automatic Strapping:<br>
+                <span style="color:#F15A24;">The ROI Analysis</span>
+            </h1>
+
+            <p class="fade-up delay-3 text-gray-300 font-light leading-relaxed mb-10 max-w-2xl"
+                style="font-size:1.1rem;">
+                How transitioning to automated strapping systems can transform your end-of-line packaging efficiency —
+                with real numbers, real timelines, and real results.
+            </p>
+
+            <div class="fade-up delay-4 flex flex-wrap items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center font-montserrat font-bold text-sm text-white"
+                        style="background:#F15A24;">AK</div>
+                    <div>
+                        <p class="text-white font-semibold text-sm">Arjun Kapoor</p>
+                        <p class="text-gray-400 text-xs">Packaging Engineer, AMR Packwell</p>
+                    </div>
+                </div>
+                <div class="h-8 w-px bg-gray-600"></div>
+                <div class="flex items-center gap-4 text-xs text-gray-400">
+                    <span>📅 Mar 10, 2026</span>
+                    <span>⏱ 8 min read</span>
+                    <span>👁 2,340 views</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ══════════════ MAIN CONTENT ══════════════ -->
+    <main class="max-w-7xl mx-auto px-6 py-16 -mt-24 relative z-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+            <!-- ─── Article Body ─── -->
+            <article class="lg:col-span-8">
+
+                <!-- Featured Image -->
+                <div class="reveal rounded-3xl overflow-hidden shadow-2xl mb-14 relative" style="height:420px;">
+                    <img src="https://images.unsplash.com/photo-1601598851547-4302969d0614?w=1200&q=85"
+                        class="w-full h-full object-cover" alt="Automatic Strapping Machine">
+                    <div class="absolute bottom-0 left-0 right-0 p-6"
+                        style="background:linear-gradient(to top, rgba(15,28,48,0.85), transparent)">
+                        <p class="text-white text-sm font-light">Modern automatic strapping machine in a high-volume
+                            warehouse facility</p>
+                    </div>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="reveal grid grid-cols-3 gap-5 mb-14">
+                    <div class="stat-card bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+                        <div class="font-montserrat font-black text-4xl mb-1" style="color:#F15A24;">65%</div>
+                        <p class="text-xs text-gray-500 font-medium leading-tight">Labor Cost<br>Reduction</p>
+                    </div>
+                    <div class="stat-card bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+                        <div class="font-montserrat font-black text-4xl mb-1" style="color:#1A2B4A;">18mo</div>
+                        <p class="text-xs text-gray-500 font-medium leading-tight">Average<br>Payback Period</p>
+                    </div>
+                    <div class="stat-card bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm">
+                        <div class="font-montserrat font-black text-4xl mb-1" style="color:#F15A24;">3×</div>
+                        <p class="text-xs text-gray-500 font-medium leading-tight">Speed vs.<br>Manual Strapping</p>
+                    </div>
+                </div>
+
+                <!-- Section: Introduction -->
+                <section id="intro" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-5 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#F15A24;">1</span>
+                        Why Strapping Automation Matters Now
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4" style="font-size:15px;">
+                        In today's high-velocity supply chain environment, end-of-line packaging has become a critical
+                        bottleneck for industrial exporters. Manual strapping — while familiar — is increasingly
+                        insufficient for plants shipping heavy machinery, steel components, or bulk goods at scale.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed" style="font-size:15px;">
+                        The shift toward automatic strapping isn't simply about replacing human labor. It's a strategic
+                        investment in throughput consistency, load security, and measurable cost reduction. At AMR
+                        Packwell, we've analyzed data from over 40 client transitions over 5 years — this article
+                        presents the clearest picture of what that journey looks like financially.
+                    </p>
+                </section>
+
+                <!-- Pull Quote -->
+                <div class="reveal pull-quote mb-12">
+                    <p class="font-montserrat font-bold text-navy text-lg leading-snug relative z-10">
+                        "Plants that switched to automatic strapping reported a 65% reduction in labor costs per unit
+                        shipped — within the first 12 months."
+                    </p>
+                    <p class="text-xs text-gray-400 mt-3 font-medium">— AMR Packwell Internal Client Study, 2025</p>
+                </div>
+
+                <!-- Section: Manual vs Auto Comparison -->
+                <section id="comparison" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-6 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#F15A24;">2</span>
+                        Manual vs. Automatic: A Direct Comparison
+                    </h2>
+
+                    <div class="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+                        <div class="grid grid-cols-3 text-xs font-bold uppercase tracking-wider p-4 border-b border-gray-100"
+                            style="background:#1A2B4A;color:white;">
+                            <div>Parameter</div>
+                            <div class="text-center">Manual</div>
+                            <div class="text-center" style="color:#F15A24;">Automatic</div>
+                        </div>
+                        <div class="divide-y divide-gray-50">
+                            <div class="comp-row grid grid-cols-3 p-4 text-sm">
+                                <div class="font-medium text-navy">Straps/Hour</div>
+                                <div class="text-center text-gray-500">60 – 80</div>
+                                <div class="text-center font-bold" style="color:#F15A24;">200 – 280</div>
+                            </div>
+                            <div class="comp-row grid grid-cols-3 p-4 text-sm">
+                                <div class="font-medium text-navy">Consistency</div>
+                                <div class="text-center text-gray-500">Variable</div>
+                                <div class="text-center font-bold" style="color:#F15A24;">±2% tension</div>
+                            </div>
+                            <div class="comp-row grid grid-cols-3 p-4 text-sm">
+                                <div class="font-medium text-navy">Operators Required</div>
+                                <div class="text-center text-gray-500">2 – 3 per line</div>
+                                <div class="text-center font-bold" style="color:#F15A24;">0 – 1 per line</div>
+                            </div>
+                            <div class="comp-row grid grid-cols-3 p-4 text-sm">
+                                <div class="font-medium text-navy">Annual Injury Risk</div>
+                                <div class="text-center text-gray-500">High (repetitive)</div>
+                                <div class="text-center font-bold" style="color:#F15A24;">Minimal</div>
+                            </div>
+                            <div class="comp-row grid grid-cols-3 p-4 text-sm">
+                                <div class="font-medium text-navy">Strap Waste</div>
+                                <div class="text-center text-gray-500">8 – 12%</div>
+                                <div class="text-center font-bold" style="color:#F15A24;">1 – 2%</div>
+                            </div>
+                            <div class="comp-row grid grid-cols-3 p-4 text-sm">
+                                <div class="font-medium text-navy">Shift Flexibility</div>
+                                <div class="text-center text-gray-500">Staffing dependent</div>
+                                <div class="text-center font-bold" style="color:#F15A24;">24/7 capable</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: ROI Breakdown -->
+                <section id="roi" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-6 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#F15A24;">3</span>
+                        The ROI Breakdown: Real Numbers
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-6" style="font-size:15px;">
+                        Consider a mid-size packaging plant strapping 500 units/day on two lines. Here's how the
+                        economics play out over a 36-month window:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+                        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <h4 class="font-montserrat font-bold text-sm text-gray-400 uppercase tracking-wider mb-4">
+                                Manual Setup — Annual Cost</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-600">Labor (4 operators)</span>
+                                    <span class="font-bold text-navy">₹28,80,000</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-600">Strap material waste</span>
+                                    <span class="font-bold text-navy">₹3,20,000</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-600">Re-work & damage cost</span>
+                                    <span class="font-bold text-navy">₹1,80,000</span>
+                                </div>
+                                <div class="border-t pt-3 flex justify-between text-sm font-bold">
+                                    <span style="color:#1A2B4A;">Total Annual</span>
+                                    <span style="color:#c94412;">₹33,80,000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl p-6 border-2 shadow-sm" style="border-color:#F15A24;">
+                            <h4 class="font-montserrat font-bold text-sm uppercase tracking-wider mb-4"
+                                style="color:#F15A24;">Automatic Setup — Annual Cost</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-600">Machine (amortized 5yr)</span>
+                                    <span class="font-bold text-navy">₹8,40,000</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-600">1 operator + maintenance</span>
+                                    <span class="font-bold text-navy">₹9,60,000</span>
+                                </div>
+                                <div class="flex justify-between text-sm">
+                                    <span class="text-gray-600">Strap material (optimized)</span>
+                                    <span class="font-bold text-navy">₹2,40,000</span>
+                                </div>
+                                <div class="border-t pt-3 flex justify-between text-sm font-bold">
+                                    <span style="color:#1A2B4A;">Total Annual</span>
+                                    <span style="color:#F15A24;">₹20,40,000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Savings bar -->
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-montserrat font-bold text-sm text-navy">Annual Savings</span>
+                            <span class="font-montserrat font-black text-xl" style="color:#F15A24;">₹13,40,000 /
+                                year</span>
+                        </div>
+                        <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
+                            <div class="h-full rounded-full transition-all duration-1000"
+                                style="width:60%;background:linear-gradient(90deg,#F15A24,#FF7A45);"></div>
+                        </div>
+                        <p class="text-xs text-gray-400 mt-2">60% cost reduction vs. manual baseline</p>
+                    </div>
+                </section>
+
+                <!-- Section: Implementation -->
+                <section id="implementation" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-6 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#F15A24;">4</span>
+                        Implementation: What to Expect
+                    </h2>
+
+                    <div class="space-y-5">
+                        <div class="flex gap-5 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                                style="background:#fff8f5;">🔍</div>
+                            <div>
+                                <h4 class="font-montserrat font-bold text-navy mb-1">Week 1–2: Site Assessment</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">Line speed analysis, strap pattern
+                                    mapping, bundle dimension profiling, and power supply audit.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                                style="background:#fff8f5;">⚙️</div>
+                            <div>
+                                <h4 class="font-montserrat font-bold text-navy mb-1">Week 3–5: Machine Installation</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">Foundation prep, machine anchoring,
+                                    conveyor integration, and control panel wiring. Minimal production disruption.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                                style="background:#fff8f5;">🎓</div>
+                            <div>
+                                <h4 class="font-montserrat font-bold text-navy mb-1">Week 6: Operator Training</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">1-day hands-on training. PLC parameter
+                                    tuning, strap reel changeover, and fault code response.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0"
+                                style="background:#fff8f5;">📈</div>
+                            <div>
+                                <h4 class="font-montserrat font-bold text-navy mb-1">Month 2–18: ROI Realization</h4>
+                                <p class="text-sm text-gray-500 leading-relaxed">Track KPIs monthly. Most clients break
+                                    even between months 14–22 depending on shift volume and labor cost index.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Conclusion -->
+                <section id="conclusion" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-5 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#F15A24;">5</span>
+                        The Bottom Line
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4" style="font-size:15px;">
+                        Automatic strapping is no longer a premium upgrade — it's a competitive necessity. With payback
+                        periods under 18 months for most mid-to-large operations, the question isn't <em>whether</em> to
+                        automate — it's <em>how quickly</em> you can.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed" style="font-size:15px;">
+                        AMR Packwell offers free site assessments and ROI projections for qualifying facilities. Contact
+                        our machinery division to schedule yours.
+                    </p>
+                </section>
+
+                <!-- Tags -->
+                <div class="reveal flex flex-wrap gap-2 mb-8">
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#Strapping</span>
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#ROI</span>
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#Automation</span>
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#Packaging</span>
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#Machinery</span>
+                </div>
+
+                <!-- Share Bar -->
+                <div class="reveal flex flex-wrap items-center gap-3 pt-6 border-t border-gray-100">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Share this</span>
+                    <button class="share-pill">🔗 Copy Link</button>
+                    <button class="share-pill">📘 LinkedIn</button>
+                    <button class="share-pill">🐦 Twitter</button>
+                    <button class="share-pill">📧 Email</button>
+                </div>
+
+                <!-- Back -->
+                <div class="reveal mt-10">
+                    <a href="blogs.php" class="back-btn">← Back to Insights</a>
+                </div>
+            </article>
+
+            <!-- ─── Sidebar ─── -->
+            <aside class="lg:col-span-4 space-y-8">
+
+                <!-- Table of Contents -->
+                <div class="reveal bg-white rounded-3xl p-7 shadow-sm border border-gray-100 sticky top-8">
+                    <h4 class="font-montserrat font-black text-navy text-sm uppercase tracking-widest mb-5">In This
+                        Article</h4>
+                    <nav class="space-y-1">
+                        <a href="#intro" class="toc-link"><span class="num">1</span> Why Automation Matters</a>
+                        <a href="#comparison" class="toc-link"><span class="num">2</span> Manual vs. Automatic</a>
+                        <a href="#roi" class="toc-link"><span class="num">3</span> ROI Breakdown</a>
+                        <a href="#implementation" class="toc-link"><span class="num">4</span> Implementation Steps</a>
+                        <a href="#conclusion" class="toc-link"><span class="num">5</span> The Bottom Line</a>
+                    </nav>
+                    <div class="mt-6 pt-5 border-t border-gray-100">
+                        <p class="text-xs text-gray-400">⏱ Estimated read time: <strong class="text-navy">8
+                                minutes</strong></p>
+                    </div>
+                </div>
+
+                <!-- CTA Widget -->
+                <div class="reveal bg-white rounded-3xl p-7 shadow-lg border-t-4" style="border-color:#F15A24;">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-5"
+                        style="background:#fff8f5;">📊</div>
+                    <h3 class="font-montserrat font-black text-navy text-lg mb-3">Get Your ROI Report</h3>
+                    <p class="text-sm text-gray-500 mb-6 leading-relaxed">Our engineers will calculate your exact
+                        strapping ROI — free of charge.</p>
+                    <input type="text" placeholder="Your company name"
+                        class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 mb-3 outline-none text-sm focus:border-orange/50 transition-all">
+                    <input type="email" placeholder="Work email"
+                        class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 mb-4 outline-none text-sm focus:border-orange/50 transition-all">
+                    <button class="w-full py-4 rounded-xl font-bold text-sm text-white transition-all duration-300"
+                        style="background:#1A2B4A;" onmouseover="this.style.background='#F15A24'"
+                        onmouseout="this.style.background='#1A2B4A'">
+                        Request Free Assessment →
+                    </button>
+                </div>
+
+                <!-- Related Article -->
+                <div class="reveal bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
+                    <h4 class="font-montserrat font-black text-navy text-xs uppercase tracking-widest mb-5">Related
+                        Reading</h4>
+                    <a href="blog-shipping-regulations.html" class="flex gap-4 group">
+                        <div class="w-20 h-16 rounded-xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=200&q=80"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                alt="Related">
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider"
+                                style="color:#16a34a;">Industry</span>
+                            <h5 class="font-montserrat font-bold text-navy text-sm leading-snug mt-1 group-hover:text-orange transition-colors"
+                                style="--tw-text-opacity:1;" onmouseover="this.style.color='#F15A24'"
+                                onmouseout="this.style.color='#1A2B4A'">
+                                2026 Global Shipping Regulations Update
+                            </h5>
+                            <p class="text-xs text-gray-400 mt-1">Mar 08, 2026</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Popular Tags -->
+                <div class="reveal bg-white rounded-3xl p-7 shadow-sm border border-gray-100">
+                    <h4 class="font-montserrat font-black text-navy/70 text-xs uppercase tracking-widest mb-5">Popular
+                        Tags</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#"
+                            class="px-3 py-1.5 bg-gray-100 rounded-xl text-xs font-bold text-navy/70 hover:bg-orange/10 hover:text-orange transition-all"
+                            onmouseover="this.style.background='rgba(241,90,36,0.1)';this.style.color='#F15A24'"
+                            onmouseout="this.style.background='#f3f4f6';this.style.color='rgba(26,43,74,0.7)'">#Strapping</a>
+                        <a href="#"
+                            class="px-3 py-1.5 bg-gray-100 rounded-xl text-xs font-bold text-navy/70 transition-all"
+                            onmouseover="this.style.background='rgba(241,90,36,0.1)';this.style.color='#F15A24'"
+                            onmouseout="this.style.background='#f3f4f6';this.style.color='rgba(26,43,74,0.7)'">#PlywoodBoxes</a>
+                        <a href="#"
+                            class="px-3 py-1.5 bg-gray-100 rounded-xl text-xs font-bold text-navy/70 transition-all"
+                            onmouseover="this.style.background='rgba(241,90,36,0.1)';this.style.color='#F15A24'"
+                            onmouseout="this.style.background='#f3f4f6';this.style.color='rgba(26,43,74,0.7)'">#ROI</a>
+                        <a href="#"
+                            class="px-3 py-1.5 bg-gray-100 rounded-xl text-xs font-bold text-navy/70 transition-all"
+                            onmouseover="this.style.background='rgba(241,90,36,0.1)';this.style.color='#F15A24'"
+                            onmouseout="this.style.background='#f3f4f6';this.style.color='rgba(26,43,74,0.7)'">#Automation</a>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-bottom"></div>
+    <script>
+        fetch('footer.php').then(r => r.text()).then(d => { document.getElementById('footer-bottom').innerHTML = d; }).catch(() => { });
+    </script>
+
+    <script>
+        // Reading progress
+        window.addEventListener('scroll', () => {
+            const doc = document.documentElement;
+            const scrollTop = doc.scrollTop || document.body.scrollTop;
+            const scrollHeight = doc.scrollHeight - doc.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('reading-progress').style.width = progress + '%';
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // TOC active state
+        const sections = document.querySelectorAll('section[id]');
+        const tocLinks = document.querySelectorAll('.toc-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+            tocLinks.forEach(l => {
+                l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+            });
+        });
+    </script>
+
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/formsubmit.js"></script>
+</body>
+
+</html>

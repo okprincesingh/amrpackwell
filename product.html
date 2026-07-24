@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/images/logo/logo_140881.png" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/styless.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
+      <link rel="canonical" href="https://www.amrpackwell.com/product"/>
+  <title>Packaging Products | AMR Packwell Noida</title>
+   <meta name="description" content="Shop AMR Packwell's complete range of corrugated boxes, wooden pallets, paper edge protectors, angle boards & strapping machines. Bulk orders accepted across India."/>
+  <meta name="keywords" content="Plywood Pallet Near Me, Plywood Pallet Manufacturer, Plywood Packaging Box, Plywood Box Manufacturer, Paper Angle Board, Paper Angle Board Manufacturer, Corrugated Box Manufacturer, Corrugated Box Near Me, Corrugated Box in Noida, Wooden Pallet Manufacturer"/>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Poppins:wght@300;400;500;600&family=Bebas+Neue&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                        bebas: ['Bebas Neue', 'cursive'],
+                    },
+                    colors: {
+                        orange: { DEFAULT: '#F15A24', light: '#FF7A45', pale: '#FFF3EE', dark: '#c94412' },
+                        navy: { DEFAULT: '#1A2B4A', dark: '#0f1c30', light: '#243660', muted: '#2d3f5f' },
+                    },
+                    boxShadow: {
+                        card: '0 8px 40px rgba(26,43,74,0.10)',
+                        'card-lg': '0 20px 60px rgba(26,43,74,0.16)',
+                        orange: '0 8px 28px rgba(241,90,36,0.40)',
+                        '3d': '8px 8px 0px #c94412',
+                        glow: '0 0 40px rgba(241,90,36,0.25)',
+                    },
+                    backgroundImage: {
+                        'grad-orange': 'linear-gradient(135deg, #F15A24, #FF7A45, #f9a96e)',
+                        'grad-orange-h': 'linear-gradient(90deg, #F15A24, #FF7A45)',
+                        'shimmer-anim': 'linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.35) 50%, transparent 70%)',
+                        'grid-pattern': 'repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 64px), repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 64px)',
+                    },
+                    keyframes: {
+                        fadeUp: { from: { opacity: '0', transform: 'translateY(40px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+                        floatY: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-14px)' } },
+                        rotateSlow: { from: { transform: 'rotate(0deg)' }, to: { transform: 'rotate(360deg)' } },
+                        shimmer: { '0%': { backgroundPosition: '-200% 0' }, '100%': { backgroundPosition: '200% 0' } },
+                        scaleIn: { from: { opacity: '0', transform: 'scale(0.85)' }, to: { opacity: '1', transform: 'scale(1)' } },
+                        pulseRing: { '0%': { transform: 'scale(1)', opacity: '0.8' }, '100%': { transform: 'scale(1.6)', opacity: '0' } },
+                        countUp: { from: { opacity: '0', transform: 'translateY(20px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+                        slideX: { from: { transform: 'translateX(-100%)' }, to: { transform: 'translateX(100%)' } },
+                        revealFadeUp: { from: { opacity: '0', transform: 'translateY(55px)' }, to: { opacity: '1', transform: 'translateY(0)' } },
+                        revealFadeLeft: { from: { opacity: '0', transform: 'translateX(-70px)' }, to: { opacity: '1', transform: 'translateX(0)' } },
+                        revealFadeRight: { from: { opacity: '0', transform: 'translateX(70px)' }, to: { opacity: '1', transform: 'translateX(0)' } },
+                        revealScale: { from: { opacity: '0', transform: 'scale(0.85)' }, to: { opacity: '1', transform: 'scale(1)' } },
+                    },
+                    animation: {
+                        fadeUp: 'fadeUp 0.7s cubic-bezier(.4,0,.2,1) both',
+                        floatY: 'floatY 4s ease-in-out infinite',
+                        'floatY-delay': 'floatY 4s 1s ease-in-out infinite',
+                        rotateSlow: 'rotateSlow 20s linear infinite',
+                        shimmer: 'shimmer 2.5s linear infinite',
+                        scaleIn: 'scaleIn 0.6s cubic-bezier(.34,1.56,.64,1) both',
+                        pulseRing: 'pulseRing 2s cubic-bezier(.4,0,.2,1) infinite',
+                        countUp: 'countUp 0.5s ease both',
+                        revealFadeUp: 'revealFadeUp 0.75s cubic-bezier(.4,0,.2,1) both',
+                        revealFadeLeft: 'revealFadeLeft 0.75s cubic-bezier(.4,0,.2,1) both',
+                        revealFadeRight: 'revealFadeRight 0.75s cubic-bezier(.4,0,.2,1) both',
+                        revealScale: 'revealScale 0.75s cubic-bezier(.4,0,.2,1) both',
+                    },
+                    transitionDelay: {
+                        '100': '100ms',
+                        '200': '200ms',
+                        '320': '320ms',
+                        '440': '440ms',
+                        '560': '560ms',
+                    },
+                }
+            }
+        };
+    </script>
+    <style>
+        .grad-text {
+            background: linear-gradient(135deg, #F15A24, #FF7A45, #f9a96e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent-line::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+
+        .accent-line-center::after {
+            content: '';
+            display: block;
+            width: 56px;
+            height: 4px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            border-radius: 3px;
+            margin: 10px auto 0;
+        }
+
+        .card-bar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #F15A24, #FF7A45);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s ease;
+        }
+
+        .prod-card:hover .card-bar::after {
+            transform: scaleX(1);
+        }
+
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+        }
+
+        .grid-overlay {
+            background-image:
+                repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 64px),
+                repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 64px);
+        }
+
+        .shine-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(105deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+            background-size: 200% 100%;
+            animation: shimmer 2.5s linear infinite;
+        }
+
+        .pulse-dot::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border: 2px solid #F15A24;
+            border-radius: 50%;
+            animation: pulseRing 2s cubic-bezier(.4, 0, .2, 1) infinite;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(241, 90, 36, 0.12), transparent 60%);
+            border-radius: 16px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #F15A24;
+            border-radius: 3px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transition: opacity .75s cubic-bezier(.4, 0, .2, 1), transform .75s cubic-bezier(.4, 0, .2, 1);
+        }
+
+        .reveal.from-left {
+            transform: translateX(-70px);
+        }
+
+        .reveal.from-right {
+            transform: translateX(70px);
+        }
+
+        .reveal.from-bottom {
+            transform: translateY(55px);
+        }
+
+        .reveal.from-top {
+            transform: translateY(-40px);
+        }
+
+        .reveal.scale-in {
+            transform: scale(0.85);
+        }
+
+        .reveal.revealed {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        .delay-1 {
+            transition-delay: .10s;
+        }
+
+        .delay-2 {
+            transition-delay: .20s;
+        }
+
+        .delay-3 {
+            transition-delay: .32s;
+        }
+
+        .delay-4 {
+            transition-delay: .44s;
+        }
+
+        .delay-5 {
+            transition-delay: .56s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-header"></div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                const navbarContainer = document.getElementById('navbar-header');
+                navbarContainer.innerHTML = data;
+                window.addEventListener('scroll', function () {
+                    const headerTag = navbarContainer.querySelector('.navbar-header');
+                    const topbar = navbarContainer.querySelector('.amr-topbar');
+                    if (window.scrollY > 50) {
+                        headerTag.classList.add('is-sticky-active');
+                    } else {
+                        headerTag.classList.remove('is-sticky-active');
+                    }
+                });
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
+
+    <div class="bg-[#F5F4F0] text-gray-900 font-poppins scroll-smooth">
+        <!-- Hero Banner Section -->
+        <!-- ═══════════════════ HERO ═══════════════════ -->
+
+        <section
+            class="relative h-[70vh] md:h-[380px] w-full overflow-hidden flex items-center justify-start font-sans">
+
+            <style>
+                @keyframes kenBurns {
+                    0% {
+                        transform: scale(1);
+                    }
+
+                    100% {
+                        transform: scale(1.15);
+                    }
+                }
+
+                @keyframes slideFromTop {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-40px);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                .kb-zoom {
+                    animation: kenBurns 15s infinite alternate ease-in-out;
+                }
+
+                .text-slide-in {
+                    opacity: 0;
+                    animation: slideFromTop 0.8s ease-out forwards;
+                }
+
+                .delay-1 {
+                    animation-delay: 0.3s;
+                }
+
+                .delay-2 {
+                    animation-delay: 0.6s;
+                }
+            </style>
+
+            <div class="absolute inset-0 z-0">
+                <!-- Mobile Banner -->
+                <img src="assets/images/product-banners/ourproduct-mobile.jpeg" alt="AMR Packaging Mobile Banner"
+                    class="block md:hidden w-full h-full object-cover kb-zoom" />
+
+                <!-- Desktop Banner -->
+                <img src="assets/images/product-banners/ourproduct.jpeg" alt="AMR Packaging Industrial Solutions"
+                    class="hidden md:block w-full h-full object-cover kb-zoom" />
+
+                <!-- Overlay for better text visibility -->
+                <div class="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent"></div>
+            </div>
+
+            <div class="relative z-10 container mx-auto px-6 md:px-20 flex flex-col items-start text-left">
+
+                <h1
+                    class="text-slide-in text-3xl md:text-5xl font-black tracking-tight mb-4 leading-tight text-white uppercase">
+                    Premium <span class="text-[#f47933]">Industrial</span> <br>
+                    <span class="text-[#f47933]">Packaging</span> Solutions
+                </h1>
+
+                <p
+                    class="text-slide-in delay-1 text-base md:text-lg text-gray-200 max-w-xl mb-8 leading-relaxed border-l-4 border-[#f47933] pl-4">
+                    Manufacturer of high-quality <strong>Corrugated Boxes, Wooden Pallets,
+                        and Edge Protectors</strong>. Custom-engineered solutions designed
+                    to secure your cargo and streamline your logistics.
+                </p>
+
+
+
+            </div>
+        </section>
+
+
+        <!-- ══════════════ HERO ══════════════ -->
+        <!-- <section class="hero-clip bg-navy pt-32 pb-36 relative overflow-hidden">
+            <div class="absolute inset-0 grid-overlay pointer-events-none"></div>
+            <div class="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-orange opacity-[0.07] blur-3xl pointer-events-none animate-rotateSlow"
+                style="transform-origin:center"></div>
+            <div
+                class="absolute bottom-20 left-1/3 w-80 h-80 rounded-full bg-orange opacity-[0.04] blur-3xl pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <p class="animate-fadeUp font-poppins text-[10px] tracking-[3px] uppercase text-white/30 mb-8">
+                    Home &nbsp;/&nbsp; <span class="text-orange">Our Products</span>
+                </p>
+
+                <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-12">
+                    <div>
+                        <div
+                            class="animate-scaleIn inline-flex items-center gap-2.5 bg-orange/15 border border-orange/30 px-5 py-2 rounded-full mb-6">
+                            <span class="w-1.5 h-1.5 rounded-full bg-orange inline-block relative pulse-dot"></span>
+                            <span class="font-montserrat font-bold text-[10px] tracking-[3px] uppercase text-orange">8+
+                                Years of Excellence</span>
+                        </div>
+
+                        <h1
+                            class="animate-fadeUp font-bebas text-6xl lg:text-8xl text-white uppercase leading-[0.9] tracking-wide mb-5">
+                            Our <span class="grad-text">Products</span>
+                        </h1>
+                        <p class="animate-fadeUp font-poppins font-light text-white/55 text-sm leading-relaxed max-w-xl"
+                            style="animation-delay:.15s">
+                            From edge protectors to wooden crates — explore our complete range of industrial packaging
+                            solutions, trusted by businesses across India for strength, reliability, and value.
+                        </p>
+
+                        <div class="animate-fadeUp flex flex-wrap gap-2 mt-6" style="animation-delay:.25s">
+                            <span
+                                class="font-montserrat font-semibold text-[9px] tracking-widest uppercase bg-white/[0.08] border border-white/15 text-white/70 px-3 py-1.5 rounded-full cursor-default hover:bg-orange hover:text-white transition-all duration-200">Paper
+                                Edge Protector</span>
+                            <span
+                                class="font-montserrat font-semibold text-[9px] tracking-widest uppercase bg-white/[0.08] border border-white/15 text-white/70 px-3 py-1.5 rounded-full cursor-default hover:bg-orange hover:text-white transition-all duration-200">Wooden
+                                Pallets</span>
+                            <span
+                                class="font-montserrat font-semibold text-[9px] tracking-widest uppercase bg-white/[0.08] border border-white/15 text-white/70 px-3 py-1.5 rounded-full cursor-default hover:bg-orange hover:text-white transition-all duration-200">Paper
+                                Core Pipe</span>
+                            <span
+                                class="font-montserrat font-semibold text-[9px] tracking-widest uppercase bg-white/[0.08] border border-white/15 text-white/70 px-3 py-1.5 rounded-full cursor-default hover:bg-orange hover:text-white transition-all duration-200">Angle
+                                Boards</span>
+                            <span
+                                class="font-montserrat font-semibold text-[9px] tracking-widest uppercase bg-white/[0.08] border border-white/15 text-white/70 px-3 py-1.5 rounded-full cursor-default hover:bg-orange hover:text-white transition-all duration-200">Cardboard
+                                Trays</span>
+                        </div>
+                    </div>
+
+                    <div class="animate-fadeUp flex gap-6 flex-wrap" style="animation-delay:.35s">
+                        <div
+                            class="relative bg-white/[0.06] rounded-2xl overflow-hidden p-6 min-w-[110px] text-center stat-card">
+                            <div class="font-bebas text-5xl grad-text counter-num relative z-10" data-target="7">7</div>
+                            <div
+                                class="font-montserrat font-bold text-[9px] tracking-[2px] uppercase text-white/40 mt-1 relative z-10">
+                                Product Lines</div>
+                        </div>
+                        <div
+                            class="relative bg-white/[0.06] rounded-2xl overflow-hidden p-6 min-w-[110px] text-center stat-card">
+                            <div class="font-bebas text-5xl grad-text relative z-10">5K+</div>
+                            <div
+                                class="font-montserrat font-bold text-[9px] tracking-[2px] uppercase text-white/40 mt-1 relative z-10">
+                                Units / Day</div>
+                        </div>
+                        <div
+                            class="relative bg-white/[0.06] rounded-2xl overflow-hidden p-6 min-w-[110px] text-center stat-card">
+                            <div class="font-bebas text-5xl grad-text relative z-10">PAN</div>
+                            <div
+                                class="font-montserrat font-bold text-[9px] tracking-[2px] uppercase text-white/40 mt-1 relative z-10">
+                                India Supply</div>
+                        </div>
+                        <div
+                            class="relative bg-white/[0.06] rounded-2xl overflow-hidden p-6 min-w-[110px] text-center stat-card">
+                            <div class="font-bebas text-5xl grad-text relative z-10">8+</div>
+                            <div
+                                class="font-montserrat font-bold text-[9px] tracking-[2px] uppercase text-white/40 mt-1 relative z-10">
+                                Years Active</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- ══════════════ PRODUCTS GRID ══════════════ -->
+        <section class="max-w-7xl mx-auto px-6 mt-14 pb-24 relative z-10">
+
+            <div class="reveal from-bottom flex items-center justify-between mb-10">
+                <div>
+                    <h2 class="font-bebas text-4xl uppercase text-navy tracking-wide accent-line">Complete Product Range
+                    </h2>
+                </div>
+                <button onclick="openInquiry()"
+                    class="shine-btn hidden md:flex items-center gap-2 font-montserrat font-extrabold text-[11px] tracking-widest uppercase bg-orange text-white px-6 py-3 rounded hover:bg-orange-light transition-colors duration-200 shadow-orange relative overflow-hidden">
+                    Request Bulk Quote
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+
+                <!-- 1. Paper Edge Protector -->
+                <a href="paper-edge-protector.html"
+                    class="prod-card reveal from-bottom group bg-white rounded-2xl border border-gray-100 overflow-hidden relative card-bar shadow-card transition-all duration-[350ms] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(26,43,74,0.16)]">
+                    <img class="object-cover w-full h-56" src="assets/images/product-img/paper-edge-protector.png"
+                        alt="paper edge protector">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-2">
+                            <h3
+                                class="font-montserrat font-extrabold text-lg uppercase text-navy tracking-tight leading-tight">
+                                Paper Edge<br />Protector</h3>
+                            <svg class="w-5 h-5 text-orange mt-1 flex-shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                        <p class="font-poppins text-[12px] text-gray-400 leading-relaxed mb-4">Corner & edge protection
+                            for pallets, frames, and shipments. Lightweight yet sturdy Kraft paper construction.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-1">
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-orange/10 text-orange px-2.5 py-0.5 rounded-full">Kraft</span>
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-navy/10 text-navy px-2.5 py-0.5 rounded-full">Eco</span>
+                            </div>
+                            <span class="font-montserrat font-bold text-[10px] tracking-[2px] text-gray-400 uppercase">6
+                                Variants</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- 4. Corrugated box -->
+                <a href="corrugated-box.html" id="paper-core"
+                    class="prod-card reveal from-bottom delay-3 group bg-white rounded-2xl border border-gray-100 overflow-hidden relative card-bar shadow-card transition-all duration-[350ms] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(26,43,74,0.16)]">
+                    <img class="object-cover w-full h-56" src="assets/images/product-img/corrugated.png" alt="corrugated">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-2">
+                            <h3
+                                class="font-montserrat font-extrabold text-lg uppercase text-navy tracking-tight leading-tight">
+                                Corrugated
+                                Boxes
+
+                            </h3>
+                            <svg class="w-5 h-5 text-orange mt-1 flex-shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                        <p class="font-poppins text-[12px] text-gray-400 leading-relaxed mb-4">High-strength paper core
+                            tubes used as cores for films, tapes, textiles, and paper rolls. Various diameters.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-1">
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-sky-100 text-sky-800 px-2.5 py-0.5 rounded-full">Tubular</span>
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-navy/10 text-navy px-2.5 py-0.5 rounded-full">Multi-Dia</span>
+                            </div>
+                            <span
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] text-gray-400 uppercase">Custom</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- 2. Wooden Pallets -->
+                <a href="wooden-pallets.html" id="wooden-pallets"
+                    class="prod-card reveal from-bottom delay-1 group bg-white rounded-2xl border border-gray-100 overflow-hidden relative card-bar shadow-card transition-all duration-[350ms] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(26,43,74,0.16)]">
+                    <img class="object-cover w-full h-56" src="assets/images/product-img/wooden.png" alt="wooden Pallet">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-2">
+                            <h3
+                                class="font-montserrat font-extrabold text-lg uppercase text-navy tracking-tight leading-tight">
+                                Wooden<br />Pallets</h3>
+                            <svg class="w-5 h-5 text-orange mt-1 flex-shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                        <p class="font-poppins text-[12px] text-gray-400 leading-relaxed mb-4">Durable wooden pallets
+                            for warehousing, logistics, and heavy load transportation. Custom dimensions available.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-1">
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-amber-100 text-amber-800 px-2.5 py-0.5 rounded-full">Wood</span>
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-navy/10 text-navy px-2.5 py-0.5 rounded-full">Custom</span>
+                            </div>
+                            <span class="font-montserrat font-bold text-[10px] tracking-[2px] text-gray-400 uppercase">3
+                                Grades</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- 3. Wooden Box / Crate -->
+                <a href="wooden-box-crate.html" id="wooden-box"
+                    class="prod-card reveal from-bottom delay-2 group bg-white rounded-2xl border border-gray-100 overflow-hidden relative card-bar shadow-card transition-all duration-[350ms] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(26,43,74,0.16)]">
+                    <img class="object-cover w-full h-56" src="assets/images/product-img/woden-pallets.png" alt="woden pallets">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-2">
+                            <h3
+                                class="font-montserrat font-extrabold text-lg uppercase text-navy tracking-tight leading-tight">
+                                Wooden Box<br />/ Crate</h3>
+                            <svg class="w-5 h-5 text-orange mt-1 flex-shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                        <p class="font-poppins text-[12px] text-gray-400 leading-relaxed mb-4">Robust wooden boxes and
+                            crates for machinery, fragile items, and export packaging. Made-to-measure.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-1">
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-stone-100 text-stone-700 px-2.5 py-0.5 rounded-full">Export</span>
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-navy/10 text-navy px-2.5 py-0.5 rounded-full">Custom</span>
+                            </div>
+                            <span
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] text-gray-400 uppercase">Any
+                                Size</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- 5. Cardboard Tray -->
+                <a href="cardboard-tray.html" id="cardboard"
+                    class="prod-card reveal from-bottom delay-1 group bg-white rounded-2xl border border-gray-100 overflow-hidden relative card-bar shadow-card transition-all duration-[350ms] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(26,43,74,0.16)]">
+                    <img class="object-cover w-full h-56" src="assets/images/category-img/cardboard-tray2.jpg" alt="cardboard tray">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-2">
+                            <h3
+                                class="font-montserrat font-extrabold text-lg uppercase text-navy tracking-tight leading-tight">
+                                Cardboard<br />Tray</h3>
+                            <svg class="w-5 h-5 text-orange mt-1 flex-shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                        <p class="font-poppins text-[12px] text-gray-400 leading-relaxed mb-4">Corrugated and
+                            single-layer cardboard trays for retail, food, electronics, and pharmaceutical packaging.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-1">
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-emerald-100 text-emerald-800 px-2.5 py-0.5 rounded-full">Corrugated</span>
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-navy/10 text-navy px-2.5 py-0.5 rounded-full">Retail</span>
+                            </div>
+                            <span
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] text-gray-400 uppercase">Custom</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- 6. All Types Of Services -->
+                <a href="" id="box-packaging"
+                    class="prod-card reveal from-bottom delay-2 group bg-white rounded-2xl border border-gray-100 overflow-hidden relative card-bar shadow-card transition-all duration-[350ms] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(26,43,74,0.16)]">
+                    <img class="object-cover w-full h-56" src="assets/images/category-img/allpacking.png"
+                        alt="all type packaging">
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-2">
+                            <h3
+                                class="font-montserrat font-extrabold text-lg uppercase text-navy tracking-tight leading-tight">
+                                All Types Of<br />Packaging Materials</h3>
+                            <svg class="w-5 h-5 text-orange mt-1 flex-shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </div>
+                        <p class="font-poppins text-[12px] text-gray-400 leading-relaxed mb-4">End-to-end packaging
+                            services including design, supply, and assembly. Customized for your product line.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-1">
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-violet-100 text-violet-800 px-2.5 py-0.5 rounded-full">Turnkey</span>
+                                <span
+                                    class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-navy/10 text-navy px-2.5 py-0.5 rounded-full">B2B</span>
+                            </div>
+                            <span
+                                class="font-montserrat font-bold text-[10px] tracking-[2px] text-gray-400 uppercase">Full
+                                Service</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- 7. Paper Angle Board — wide card -->
+                <a href="paper-angle-board.html" id="paper-angle"
+                    class="prod-card reveal from-bottom delay-3 group bg-white rounded-2xl border border-gray-100 overflow-hidden relative card-bar shadow-card xl:col-span-2 transition-all duration-[350ms] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(26,43,74,0.16)]">
+                    <div class="flex flex-col md:flex-row h-full">
+                        <div
+                            class="md:w-60 h-48 md:h-auto bg-gradient-to-br from-rose-50 via-red-50 to-orange-50 flex items-center justify-center relative flex-shrink-0 overflow-hidden">
+                            <img class="object-cover h-full" src="assets/images/category-img/paper-angle-board.png"
+                                alt="paper angle board">
+                            <span
+                                class="absolute top-3 right-3 font-montserrat font-extrabold text-[9px] tracking-[2px] uppercase bg-orange text-white px-3 py-1 rounded-full shadow-orange">New
+                                Range</span>
+                        </div>
+                        <div class="p-6 flex flex-col justify-between flex-1">
+                            <div>
+                                <div class="flex items-start justify-between mb-3">
+                                    <h3
+                                        class="font-montserrat font-extrabold text-xl uppercase text-navy tracking-tight leading-tight">
+                                        Paper Angle Board</h3>
+                                    <svg class="w-5 h-5 text-orange mt-1 flex-shrink-0 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </div>
+                                <p class="font-poppins text-[12px] text-gray-400 leading-relaxed mb-4">High-quality
+                                    L-shaped angle boards for edge and corner reinforcement in shipments. Available in a
+                                    full range of dimensions — Angle Board Pallet, Frame, Corner, and Paper Frame Box
+                                    variants.</p>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex gap-1.5 flex-wrap">
+                                    <span
+                                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-rose-100 text-rose-800 px-2.5 py-0.5 rounded-full">L-Shape</span>
+                                    <span
+                                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-orange/10 text-orange px-2.5 py-0.5 rounded-full">Pallet</span>
+                                    <span
+                                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-navy/10 text-navy px-2.5 py-0.5 rounded-full">Frame</span>
+                                    <span
+                                        class="font-montserrat font-bold text-[9px] tracking-widest uppercase bg-navy/10 text-navy px-2.5 py-0.5 rounded-full">Corner</span>
+                                </div>
+                                <span
+                                    class="font-montserrat font-bold text-[10px] tracking-[2px] text-gray-400 uppercase">4
+                                    Variants</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ══════════════ WHY US ══════════════ -->
+        <section class="bg-navy py-20 relative overflow-hidden">
+            <div class="absolute inset-0 grid-overlay pointer-events-none opacity-60"></div>
+            <div
+                class="absolute top-0 left-1/4 w-96 h-96 rounded-full bg-orange opacity-[0.05] blur-3xl pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-12 reveal from-bottom">
+                    <h2 class="font-bebas text-5xl uppercase text-white tracking-wide accent-line-center">Why Choose AMR
+                        Packwell?</h2>
+                    <p class="font-poppins font-light text-white/45 text-sm mt-4 max-w-lg mx-auto">India's trusted name
+                        in industrial packaging — built on quality, speed, and commitment.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <div
+                        class="reveal from-bottom delay-1 text-center p-6 border border-white/[0.08] rounded-2xl group cursor-default transition-all duration-300 hover:shadow-[0_0_0_2px_#F15A24,0_20px_50px_rgba(241,90,36,0.15)] hover:-translate-y-1.5">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange/20 transition-colors duration-300">
+                            <span class="text-2xl">🛡️</span>
+                        </div>
+                        <div
+                            class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">
+                            Superior Strength</div>
+                        <div class="font-poppins text-[11px] text-white/35">Resists heavy loads</div>
+                    </div>
+                    <div
+                        class="reveal from-bottom delay-2 text-center p-6 border border-white/[0.08] rounded-2xl group cursor-default transition-all duration-300 hover:shadow-[0_0_0_2px_#F15A24,0_20px_50px_rgba(241,90,36,0.15)] hover:-translate-y-1.5">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange/20 transition-colors duration-300">
+                            <span class="text-2xl">♻️</span>
+                        </div>
+                        <div
+                            class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">
+                            Eco Friendly</div>
+                        <div class="font-poppins text-[11px] text-white/35">100% recyclable</div>
+                    </div>
+                    <div
+                        class="reveal from-bottom delay-3 text-center p-6 border border-white/[0.08] rounded-2xl group cursor-default transition-all duration-300 hover:shadow-[0_0_0_2px_#F15A24,0_20px_50px_rgba(241,90,36,0.15)] hover:-translate-y-1.5">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange/20 transition-colors duration-300">
+                            <span class="text-2xl">📐</span>
+                        </div>
+                        <div
+                            class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">
+                            Custom Sizes</div>
+                        <div class="font-poppins text-[11px] text-white/35">Made to measure</div>
+                    </div>
+                    <div
+                        class="reveal from-bottom delay-4 text-center p-6 border border-white/[0.08] rounded-2xl group cursor-default transition-all duration-300 hover:shadow-[0_0_0_2px_#F15A24,0_20px_50px_rgba(241,90,36,0.15)] hover:-translate-y-1.5">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange/20 transition-colors duration-300">
+                            <span class="text-2xl">💰</span>
+                        </div>
+                        <div
+                            class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">
+                            Cost Effective</div>
+                        <div class="font-poppins text-[11px] text-white/35">Bulk discounts</div>
+                    </div>
+                    <div
+                        class="reveal from-bottom delay-5 text-center p-6 border border-white/[0.08] rounded-2xl group cursor-default transition-all duration-300 hover:shadow-[0_0_0_2px_#F15A24,0_20px_50px_rgba(241,90,36,0.15)] hover:-translate-y-1.5">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange/20 transition-colors duration-300">
+                            <span class="text-2xl">🚚</span>
+                        </div>
+                        <div
+                            class="font-montserrat font-extrabold text-[11px] tracking-[2px] uppercase text-white mb-1">
+                            PAN India</div>
+                        <div class="font-poppins text-[11px] text-white/35">Fast delivery</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════ CTA ══════════════ -->
+        <section id="contact" class="bg-orange py-20 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10"
+                style="background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 32px)">
+            </div>
+            <div
+                class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-white opacity-[0.06] blur-3xl pointer-events-none">
+            </div>
+
+            <div class="max-w-3xl mx-auto px-6 text-center relative z-10">
+                <div class="reveal from-bottom">
+                    <p class="font-montserrat font-bold text-[10px] tracking-[4px] uppercase text-white/60 mb-3">Ready
+                        to Order?</p>
+                    <h2 class="font-bebas text-5xl lg:text-6xl uppercase text-white tracking-wide mb-4">Get a Custom
+                        Quote Today</h2>
+                    <p class="font-poppins font-light text-white/75 text-sm mb-10 max-w-lg mx-auto leading-relaxed">Tell
+                        us your product, dimensions, and volume — we'll respond within 24 hours with competitive
+                        pricing.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="openInquiry()"
+                            class="shine-btn relative overflow-hidden font-montserrat font-extrabold text-[12px] tracking-widest uppercase bg-white text-orange px-10 py-4 rounded hover:bg-navy hover:text-white transition-all duration-300 shadow-card-lg">
+                            Send Inquiry Now
+                        </button>
+                        <button
+                            class="font-montserrat font-extrabold text-[12px] tracking-widest uppercase border-2 border-white text-white px-10 py-4 rounded hover:bg-white hover:text-orange transition-all duration-300">
+                            📞 Call Us Today
+                        </button>
+                    </div>
+
+                    <div
+                        class="inline-flex items-center gap-2.5 bg-[linear-gradient(135deg,#1A2B4A,#243660)] border border-orange/40 px-5 py-2.5 rounded-full mt-8">
+                        <span class="w-1.5 h-1.5 rounded-full bg-orange inline-block relative pulse-dot"></span>
+                        <span class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-white/70">GST
+                            Registered &nbsp;·&nbsp; ISO Compliant &nbsp;·&nbsp; PAN India Delivery</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════ INQUIRY MODAL ══════════════ -->
+        <div id="inquiry-modal"
+            class="fixed inset-0 bg-navy-dark/80 z-[999] items-center justify-center p-4 backdrop-blur-sm"
+            style="display:none">
+            <div class="bg-white rounded-2xl w-full max-w-md shadow-card-lg overflow-hidden animate-scaleIn">
+                <div class="bg-navy px-6 py-5 flex items-center justify-between">
+                    <div>
+                        <h3 id="modal-title"
+                            class="font-montserrat font-black text-lg uppercase text-white tracking-tight">Send Inquiry
+                        </h3>
+                        <p class="font-poppins text-[11px] text-white/40 mt-0.5">We respond within 24 hours</p>
+                    </div>
+                    <button onclick="closeInquiry()"
+                        class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/60 hover:text-white transition-all duration-200">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="p-6 space-y-4">
+                    <div>
+                        <label
+                            class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Your
+                            Name *</label>
+                        <input id="f-name" type="text" placeholder="e.g. Rajesh Kumar"
+                            class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors duration-200" />
+                    </div>
+                    <div>
+                        <label
+                            class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Mobile
+                            / Email *</label>
+                        <input id="f-contact" type="text" placeholder="+91 98765 43210"
+                            class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors duration-200" />
+                    </div>
+                    <div>
+                        <label
+                            class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Product</label>
+                        <input id="f-product" type="text" readonly
+                            class="w-full border border-gray-100 bg-gray-50 rounded-lg px-4 py-2.5 text-sm text-gray-400 font-poppins outline-none" />
+                    </div>
+                    <div>
+                        <label
+                            class="font-montserrat font-bold text-[10px] tracking-[2px] uppercase text-gray-400 block mb-1.5">Requirements</label>
+                        <textarea id="f-msg" rows="3" placeholder="Quantity, size, special requirements..."
+                            class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors duration-200 resize-none"></textarea>
+                    </div>
+                    <button onclick="submitInquiry()"
+                        class="shine-btn relative overflow-hidden w-full font-montserrat font-black text-[12px] tracking-widest uppercase bg-orange text-white py-3.5 rounded-lg hover:bg-orange-light transition-all duration-200 shadow-orange">
+                        Submit Inquiry →
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // ── Scroll reveal ──
+            const revealEls = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('revealed');
+                        observer.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            revealEls.forEach(el => observer.observe(el));
+
+            // ── Modal ──
+            function openInquiry(product) {
+                document.getElementById('f-product').value = product || 'General Inquiry';
+                document.getElementById('modal-title').textContent = product ? `Inquiry: ${product}` : 'Send Inquiry';
+                document.getElementById('inquiry-modal').style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeInquiry() {
+                document.getElementById('inquiry-modal').style.display = 'none';
+                document.body.style.overflow = '';
+            }
+
+            function submitInquiry() {
+                const name = document.getElementById('f-name').value.trim();
+                const contact = document.getElementById('f-contact').value.trim();
+                if (!name || !contact) { alert('Please enter your name and contact details.'); return; }
+                closeInquiry();
+                const toast = document.createElement('div');
+                toast.className = 'fixed bottom-6 right-6 bg-navy text-white px-6 py-4 rounded-xl shadow-card-lg z-[9999] font-montserrat font-bold text-sm tracking-wide border-l-4 border-orange animate-scaleIn';
+                toast.textContent = '✓ Inquiry submitted! We\'ll contact you within 24 hours.';
+                document.body.appendChild(toast);
+                setTimeout(() => {
+                    toast.style.transition = 'opacity 0.4s';
+                    toast.style.opacity = '0';
+                    setTimeout(() => toast.remove(), 400);
+                }, 4000);
+            }
+
+            document.getElementById('inquiry-modal').addEventListener('click', function (e) {
+                if (e.target === this) closeInquiry();
+            });
+
+            // ── Product card inquiry trigger ──
+            document.querySelectorAll('.prod-card').forEach(card => {
+                card.addEventListener('click', function (e) {
+                    if (this.getAttribute('href') === '' || this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        const productName = this.querySelector('h3')?.innerText.replace('\n', ' ') || 'Product';
+                        openInquiry(productName);
+                    }
+                });
+            });
+        </script>
+    </div>
+
+    <div id="footer-bottom"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-bottom').innerHTML = data;
+            });
+    </script>
+    <script src="assets/js/formsubmit.js"></script>
+</body>
+
+</html>

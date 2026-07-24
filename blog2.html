@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/images/logo/logo_140881.png" />
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/styless.css">
+    <title>2026 Global Shipping Regulations Update – AMR Packwell</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        orange: { DEFAULT: '#F15A24', light: '#FF7A45', dark: '#c94412' },
+                        navy: { DEFAULT: '#1A2B4A', dark: '#0f1c30', light: '#243660' },
+                        green: { reg: '#16a34a' }
+                    },
+                }
+            }
+        };
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f7f8fa;
+            font-family: 'Poppins', sans-serif;
+            color: #1A2B4A;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .grid-pattern {
+            background-image:
+                linear-gradient(rgba(22, 163, 74, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(22, 163, 74, 0.06) 1px, transparent 1px);
+            background-size: 32px 32px;
+            animation: gridScroll 25s linear infinite;
+        }
+
+        @keyframes gridScroll {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 320px;
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.15s;
+            opacity: 0;
+        }
+
+        .delay-2 {
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+
+        .delay-3 {
+            animation-delay: 0.45s;
+            opacity: 0;
+        }
+
+        .delay-4 {
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.7s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Alert Box */
+        .alert-box {
+            border-left: 4px solid #dc2626;
+            background: linear-gradient(135deg, #fff5f5, #fff);
+            border-radius: 0 16px 16px 0;
+            padding: 20px 24px;
+        }
+
+        /* Regulation card */
+        .reg-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .reg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(26, 43, 74, 0.15);
+        }
+
+        /* Status badge */
+        .badge-active {
+            background: #dcfce7;
+            color: #15803d;
+        }
+
+        .badge-upcoming {
+            background: #fef9c3;
+            color: #a16207;
+        }
+
+        .badge-review {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        /* TOC */
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #4a5568;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover,
+        .toc-link.active {
+            background: #16a34a;
+            color: white;
+        }
+
+        .toc-link span.num {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 11px;
+            background: rgba(22, 163, 74, 0.12);
+            color: #16a34a;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .toc-link:hover span.num,
+        .toc-link.active span.num {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        #reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #16a34a, #22c55e);
+            z-index: 9999;
+            width: 0%;
+            transition: width 0.1s;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .pull-quote {
+            position: relative;
+            border-left: 4px solid #16a34a;
+            background: linear-gradient(135deg, #f0fdf4, #fff);
+            border-radius: 0 16px 16px 0;
+            padding: 24px 28px;
+        }
+
+        .pull-quote::before {
+            content: '"';
+            font-family: 'Montserrat', sans-serif;
+            font-size: 80px;
+            color: #16a34a;
+            opacity: 0.12;
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            line-height: 1;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #F15A24;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid #F15A24;
+            border-radius: 12px;
+            transition: all 0.25s;
+        }
+
+        .back-btn:hover {
+            background: #F15A24;
+            color: white;
+        }
+
+        .share-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1.5px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+            color: #1A2B4A;
+        }
+
+        .share-pill:hover {
+            border-color: #16a34a;
+            color: #16a34a;
+        }
+
+        /* Country grid */
+        .country-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            background: white;
+            border: 1.5px solid #e2e8f0;
+            color: #1A2B4A;
+        }
+
+        /* Timeline */
+        .timeline-item {
+            position: relative;
+            padding-left: 32px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 24px;
+            bottom: -24px;
+            width: 2px;
+            background: linear-gradient(to bottom, #16a34a, rgba(22, 163, 74, 0.1));
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 18px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #16a34a;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #16a34a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="reading-progress"></div>
+
+    <div id="navbar-header"></div>
+    <script>
+        fetch('header.html').then(r => r.text()).then(d => { document.getElementById('navbar-header').innerHTML = d; }).catch(() => { });
+    </script>
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <header class="relative pt-28 pb-44 overflow-hidden" style="background:#0f1c30;">
+        <div class="absolute inset-0 grid-pattern opacity-30 z-0"></div>
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1400&q=85"
+                class="w-full h-full object-cover opacity-25" alt="Global Shipping">
+            <div class="absolute inset-0"
+                style="background:linear-gradient(to top, #0f1c30 35%, rgba(15,28,48,0.5) 100%)"></div>
+        </div>
+
+        <!-- Alert Banner -->
+        <div class="relative z-10 max-w-5xl mx-auto px-6 mb-8">
+            <div class="inline-flex items-center gap-3 px-5 py-3 rounded-full text-sm font-semibold"
+                style="background:rgba(220,38,38,0.15);border:1px solid rgba(220,38,38,0.3);color:#fca5a5;">
+                <span class="animate-pulse">🔴</span>
+                ISPM-15 Amendment effective January 1, 2026 — Compliance Required
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="fade-up delay-1 flex items-center gap-2 text-xs text-gray-400 mb-8">
+                <a href="blog.php" class="hover:text-white transition-colors">Insights</a>
+                <span>›</span>
+                <span style="color:#22c55e;">Industry</span>
+            </div>
+
+            <div class="fade-up delay-1">
+                <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6"
+                    style="background:rgba(22,163,74,0.15);color:#22c55e;border:1px solid rgba(22,163,74,0.3);">
+                    Industry Update
+                </span>
+            </div>
+
+            <h1 class="fade-up delay-2 font-montserrat font-black text-white leading-tight mb-6"
+                style="font-size:clamp(2.2rem,5vw,3.8rem);">
+                2026 Global Shipping<br>
+                <span style="color:#22c55e;">Regulations Update</span>
+            </h1>
+
+            <p class="fade-up delay-3 text-gray-300 font-light leading-relaxed mb-10 max-w-2xl"
+                style="font-size:1.1rem;">
+                Stay ahead of the new ISPM-15 wood packaging standards affecting international machinery exports — and
+                understand exactly what your business needs to do to remain compliant.
+            </p>
+
+            <div class="fade-up delay-4 flex flex-wrap items-center gap-6">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center font-montserrat font-bold text-sm text-white"
+                        style="background:#16a34a;">RS</div>
+                    <div>
+                        <p class="text-white font-semibold text-sm">Rohit Sharma</p>
+                        <p class="text-gray-400 text-xs">Export Compliance Lead, AMR Packwell</p>
+                    </div>
+                </div>
+                <div class="h-8 w-px bg-gray-600"></div>
+                <div class="flex items-center gap-4 text-xs text-gray-400">
+                    <span>📅 Mar 08, 2026</span>
+                    <span>⏱ 10 min read</span>
+                    <span>👁 4,810 views</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ══════════════ MAIN ══════════════ -->
+    <main class="max-w-7xl mx-auto px-6 py-16 -mt-24 relative z-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+            <!-- ─── Article ─── -->
+            <article class="lg:col-span-8">
+
+                <!-- Hero image -->
+                <div class="reveal rounded-3xl overflow-hidden shadow-2xl mb-14 relative" style="height:420px;">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=85"
+                        class="w-full h-full object-cover" alt="Global Shipping Containers">
+                    <div class="absolute bottom-0 left-0 right-0 p-6"
+                        style="background:linear-gradient(to top,rgba(15,28,48,0.85),transparent)">
+                        <p class="text-white text-sm font-light">ISPM-15 compliant wood packaging is now mandatory for
+                            all inter-continental machinery shipments</p>
+                    </div>
+                </div>
+
+                <!-- Impact stats -->
+                <div class="reveal grid grid-cols-3 gap-5 mb-14">
+                    <div class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm"
+                        style="border-top:3px solid #dc2626;">
+                        <div class="font-montserrat font-black text-3xl mb-1" style="color:#dc2626;">140+</div>
+                        <p class="text-xs text-gray-500 font-medium leading-tight">Countries<br>Now Affected</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm"
+                        style="border-top:3px solid #16a34a;">
+                        <div class="font-montserrat font-black text-3xl mb-1" style="color:#16a34a;">Jan 1</div>
+                        <p class="text-xs text-gray-500 font-medium leading-tight">2026<br>Enforcement Date</p>
+                    </div>
+                    <div class="bg-white rounded-2xl p-6 text-center border border-gray-100 shadow-sm"
+                        style="border-top:3px solid #F15A24;">
+                        <div class="font-montserrat font-black text-3xl mb-1" style="color:#F15A24;">₹8L+</div>
+                        <p class="text-xs text-gray-500 font-medium leading-tight">Avg. Fine per<br>Non-Compliance</p>
+                    </div>
+                </div>
+
+                <!-- Alert box -->
+                <div class="reveal alert-box mb-12">
+                    <div class="flex gap-3">
+                        <span class="text-xl flex-shrink-0">⚠️</span>
+                        <div>
+                            <p class="font-montserrat font-bold text-red-700 mb-1">Critical Compliance Notice</p>
+                            <p class="text-sm text-red-600 leading-relaxed">Shipments using non-compliant wood packaging
+                                materials (WPM) are now subject to immediate detention, fumigation at shipper's expense,
+                                or return to origin. Port authorities in the EU, USA, and Australia have begun strict
+                                enforcement as of Q1 2026.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 1 -->
+                <section id="what-is-ispm" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-5 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#16a34a;">1</span>
+                        What Is ISPM-15 and Why It Changed
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4" style="font-size:15px;">
+                        ISPM-15 (International Standards for Phytosanitary Measures No. 15) is the global standard
+                        governing wood packaging material used in international trade — including pallets, crates,
+                        dunnage, and spools. Its purpose is to prevent the spread of invasive insects and plant diseases
+                        across borders through untreated timber.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-4" style="font-size:15px;">
+                        The 2026 amendment introduces three significant changes: (1) expansion of the mark recognition
+                        to include QR-linked digital certificates, (2) stricter moisture-content thresholds for
+                        heat-treated timber, and (3) new audit requirements for certified treatment facilities.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed" style="font-size:15px;">
+                        For Indian machinery exporters in particular — who typically ship in plywood boxes and timber
+                        crates — this update has immediate implications for their existing packaging suppliers and
+                        documentation processes.
+                    </p>
+                </section>
+
+                <!-- Pull Quote -->
+                <div class="reveal pull-quote mb-12">
+                    <p class="font-montserrat font-bold text-navy text-lg leading-snug relative z-10">
+                        "Non-compliant shipments detained at EU ports increased by 38% in 2025 — the 2026 amendments are
+                        a direct response to this surge."
+                    </p>
+                    <p class="text-xs text-gray-400 mt-3 font-medium">— IPPC Global Trade Report, Feb 2026</p>
+                </div>
+
+                <!-- Section 2 -->
+                <section id="what-changed" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-6 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#16a34a;">2</span>
+                        Key Changes at a Glance
+                    </h2>
+
+                    <div class="space-y-4">
+                        <div class="reg-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
+                                    style="background:#f0fdf4;">📋</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <h4 class="font-montserrat font-bold text-navy">Digital Certificate Integration
+                                        </h4>
+                                        <span class="badge-upcoming px-3 py-1 rounded-full text-xs font-bold">New in
+                                            2026</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500 leading-relaxed">The IPPC mark must now be
+                                        supplemented with a QR code linking to a verifiable digital phytosanitary
+                                        certificate. Paper certificates alone are no longer accepted at 78% of major
+                                        ports.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reg-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
+                                    style="background:#f0fdf4;">🌡️</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <h4 class="font-montserrat font-bold text-navy">Stricter HT Moisture Thresholds
+                                        </h4>
+                                        <span class="badge-active px-3 py-1 rounded-full text-xs font-bold">Effective
+                                            Now</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500 leading-relaxed">Heat-treated (HT) wood must now
+                                        achieve a core temperature of 56°C for a minimum of 30 continuous minutes (up
+                                        from 30 min at 56°C measured inconsistently). Moisture content must not exceed
+                                        19% at any point.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reg-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
+                                    style="background:#f0fdf4;">🏭</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <h4 class="font-montserrat font-bold text-navy">Treatment Facility Audits</h4>
+                                        <span class="badge-review px-3 py-1 rounded-full text-xs font-bold">Action
+                                            Required</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500 leading-relaxed">Certified treatment facilities must
+                                        now undergo bi-annual third-party audits and submit digital treatment logs.
+                                        Facilities not re-certified by June 2026 will lose their ISPM-15 marking rights.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reg-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
+                                    style="background:#f0fdf4;">🚫</div>
+                                <div class="flex-1">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <h4 class="font-montserrat font-bold text-navy">Bark Prohibition Extended</h4>
+                                        <span class="badge-active px-3 py-1 rounded-full text-xs font-bold">Effective
+                                            Now</span>
+                                    </div>
+                                    <p class="text-sm text-gray-500 leading-relaxed">The complete prohibition on bark in
+                                        WPM (previously with tolerance levels) is now absolute. Any detectable bark —
+                                        even on interior framing — triggers detention regardless of treatment status.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 3: Countries -->
+                <section id="countries" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-6 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#16a34a;">3</span>
+                        High-Priority Markets for Indian Exporters
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-6" style="font-size:15px;">
+                        These countries have announced zero-tolerance enforcement starting Q1 2026. Non-compliant
+                        shipments face immediate action:
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="country-chip">🇺🇸 United States</span>
+                        <span class="country-chip">🇬🇧 United Kingdom</span>
+                        <span class="country-chip">🇩🇪 Germany</span>
+                        <span class="country-chip">🇫🇷 France</span>
+                        <span class="country-chip">🇦🇺 Australia</span>
+                        <span class="country-chip">🇨🇦 Canada</span>
+                        <span class="country-chip">🇯🇵 Japan</span>
+                        <span class="country-chip">🇸🇬 Singapore</span>
+                        <span class="country-chip">🇳🇿 New Zealand</span>
+                        <span class="country-chip">🇰🇷 South Korea</span>
+                        <span class="country-chip">🇧🇷 Brazil</span>
+                        <span class="country-chip">🇿🇦 South Africa</span>
+                    </div>
+                    <div
+                        class="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm text-sm text-gray-500 flex gap-3">
+                        <span>💡</span>
+                        <span>Middle Eastern and SAARC destinations are still under the 2023 standard until July 2026,
+                            giving exporters a grace period for those routes specifically.</span>
+                    </div>
+                </section>
+
+                <!-- Section 4: Timeline -->
+                <section id="timeline" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-8 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#16a34a;">4</span>
+                        Compliance Timeline
+                    </h2>
+
+                    <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm space-y-8">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="ml-4">
+                                <span class="text-xs font-bold uppercase tracking-widest" style="color:#16a34a;">January
+                                    1, 2026</span>
+                                <h4 class="font-montserrat font-bold text-navy mt-1 mb-1">New Standard Effective</h4>
+                                <p class="text-sm text-gray-500">ISPM-15:2026 officially replaces the 2019 edition. All
+                                    new shipments must comply.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background:#F15A24;box-shadow:0 0 0 2px #F15A24;"></div>
+                            <div class="ml-4">
+                                <span class="text-xs font-bold uppercase tracking-widest" style="color:#F15A24;">March
+                                    31, 2026</span>
+                                <h4 class="font-montserrat font-bold text-navy mt-1 mb-1">Paper Certificate Phase-Out
+                                </h4>
+                                <p class="text-sm text-gray-500">Paper-only phytosanitary certificates are no longer
+                                    accepted at EU ports. QR-digital certificates mandatory.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background:#a16207;box-shadow:0 0 0 2px #a16207;"></div>
+                            <div class="ml-4">
+                                <span class="text-xs font-bold uppercase tracking-widest" style="color:#a16207;">June
+                                    30, 2026</span>
+                                <h4 class="font-montserrat font-bold text-navy mt-1 mb-1">Facility Re-Certification
+                                    Deadline</h4>
+                                <p class="text-sm text-gray-500">All treatment facilities must complete third-party
+                                    audit and submit updated credentials to national plant protection organizations.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot" style="background:#7c3aed;box-shadow:0 0 0 2px #7c3aed;"></div>
+                            <div class="ml-4">
+                                <span class="text-xs font-bold uppercase tracking-widest"
+                                    style="color:#7c3aed;">December 31, 2026</span>
+                                <h4 class="font-montserrat font-bold text-navy mt-1 mb-1">Full Global Rollout</h4>
+                                <p class="text-sm text-gray-500">SAARC and Middle East transition to 2026 standard. All
+                                    140+ signatory countries enforce uniformly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 5: Action Steps -->
+                <section id="action" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-6 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#16a34a;">5</span>
+                        What You Need to Do Right Now
+                    </h2>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="text-2xl mb-3">✅</div>
+                            <h4 class="font-montserrat font-bold text-navy mb-2">Audit Your Packaging Supplier</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">Confirm your WPM supplier holds a valid
+                                ISPM-15 certification issued after January 1, 2026 and can generate QR-linked
+                                certificates.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="text-2xl mb-3">📄</div>
+                            <h4 class="font-montserrat font-bold text-navy mb-2">Update Documentation Flow</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">Work with your freight forwarder to ensure
+                                phytosanitary certificates are now digitally issued and QR-enabled before shipment.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="text-2xl mb-3">🔍</div>
+                            <h4 class="font-montserrat font-bold text-navy mb-2">Inspect Existing Stock</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">Any crates, pallets, or dunnage
+                                manufactured before January 2026 with old-format marks must be re-certified before use
+                                in export.</p>
+                        </div>
+                        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+                            <div class="text-2xl mb-3">📞</div>
+                            <h4 class="font-montserrat font-bold text-navy mb-2">Brief Your Logistics Team</h4>
+                            <p class="text-sm text-gray-500 leading-relaxed">Customs agents and warehouse staff should
+                                be trained on the new mark format, moisture limits, and bark-zero-tolerance policy.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 6: AMR Packwell compliance -->
+                <section id="amr" class="reveal mb-12">
+                    <h2 class="font-montserrat font-black text-2xl text-navy mb-5 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                            style="background:#16a34a;">6</span>
+                        How AMR Packwell Keeps You Compliant
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-4" style="font-size:15px;">
+                        AMR Packwell is a fully ISPM-15:2026 certified packaging manufacturer. Every plywood export box,
+                        timber crate, and pallet we produce carries a valid QR-linked certificate, generated at time of
+                        manufacture and traceable through the NPPO system.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed" style="font-size:15px;">
+                        Our treatment kilns operate at 60°C core temperature with continuous monitoring — exceeding the
+                        new 56°C/30-minute standard. We're the packaging partner that keeps your shipments moving.
+                    </p>
+                </section>
+
+                <!-- Tags -->
+                <div class="reveal flex flex-wrap gap-2 mb-8">
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#ISPM15</span>
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#ExportCompliance</span>
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#PlywoodBoxes</span>
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#GlobalShipping</span>
+                    <span
+                        class="px-4 py-2 rounded-full text-xs font-bold text-navy/60 border border-gray-200 bg-white">#Regulations2026</span>
+                </div>
+
+                <!-- Share -->
+                <div class="reveal flex flex-wrap items-center gap-3 pt-6 border-t border-gray-100">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-wider">Share this</span>
+                    <button class="share-pill">🔗 Copy Link</button>
+                    <button class="share-pill">📘 LinkedIn</button>
+                    <button class="share-pill">🐦 Twitter</button>
+                    <button class="share-pill">📧 Email</button>
+                </div>
+
+                <div class="reveal mt-10">
+                    <a href="blog.php" class="back-btn">← Back to Insights</a>
+                </div>
+            </article>
+
+            <!-- ─── Sidebar ─── -->
+            <aside class="lg:col-span-4 space-y-8">
+
+                <!-- TOC -->
+                <div class="reveal bg-white rounded-3xl p-7 shadow-sm border border-gray-100 sticky top-8">
+                    <h4 class="font-montserrat font-black text-navy text-sm uppercase tracking-widest mb-5">In This
+                        Article</h4>
+                    <nav class="space-y-1">
+                        <a href="#what-is-ispm" class="toc-link"><span class="num">1</span> What Is ISPM-15</a>
+                        <a href="#what-changed" class="toc-link"><span class="num">2</span> Key Changes</a>
+                        <a href="#countries" class="toc-link"><span class="num">3</span> Affected Markets</a>
+                        <a href="#timeline" class="toc-link"><span class="num">4</span> Compliance Timeline</a>
+                        <a href="#action" class="toc-link"><span class="num">5</span> Action Steps</a>
+                        <a href="#amr" class="toc-link"><span class="num">6</span> AMR Packwell Solution</a>
+                    </nav>
+                    <div class="mt-6 pt-5 border-t border-gray-100">
+                        <p class="text-xs text-gray-400">⏱ Estimated read time: <strong class="text-navy">10
+                                minutes</strong></p>
+                    </div>
+                </div>
+
+                <!-- Compliance CTA -->
+                <div class="reveal bg-white rounded-3xl p-7 shadow-lg border-t-4" style="border-color:#16a34a;">
+                    <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-5"
+                        style="background:#f0fdf4;">🛡️</div>
+                    <h3 class="font-montserrat font-black text-navy text-lg mb-3">Free Compliance Check</h3>
+                    <p class="text-sm text-gray-500 mb-6 leading-relaxed">Find out if your current packaging supplier
+                        meets the 2026 ISPM-15 standard — before your next shipment.</p>
+                    <input type="text" placeholder="Your company name"
+                        class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 mb-3 outline-none text-sm focus:border-green-500 transition-all">
+                    <input type="email" placeholder="Work email"
+                        class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 mb-4 outline-none text-sm focus:border-green-500 transition-all">
+                    <button class="w-full py-4 rounded-xl font-bold text-sm text-white transition-all duration-300"
+                        style="background:#1A2B4A;" onmouseover="this.style.background='#16a34a'"
+                        onmouseout="this.style.background='#1A2B4A'">
+                        Check My Compliance →
+                    </button>
+                </div>
+
+                <!-- Related Article -->
+                <div class="reveal bg-white rounded-3xl p-6 shadow-sm border border-gray-100">
+                    <h4 class="font-montserrat font-black text-navy text-xs uppercase tracking-widest mb-5">Related
+                        Reading</h4>
+                    <a href="blog-strapping-roi.html" class="flex gap-4 group">
+                        <div class="w-20 h-16 rounded-xl overflow-hidden flex-shrink-0">
+                            <img src="https://images.unsplash.com/photo-1601598851547-4302969d0614?w=200&q=80"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                alt="Related">
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest"
+                                style="color:#F15A24;">Machinery</span>
+                            <h5 class="font-montserrat font-bold text-navy text-sm leading-snug mt-1"
+                                onmouseover="this.style.color='#F15A24'" onmouseout="this.style.color='#1A2B4A'"
+                                style="transition:color 0.2s;cursor:pointer;">
+                                Automatic Strapping: The ROI Analysis
+                            </h5>
+                            <p class="text-xs text-gray-400 mt-1">Mar 10, 2026</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Compliance Badge Widget -->
+                <div class="reveal rounded-3xl p-6 text-center"
+                    style="background:linear-gradient(135deg,#0f1c30,#1A2B4A);">
+                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4"
+                        style="background:rgba(22,163,74,0.2);">🏅</div>
+                    <h4 class="font-montserrat font-bold text-white mb-2">AMR Packwell</h4>
+                    <p class="text-xs mb-4" style="color:#22c55e;">ISPM-15:2026 Certified Manufacturer</p>
+                    <p class="text-xs text-gray-400">Certificate No. NPPO-IN-2026-0047</p>
+                    <div class="mt-4 pt-4 border-t border-white/10">
+                        <p class="text-xs text-gray-500">Valid through December 2026</p>
+                    </div>
+                </div>
+
+                <!-- Tags -->
+                <div class="reveal bg-white rounded-3xl p-7 shadow-sm border border-gray-100">
+                    <h4 class="font-montserrat font-black text-navy/70 text-xs uppercase tracking-widest mb-5">Popular
+                        Tags</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <a href="#"
+                            class="px-3 py-1.5 bg-gray-100 rounded-xl text-xs font-bold text-navy/70 transition-all"
+                            onmouseover="this.style.background='rgba(22,163,74,0.1)';this.style.color='#16a34a'"
+                            onmouseout="this.style.background='#f3f4f6';this.style.color='rgba(26,43,74,0.7)'">#ISPM15</a>
+                        <a href="#"
+                            class="px-3 py-1.5 bg-gray-100 rounded-xl text-xs font-bold text-navy/70 transition-all"
+                            onmouseover="this.style.background='rgba(22,163,74,0.1)';this.style.color='#16a34a'"
+                            onmouseout="this.style.background='#f3f4f6';this.style.color='rgba(26,43,74,0.7)'">#PlywoodBoxes</a>
+                        <a href="#"
+                            class="px-3 py-1.5 bg-gray-100 rounded-xl text-xs font-bold text-navy/70 transition-all"
+                            onmouseover="this.style.background='rgba(22,163,74,0.1)';this.style.color='#16a34a'"
+                            onmouseout="this.style.background='#f3f4f6';this.style.color='rgba(26,43,74,0.7)'">#Compliance</a>
+                        <a href="#"
+                            class="px-3 py-1.5 bg-gray-100 rounded-xl text-xs font-bold text-navy/70 transition-all"
+                            onmouseover="this.style.background='rgba(22,163,74,0.1)';this.style.color='#16a34a'"
+                            onmouseout="this.style.background='#f3f4f6';this.style.color='rgba(26,43,74,0.7)'">#Exports</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-bottom"></div>
+    <script>
+        fetch('footer.php').then(r => r.text()).then(d => { document.getElementById('footer-bottom').innerHTML = d; }).catch(() => { });
+    </script>
+
+    <script>
+        // Reading progress
+        window.addEventListener('scroll', () => {
+            const doc = document.documentElement;
+            const pct = (doc.scrollTop / (doc.scrollHeight - doc.clientHeight)) * 100;
+            document.getElementById('reading-progress').style.width = pct + '%';
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // TOC active
+        const sections = document.querySelectorAll('section[id]');
+        const tocLinks = document.querySelectorAll('.toc-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => { if (window.scrollY >= s.offsetTop - 130) current = s.id; });
+            tocLinks.forEach(l => {
+                l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+            });
+        });
+    </script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/formsubmit.js"></script>
+</body>
+
+</html>
