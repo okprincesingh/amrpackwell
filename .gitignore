@@ -3,3 +3,4 @@ php-admin/database/
 
 # Ignore .htaccess
 .htaccess
+php-admin/config/config.php
