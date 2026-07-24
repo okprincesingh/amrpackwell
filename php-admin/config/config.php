@@ -4,13 +4,13 @@
 
 // ---- Database ----
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'amr_packwell');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_NAME', 'jaikvikc2_amrpackwell');
+define('DB_USER', 'jaikvikc2_amrpackwell');
+define('DB_PASS', '?%LrLU6DZAsy');
 define('DB_CHARSET', 'utf8mb4');
 
 // ---- Site ----
-define('SITE_URL', 'http://localhost/amrpackwell'); // no trailing slash
+define('SITE_URL', 'https://amrpackwell.com/'); // no trailing slash
 define('ADMIN_URL', SITE_URL . '/admin');
 define('UPLOAD_DIR', __DIR__ . '/../uploads');      // absolute filesystem path
 define('UPLOAD_URL', SITE_URL . '/php-admin/uploads');       // public URL to uploads folder
