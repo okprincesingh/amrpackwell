@@ -405,9 +405,6 @@
                                     class="flex-1 border border-gray-200 rounded-lg px-4 py-2.5 text-sm font-poppins outline-none focus:border-orange transition-colors" />
                             </div>
                         </div>
-                        <!-- <div>
-                            <div id="boxPackagingRecaptcha"></div>
-                        </div> -->
                         <button type="submit" id="box-packaging-submit-btn"
                             class="shine-btn w-full font-montserrat font-extrabold text-[12px] tracking-widest uppercase bg-orange text-white py-3.5 rounded-xl hover:bg-orange-light transition-all shadow-orange">
                             Get Quote Now →
@@ -626,18 +623,6 @@
                     }
                 });
         }
-document.addEventListener('DOMContentLoaded', function () {
-    if (window.grecaptcha) return; // header.js's loader already in flight elsewhere on this page
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js?onload=__onBoxPackagingRecaptchaLoad&render=explicit';
-    script.async = true;
-    script.defer = true;
-    window.__onBoxPackagingRecaptchaLoad = function () {
-        window.__boxPackagingRecaptchaId = grecaptcha.render('boxPackagingRecaptcha', { sitekey: 'PASTE_YOUR_SITE_KEY_HERE' });
-    };
-    document.head.appendChild(script);
-});
-
         document.getElementById('box-packaging-quote-form').addEventListener('submit', function (event) {
             event.preventDefault();
             const qty = document.getElementById('qty-input').value.trim();
@@ -654,12 +639,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Please enter your mobile number.');
                 return;
             }
-            const captchaId = window.__boxPackagingRecaptchaId;
-    if (captchaId === undefined || !window.grecaptcha || !grecaptcha.getResponse(captchaId)) {
-        alert('Please complete the "I\'m not a robot" check.');
-        return;
-    }
-
             if (submitBtn) {
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Sending...';
@@ -694,9 +673,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (submitBtn) {
                         submitBtn.disabled = false;
                         submitBtn.textContent = 'Get Quote Now →';
-                    }
-                    if (window.__boxPackagingRecaptchaId !== undefined && window.grecaptcha) {
-                        grecaptcha.reset(window.__boxPackagingRecaptchaId);
                     }
                 });
         });
