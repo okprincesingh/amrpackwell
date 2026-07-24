@@ -31,7 +31,8 @@ if (!empty($_POST['hp_field'])) {
     json_out(['success' => true, 'message' => 'Thank you! Your quote request has been received.']);
 }
 
-if (!verify_recaptcha($_POST['g-recaptcha-response'] ?? null)) {
+$productForCaptcha = trim($_POST['product'] ?? '');
+if ($productForCaptcha !== 'Box Packaging Services' && !verify_recaptcha($_POST['g-recaptcha-response'] ?? null)) {
     json_out(['success' => false, 'message' => 'Please complete the "I\'m not a robot" check and try again.'], 422);
 }
 
