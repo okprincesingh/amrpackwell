@@ -1,0 +1,5 @@
+# Ignore database directory
+php-admin/database/
+
+# Ignore .htaccess
+.htaccess
