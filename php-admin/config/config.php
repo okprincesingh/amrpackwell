@@ -19,8 +19,8 @@ define('UPLOAD_URL', SITE_URL . '/php-admin/uploads');       // public URL to up
 define('ADMIN_SESSION_LIFETIME', 60 * 60 * 4); // 4 hours
 
 // ---- Google reCAPTCHA (v2 checkbox) ----
-define('RECAPTCHA_SITE_KEY', '6LeHo-csAAAAAA-RUUtC-xmee5YqI4LMF75xMXuV');
-define('RECAPTCHA_SECRET_KEY', '6LeHo-csAAAAAG_k_wiYsZtptzG9BLmDTd_6cK5h');
+define('RECAPTCHA_SITE_KEY', '6LfB12ItAAAAAKvrgkjQfE-kPjb3WORmiqu5owDE');
+define('RECAPTCHA_SECRET_KEY', '6LfB12ItAAAAAMmZW6r1ZykFazIkQfBk0zEKsw5x');
 
 // ---- Error reporting (turn OFF display_errors on production) ----
 ini_set('display_errors', 1);
