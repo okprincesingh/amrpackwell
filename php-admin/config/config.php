@@ -10,7 +10,7 @@ define('DB_PASS', '?%LrLU6DZAsy');
 define('DB_CHARSET', 'utf8mb4');
 
 // ---- Site ----
-define('SITE_URL', 'https://amrpackwell.com/'); // no trailing slash
+define('SITE_URL', 'https://amrpackwell.com'); // no trailing slash
 define('ADMIN_URL', SITE_URL . '/admin');
 define('UPLOAD_DIR', __DIR__ . '/../uploads');      // absolute filesystem path
 define('UPLOAD_URL', SITE_URL . '/php-admin/uploads');       // public URL to uploads folder
